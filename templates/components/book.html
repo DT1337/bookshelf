@@ -11,9 +11,9 @@
     <div class="book-details">
       <div class="book-info">
         <div class="data">
-          <h3 class="title">{{ .Title }}</h3>
-          <p class="subtitle">{{ .Subtitle }}</p>
-          <p class="isbn">{{ .Isbn }}</p>
+          {{ if .Title }}<h3 class="title">{{ .Title }}</h3>{{ end }}
+          {{ if .Subtitle }}<p class="subtitle">{{ .Subtitle }}</p>{{ end }}
+          {{ if .Isbn }}<p class="isbn">ISBN: {{ .Isbn }}</p>{{ end }}
           <div class="authors">
             <ul>
               {{ range .Authors }}

@@ -254,9 +254,8 @@ main.site-main .layout-with-aside {
   color: var(--card);
   background: var(--accent-2);
   border-radius: 16px 0 16px 0;
-  border-color: var(--card);
-  border-right: 3px solid;
-  border-bottom: 3px solid;
+  border-right: 3px solid var(--card);
+  border-bottom: 3px solid var(--card);
 }
 
 .book-card img {
@@ -321,14 +320,6 @@ main.site-main .layout-with-aside {
   margin-bottom: .5rem;
   font-style: italic;
   color: var(--muted);
-}
-
-.book-details .subtitle {
-  font-size: .9rem;
-}
-
-.book-details .isbn {
-  font-size: .8rem;
 }
 
 .book-details .authors {
@@ -554,11 +545,11 @@ footer.site-footer {
   }
 
   .book-details {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   .book-details .title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .book-btn {
