@@ -323,14 +323,6 @@ main.site-main .layout-with-aside {
   color: var(--muted);
 }
 
-.book-details .subtitle {
-  font-size: .9rem;
-}
-
-.book-details .isbn {
-  font-size: .8rem;
-}
-
 .book-details .authors {
   margin-bottom: .5rem;
   font-weight: 600;
@@ -554,11 +546,11 @@ footer.site-footer {
   }
 
   .book-details {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 
   .book-details .title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
   }
 
   .book-btn {
