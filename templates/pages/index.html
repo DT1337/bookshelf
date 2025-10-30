@@ -50,8 +50,8 @@
           {{ end }}
         </div>
         <div class="meta-item-list">
-          <h3>Books by Status</h3>
-          {{range .Stats.BooksByStatus }}
+          <h3>Books by Language</h3>
+          {{range .Stats.BooksByLanguage }}
             <div class="entry">
               <span>{{ .Value }}</span>
               <span class="small highlighted">{{ .Count }}</span>
@@ -59,8 +59,8 @@
           {{ end }}
         </div>
         <div class="meta-item-list">
-          <h3>Books by Language</h3>
-          {{range .Stats.BooksByLanguage }}
+          <h3>Books by Status</h3>
+          {{range .Stats.BooksByStatus }}
             <div class="entry">
               <span>{{ .Value }}</span>
               <span class="small highlighted">{{ .Count }}</span>

@@ -112,31 +112,47 @@ func (b *Bookshelf) Stats() Stats {
 	var totalPages int
 	var totalRating float64
 	var ratedBooks int
-	statusCount := make(map[string]int)
-	languageCount := make(map[string]int)
 	genreCount := make(map[string]int)
+	languageCount := make(map[string]int)
+	statusCount := make(map[string]int)
 
 	for _, book := range b.Books {
+		statusCount[book.Status]++
+
+		// Wishlisted books are excluded
+		if book.Status == StatusWishlisted {
+			continue
+		}
+
+		// Total number of books in library
 		stats.TotalBooks++
 
+		// Total number of books finished
 		if book.Status == StatusFinished {
 			stats.BooksFinished++
 		}
+
+		// Total number of pages read
 		stats.PagesRead += book.Progress.PagesRead
-		if book.Rating > 0 {
-			totalRating += book.Rating
-			ratedBooks++
-		}
+
+		// Total number of pages
 		if book.Pages > 0 {
 			totalPages += book.Pages
 		}
 
-		statusCount[book.Status]++
-		if book.Language != "" {
-			languageCount[book.Language]++
+		if book.Rating > 0 {
+			totalRating += book.Rating
+			ratedBooks++
 		}
+
+		// Books by Genre
 		if book.Genre != "" {
 			genreCount[book.Genre]++
+		}
+
+		// Books by Language
+		if book.Language != "" {
+			languageCount[book.Language]++
 		}
 	}
 
@@ -148,8 +164,8 @@ func (b *Bookshelf) Stats() Stats {
 	}
 
 	stats.TopGenres = topN(mapToStatCountSlice(genreCount), 3)
-	stats.BooksByStatus = mapToStatCountSlice(statusCount)
 	stats.BooksByLanguage = mapToStatCountSlice(languageCount)
+	stats.BooksByStatus = mapToStatCountSlice(statusCount)
 
 	return stats
 }
