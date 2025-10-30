@@ -1,0 +1,59 @@
+{{ define "base" }}
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>DT - My Digital Bookshelf</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <meta name="description" content="DT - My Digital Bookshelf" />
+      <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+      <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+      <link rel="manifest" href="site.webmanifest">
+      <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+      <div class="site" role="document">
+        <header class="site-header" role="banner">
+          <a href="index.html" class="brand" aria-label="Homepage">
+            <span class="logo" aria-hidden="true">DT</span>
+            <span class="site-title">
+              <h1 class="title">My Digital Bookshelf</h1>
+              <p class="subtitle">Books I've read, am currently reading or want to read in the future</p>
+            </span>
+          </a>
+
+          <div class="nav-wrap">
+            <input id="nav-toggle" type="checkbox" aria-hidden="true" />
+            <label class="nav-toggle-label" for="nav-toggle" aria-hidden="true" title="Toggle navigation">
+              <span class="hamburger" aria-hidden="true"></span>
+            </label>
+
+            <nav class="primary-nav" role="navigation" aria-label="Main navigation">
+              <a href="index.html">Home</a>
+              <a href="bookshelf.html">Bookshelf</a>
+              <a href="collections.html">Collections</a>
+              <a href="wishlist.html" class="cta">Wishlist</a>
+            </nav>
+          </div>
+        </header>
+
+        <main class="site-main" role="main">
+          {{ template "content" .Page }}
+        </main>
+
+        <footer class="site-footer" role="contentinfo">
+          <p class="legal">
+            All book cover images are the property of their respective publishers and are used here for informational and non-commercial purposes only.<br>
+            The cover images are provided through the <a href="https://openlibrary.org" target="_blank">Open Library Iniative</a>.<br>
+            All rights to the images, titles, and content are owned by the authors, publishers, or other copyright holders.<br>
+            If you are the copyright holder of any image used here and believe it is being used improperly, please <a href="mailto:dt1337.github@gmail.com">contact me</a>, and I will gladly remove or replace it.<br>
+            No copyright infringement is intended.
+          </p>
+          <p class="timestamp">Last updated: <time datetime="{{ .LastUpdated }}">{{ .LastUpdated }}</time></p>
+        </footer>
+      </div>
+    </body>
+  </html>
+{{ end }}

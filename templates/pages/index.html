@@ -1,0 +1,73 @@
+{{ define "content" }}
+  <div class="layout-with-aside">
+    <section class="card" aria-labelledby="hero-heading">
+      <header>
+        <h2 id="hero-heading">Welcome to My Digital Book Library</h2>
+        <p class="muted small">Here you can find a collection of books I'm reading now — and those I can't wait to start.</p>
+      </header>
+
+      {{ if .HasUpcomingBooks}}
+        <div class="books-grid">
+          {{ range $status, $books := .UpcomingBooks }}
+            {{ $statusDisplayed := false }}
+            {{ range $books }}
+              <div class="book-group">
+                {{ if not $statusDisplayed }}
+                  <div class="status-label">{{ title $status }}</div>
+                  {{ $statusDisplayed = true }}
+                {{ end }}
+                {{ template "book" . }}
+              </div>
+            {{ end }}
+          {{ end }}
+        </div>
+      {{ else }}
+        <p class="empty-set">
+          Oh, quite empty here.<br>
+          Feel free to suggest me some good books :)
+        </p>
+      {{ end }}
+    </section>
+
+    <aside class="card" aria-labelledby="sidebar-heading">
+      <header>
+        <h2 id="sidebar-heading">Stats</h2>
+        <p class="muted small">A snapshot of my bookshelf by the numbers.</p>
+      </header>
+      <div class="meta-list">
+        <div class="meta-item"><h3>Total books</h3><span class="small highlighted">{{ .Stats.TotalBooks }}</span></div>
+        <div class="meta-item"><h3>Books finished</h3><span class="small highlighted">{{ .Stats.BooksFinished }}</span></div>
+        <div class="meta-item"><h3>Pages read</h3><span class="small highlighted">{{ .Stats.PagesRead }}</span></div>
+        <div class="meta-item"><h3>Average pages per book</h3><span class="small highlighted">{{ printf "%.0f" .Stats.AveragePages }}</span></div>
+        <div class="meta-item"><h3>Average rating</h3><span class="small highlighted">{{printf "%.2f" .Stats.AverageRating}}</span></div>
+        <div class="meta-item-list">
+          <h3>Top 3 Genres</h3>
+          {{range .Stats.TopGenres}}
+            <div class="entry">
+              <span>{{ .Value }}</span>
+              <span class="small highlighted">{{ .Count }}</span>
+            </div>
+          {{ end }}
+        </div>
+        <div class="meta-item-list">
+          <h3>Books by Status</h3>
+          {{range .Stats.BooksByStatus }}
+            <div class="entry">
+              <span>{{ .Value }}</span>
+              <span class="small highlighted">{{ .Count }}</span>
+            </div>
+          {{ end }}
+        </div>
+        <div class="meta-item-list">
+          <h3>Books by Language</h3>
+          {{range .Stats.BooksByLanguage }}
+            <div class="entry">
+              <span>{{ .Value }}</span>
+              <span class="small highlighted">{{ .Count }}</span>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </aside>
+  </div>
+{{ end }}
