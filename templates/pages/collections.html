@@ -1,0 +1,16 @@
+{{ define "content" }}
+  {{ range $collection := .Collections }}
+    <section class="card" aria-labelledby="hero-heading">
+      <header>
+        <h2 id="hero-heading">{{ .Name }}</h2>
+        <p class="muted small">{{ .Description }}</p>
+      </header>
+      
+      <div class="books-grid">
+        {{ range .Books }}
+          {{ template "book" . }}
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
+{{ end }}

@@ -1,0 +1,21 @@
+{{ define "content" }}
+  <section class="card" aria-labelledby="hero-heading">
+    <header>
+      <h2 id="hero-heading">Wishlist</h2>
+      <p class="muted small">A list of books on my wishlist, ordered by my personal reading priority.</p>
+    </header>
+
+    {{ if .Books}}
+      <div class="books-grid">
+        {{ range .Books }}
+          {{ template "book" . }}
+        {{ end }}
+      </div>
+    {{ else }}
+      <p class="empty-set">
+        Oh, quite empty here.<br>
+        Feel free to suggest me some good books :)
+      </p>
+    {{ end }}
+  </section>
+{{ end }}

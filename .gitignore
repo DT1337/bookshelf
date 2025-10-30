@@ -1,0 +1,9 @@
+# Excluded directories
+/data/internal
+/dist/
+/bin/
+
+# Editor/OS files
+.vscode/
+.idea/
+.DS_Store
