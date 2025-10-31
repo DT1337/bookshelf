@@ -528,7 +528,7 @@ footer.site-footer {
   nav.primary-nav {
     position: absolute;
     right: 0;
-    top: 78px;
+    top: calc(100% + 6px);
     min-width: 220px;
     transform-origin: top right;
     background: var(--secondary-bg);
