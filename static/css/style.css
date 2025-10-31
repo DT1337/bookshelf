@@ -254,8 +254,8 @@ main.site-main .layout-with-aside {
   color: var(--card);
   background: var(--accent-2);
   border-radius: 16px 0 16px 0;
-  border-right: 3px solid var(--card);
-  border-bottom: 3px solid var(--card);
+  border-right: 2px solid var(--card);
+  border-bottom: 2px solid var(--card);
 }
 
 .book-card img {
@@ -263,7 +263,6 @@ main.site-main .layout-with-aside {
   height: 100%;
   object-fit: cover;
   display: block;
-  transition: transform 0.3s ease;
 }
 
 .book-card img::before {
@@ -277,10 +276,6 @@ main.site-main .layout-with-aside {
   color: var(--muted);
 }
 
-.book-card:hover img {
-  transform: scale(1.025);
-}
-
 .book-details {
   position: absolute;
   inset: 0;
@@ -290,6 +285,7 @@ main.site-main .layout-with-aside {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: .5rem;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -306,29 +302,26 @@ main.site-main .layout-with-aside {
 .book-details .book-info {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: .25rem;
 }
 
-.book-details .title {
-  margin: 0 0 .3rem 0;
+.book-info .title {
   font-size: 1.1rem;
   font-weight: 700;
 }
 
-.book-details .subtitle,
-.book-details .isbn {
-  margin-bottom: .5rem;
+.book-info .subtitle,
+.book-info .isbn {
   font-style: italic;
   color: var(--muted);
 }
 
-.book-details .authors {
-  margin-bottom: .5rem;
+.book-info .authors {
   font-weight: 600;
   color: var(--accent-2);
 }
 
-.book-details .authors ul {
+.book-info .authors ul {
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
@@ -336,25 +329,26 @@ main.site-main .layout-with-aside {
   white-space: nowrap;
 }
 
-.book-details .meta {
+.book-info .meta {
   opacity: 0.8;
   margin-bottom: .5rem;
 }
 
-.book-details .meta ul {
+.book-info .meta ul {
   list-style: none;
   display: flex;
   gap: .5rem;
 }
 
-.book-details .authors ul li:not(:last-child)::after,
-.book-details .meta ul li:not(:last-child)::after {
+.book-info .authors ul li:not(:last-child)::after,
+.book-info .meta ul li:not(:last-child)::after {
   content: "•";
   margin-left: .5rem;
 }
 
-.book-details .progress {
+.book-details .book-progress {
   background: rgba(255, 255, 255, 0.1);
+  margin-bottom: auto;
   padding: .3rem .5rem;
   border-radius: 8px;
   display: flex;
@@ -362,13 +356,12 @@ main.site-main .layout-with-aside {
   gap: .2rem;
 }
 
-.book-actions {
+.book-details .book-actions {
   display: flex;
   gap: .5rem;
-  margin-top: .5rem;
 }
 
-.book-btn {
+.book-actions .book-btn {
   flex: 1;
   border: none;
   padding: .5rem .7rem;
@@ -382,17 +375,17 @@ main.site-main .layout-with-aside {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.book-btn:hover {
+.book-actions .book-btn:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.book-btn.cta {
+.book-actions .book-btn.cta {
   background: linear-gradient(90deg, #7dd3fc, #60a5fa);
   color: #052230;
 }
 
-.book-btn.cta:hover {
+.book-actions .book-btn.cta:hover {
   filter: brightness(1.1);
 }
 
@@ -548,11 +541,11 @@ footer.site-footer {
     font-size: 1rem;
   }
 
-  .book-details .title {
+  .book-info .title {
     font-size: 1.5rem;
   }
 
-  .book-btn {
+  .book-actions .book-btn {
     font-size: 1rem;
   }
 
