@@ -534,6 +534,10 @@ footer.site-footer {
   white-space: nowrap;
 }
 
+.timestamp time {
+  font-weight: 600;
+}
+
 @media (max-width: 880px) {
   main.site-main .layout-with-aside {
     grid-template-columns: 1fr;
