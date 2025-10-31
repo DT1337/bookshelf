@@ -473,8 +473,20 @@ aside .meta-list {
   padding: .6rem;
   background: var(--semi-transparent-1);
   border-radius: 10px;
+}
+
+.meta-item .key,
+.meta-item-list .entry .key {
+  font-size: 1rem;
   font-weight: 600;
   color: var(--muted);
+}
+
+.meta-item .value,
+.meta-item-list .entry .value {
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--accent-2);
 }
 
 .meta-item-list {
@@ -483,7 +495,11 @@ aside .meta-list {
   padding: .6rem;
   background: var(--semi-transparent-1);
   border-radius: 10px;
-  font-weight: 600;
+}
+
+.meta-item-list .category {
+  font-size: 1rem;
+  font-weight: 700;
   color: var(--muted);
 }
 
@@ -492,8 +508,6 @@ aside .meta-list {
   justify-content: space-between;
   align-items: center;
   padding: .2rem 0 .2rem 1.2rem;
-  font-weight: 600;
-  color: var(--muted);
 }
 
 footer.site-footer {
