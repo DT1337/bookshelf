@@ -3,11 +3,14 @@
     {{ if .Rank }}
       <span class="rank">{{ .Rank }}</span>
     {{ end }}
-    {{ $link := .Cover }}
-    {{ if not $link }}
-      {{ $link = printf "https://placehold.co/320x500/111111/9aa4b2?text=%s\\n%s" (urlquery .Title) (urlquery .Subtitle) }}
+    {{ if .Cover }}
+      <img src="{{ .Cover }}" alt="Cover of: {{ .Title }}">
+    {{ else }}
+      <div class="cover-placeholder">
+        {{ if .Title }}<span class="title">{{ .Title }}</span>{{ end }}
+        {{ if .Subtitle }}<span class="subtitle">{{ .Subtitle }}</span>{{ end }}
+      </div>
     {{ end}}
-    <img src="{{ $link }}" alt="Cover of: {{ .Title }}">
     <div class="book-details">
       <div class="book-info">
         {{ if .Title }}<h3 class="title">{{ .Title }}</h3>{{ end }}

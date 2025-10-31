@@ -318,6 +318,25 @@ main.site-main .layout-with-aside {
   color: var(--muted);
 }
 
+.book-card .cover-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--cover);
+  color: var(--muted);
+  font-size: .85rem;
+  text-align: center;
+}
+
+.book-card .cover-placeholder .title {
+  margin-bottom: .5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
 .book-details {
   position: absolute;
   inset: 0;
