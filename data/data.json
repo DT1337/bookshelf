@@ -294,7 +294,7 @@
       "progress": {
         "date_started": "2025-10-22",
         "date_finished": "",
-        "pages_read": 98
+        "pages_read": 120
       },
       "rating": null,
       "collections": ["2025"]
@@ -383,7 +383,7 @@
       "link": "",
       "date_added": "",
       "status": "wishlisted",
-      "rank": 6,
+      "rank": null,
       "progress": {
         "date_started": "",
         "date_finished": "",
@@ -406,7 +406,7 @@
       "link": "",
       "date_added": "",
       "status": "wishlisted",
-      "rank": 7,
+      "rank": null,
       "progress": {
         "date_started": "",
         "date_finished": "",
@@ -429,7 +429,7 @@
       "link": "",
       "date_added": "",
       "status": "wishlisted",
-      "rank": 8,
+      "rank": null,
       "progress": {
         "date_started": "",
         "date_finished": "",
@@ -452,7 +452,7 @@
       "link": "",
       "date_added": "",
       "status": "wishlisted",
-      "rank": 9,
+      "rank": null,
       "progress": {
         "date_started": "",
         "date_finished": "",
