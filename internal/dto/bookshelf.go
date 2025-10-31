@@ -177,9 +177,17 @@ func sortBooksAlphabetically(books []Book) {
 }
 
 func sortBooksByRank(books []Book) {
-	sort.SliceStable(books, func(i, j int) bool {
-		return books[i].Rank < books[j].Rank
-	})
+    sort.SliceStable(books, func(i, j int) bool {
+        ri, rj := books[i].Rank, books[j].Rank
+
+        if ri == 0 && rj != 0 {
+            return false
+        }
+        if ri != 0 && rj == 0 {
+            return true
+        }
+        return ri < rj
+    })
 }
 
 func mapToStatCountSlice(m map[string]int) []StatCount {
