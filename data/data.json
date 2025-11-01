@@ -294,7 +294,7 @@
       "progress": {
         "date_started": "2025-10-22",
         "date_finished": "",
-        "pages_read": 120
+        "pages_read": 158
       },
       "rating": null,
       "collections": ["2025"]
@@ -369,121 +369,6 @@
       "rating": null
     },
     {
-      "id": "do-androids-dream-of-electric-sheep",
-      "isbn": "",
-      "title": "Do Androids Dream of Electric Sheep?",
-      "subtitle": "",
-      "authors": ["Philip K. Dick"],
-      "year": 1968,
-      "language": "en",
-      "pages": null,
-      "genre": "science fiction",
-      "tags": ["cyberpunk"],
-      "cover": "",
-      "link": "",
-      "date_added": "",
-      "status": "wishlisted",
-      "rank": null,
-      "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
-      },
-      "rating": null
-    },
-    {
-      "id": "neuromancer",
-      "isbn": "9780441569595",
-      "title": "Neuromancer",
-      "subtitle": "Sprawl #1",
-      "authors": ["William Gibson"],
-      "year": 1984,
-      "language": "en",
-      "pages": null,
-      "genre": "science fiction",
-      "tags": ["cyberpunk"],
-      "cover": "",
-      "link": "",
-      "date_added": "",
-      "status": "wishlisted",
-      "rank": null,
-      "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
-      },
-      "rating": null
-    },
-    {
-      "id": "count-zero",
-      "isbn": "9780441013678",
-      "title": "Count Zero",
-      "subtitle": "Sprawl #2",
-      "authors": ["William Gibson"],
-      "year": 1986,
-      "language": "en",
-      "pages": null,
-      "genre": "science fiction",
-      "tags": ["cyberpunk"],
-      "cover": "",
-      "link": "",
-      "date_added": "",
-      "status": "wishlisted",
-      "rank": null,
-      "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
-      },
-      "rating": null
-    },
-    {
-      "id": "mona-lisa-overdrive",
-      "isbn": "9798217093960",
-      "title": "Mona Lisa Overdrive",
-      "subtitle": "Sprawl #3",
-      "authors": ["William Gibson"],
-      "year": 1988,
-      "language": "en",
-      "pages": null,
-      "genre": "science fiction",
-      "tags": ["cyberpunk"],
-      "cover": "",
-      "link": "",
-      "date_added": "",
-      "status": "wishlisted",
-      "rank": null,
-      "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
-      },
-      "rating": null
-    },
-    {
-      "id": "solaris",
-      "isbn": "9780571311576",
-      "title": "Solaris",
-      "subtitle": "",
-      "authors": ["Stanislaw Lem"],
-      "year": 1961,
-      "language": "en",
-      "pages": null,
-      "genre": "science fiction",
-      "tags": ["space", "philosophy"],
-      "cover": "https://covers.openlibrary.org/b/id/10116589-L.jpg",
-      "link": "https://openlibrary.org/works/OL109524W/Solaris?edition=key:/books/OL28179710M",
-      "date_added": "",
-      "status": "wishlisted",
-      "rank": 3,
-      "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
-      },
-      "rating": null
-    },
-    {
       "id": "ready-player-one",
       "isbn": "9780307887436",
       "title": "Ready Player One",
@@ -499,6 +384,29 @@
       "date_added": "",
       "status": "wishlisted",
       "rank": 2,
+      "progress": {
+        "date_started": "",
+        "date_finished": "",
+        "pages_read": 0
+      },
+      "rating": null
+    },
+        {
+      "id": "solaris",
+      "isbn": "9780571311576",
+      "title": "Solaris",
+      "subtitle": "",
+      "authors": ["Stanislaw Lem"],
+      "year": 1961,
+      "language": "en",
+      "pages": null,
+      "genre": "science fiction",
+      "tags": ["space", "philosophy"],
+      "cover": "https://covers.openlibrary.org/b/id/10116589-L.jpg",
+      "link": "https://openlibrary.org/works/OL109524W/Solaris?edition=key:/books/OL28179710M",
+      "date_added": "",
+      "status": "wishlisted",
+      "rank": 3,
       "progress": {
         "date_started": "",
         "date_finished": "",
