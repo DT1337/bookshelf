@@ -41,16 +41,15 @@ func (b *Bookshelf) BooksByStatus() map[string][]Book {
 }
 
 func (b *Bookshelf) UpcomingBooks(limit int) map[string][]Book {
-	upcoming := map[string][]Book{
-		StatusReading: {},
-		StatusToRead:  {},
-	}
+	upcoming := make(map[string][]Book)
 
 	for _, book := range b.Books {
-		if book.Status == StatusReading || book.Status == StatusToRead {
+		if book.Status == StatusReading || book.Status == StatusToRead || book.Status == StatusWishlisted {
 			upcoming[book.Status] = append(upcoming[book.Status], book)
 		}
 	}
+
+	sortBooksByRank(upcoming[StatusWishlisted])
 
 	if limit > 0 {
 		for key, books := range upcoming {
@@ -177,17 +176,17 @@ func sortBooksAlphabetically(books []Book) {
 }
 
 func sortBooksByRank(books []Book) {
-    sort.SliceStable(books, func(i, j int) bool {
-        ri, rj := books[i].Rank, books[j].Rank
+	sort.SliceStable(books, func(i, j int) bool {
+		ri, rj := books[i].Rank, books[j].Rank
 
-        if ri == 0 && rj != 0 {
-            return false
-        }
-        if ri != 0 && rj == 0 {
-            return true
-        }
-        return ri < rj
-    })
+		if ri == 0 && rj != 0 {
+			return false
+		}
+		if ri != 0 && rj == 0 {
+			return true
+		}
+		return ri < rj
+	})
 }
 
 func mapToStatCountSlice(m map[string]int) []StatCount {
