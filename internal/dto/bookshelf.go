@@ -40,26 +40,49 @@ func (b *Bookshelf) BooksByStatus() map[string][]Book {
 	return booksByStatus
 }
 
-func (b *Bookshelf) UpcomingBooks(limit int) map[string][]Book {
-	upcoming := make(map[string][]Book)
+func (b *Bookshelf) UpcomingBooks(limit int) (map[string][]Book, bool) {
+	hasUpcomingBooks := false
+	booksByStatus := map[string][]Book{
+		StatusReading:    {},
+		StatusToRead:     {},
+		StatusWishlisted: {},
+	}
 
 	for _, book := range b.Books {
-		if book.Status == StatusReading || book.Status == StatusToRead || book.Status == StatusWishlisted {
-			upcoming[book.Status] = append(upcoming[book.Status], book)
+		switch book.Status {
+		case StatusReading, StatusToRead, StatusWishlisted:
+			hasUpcomingBooks = true
+			booksByStatus[book.Status] = append(booksByStatus[book.Status], book)
 		}
 	}
 
-	sortBooksByRank(upcoming[StatusWishlisted])
+	sortBooksByRank(booksByStatus[StatusWishlisted])
 
-	if limit > 0 {
-		for key, books := range upcoming {
-			if len(books) > limit {
-				upcoming[key] = books[:limit]
-			}
+	if limit <= 0 {
+		return booksByStatus, hasUpcomingBooks
+	}
+
+	total := 0
+	upcomingBooks := make(map[string][]Book, len(booksByStatus))
+
+	// Fixed order to ensure deterministic limiting.
+	for _, status := range []string{StatusReading, StatusToRead, StatusWishlisted} {
+		books := booksByStatus[status]
+		if total >= limit {
+			break
+		}
+
+		remaining := limit - total
+		if len(books) > remaining {
+			upcomingBooks[status] = books[:remaining]
+			total += remaining
+		} else {
+			upcomingBooks[status] = books
+			total += len(books)
 		}
 	}
 
-	return upcoming
+	return upcomingBooks, hasUpcomingBooks
 }
 
 func (b *Bookshelf) BookshelfedBooks() map[string][]Book {
