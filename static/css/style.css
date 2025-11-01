@@ -163,7 +163,13 @@ nav.primary-nav a.cta {
   height: 38px;
   align-items: center;
   justify-content: center;
-  background: transparent;
+  border-radius: 8px;
+}
+
+.nav-toggle-label:hover,
+.nav-toggle-label:focus {
+  background: var(--border);
+  outline: none;
 }
 
 .nav-toggle-label .hamburger {
@@ -205,6 +211,13 @@ nav.primary-nav a.cta {
   height: 32px;
   align-items: center;
   justify-content: center;
+  border-radius: 8px;
+}
+
+.theme-toggle-label:hover,
+.theme-toggle-label:focus {
+  background: var(--border);
+  outline: none;
 }
 
 #theme-toggle+.theme-toggle-label .dark {
