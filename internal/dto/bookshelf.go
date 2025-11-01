@@ -28,12 +28,19 @@ func LoadBookshelfFromFile(path string) (*Bookshelf, error) {
 	return &bookshelf, nil
 }
 
-func (b *Bookshelf) BooksByStatus() map[string][]Book {
-	booksByStatus := make(map[string][]Book)
-	books := append([]Book(nil), b.Books...) // clone to preserve original order
+func (b *Bookshelf) bookById() map[string]Book {
+	bookById := make(map[string]Book, len(b.Books))
+	for _, book := range b.Books {
+		bookById[book.Id] = book
+	}
 
-	sortBooksAlphabetically(books)
-	for _, book := range books {
+	return bookById
+}
+
+func (b *Bookshelf) booksByStatus() map[string][]Book {
+	booksByStatus := make(map[string][]Book)
+
+	for _, book := range b.Books {
 		booksByStatus[book.Status] = append(booksByStatus[book.Status], book)
 	}
 
@@ -42,17 +49,13 @@ func (b *Bookshelf) BooksByStatus() map[string][]Book {
 
 func (b *Bookshelf) UpcomingBooks(limit int) (map[string][]Book, bool) {
 	hasUpcomingBooks := false
-	booksByStatus := map[string][]Book{
-		StatusReading:    {},
-		StatusToRead:     {},
-		StatusWishlisted: {},
-	}
+	booksByStatus := b.booksByStatus()
+	delete(booksByStatus, StatusFinished) // Finished books are not part of the upcoming books
 
-	for _, book := range b.Books {
-		switch book.Status {
-		case StatusReading, StatusToRead, StatusWishlisted:
+	for _, books := range booksByStatus {
+		if len(books) > 0 {
 			hasUpcomingBooks = true
-			booksByStatus[book.Status] = append(booksByStatus[book.Status], book)
+			break
 		}
 	}
 
@@ -85,20 +88,21 @@ func (b *Bookshelf) UpcomingBooks(limit int) (map[string][]Book, bool) {
 	return upcomingBooks, hasUpcomingBooks
 }
 
-func (b *Bookshelf) BookshelfedBooks() map[string][]Book {
-	bookshelfedBooks := b.BooksByStatus()
-	delete(bookshelfedBooks, StatusWishlisted) // Wishlisted books are not part of the bookshelf
+func (b *Bookshelf) BookshelvedBooks() map[string][]Book {
+	bookshelvedBooks := b.booksByStatus()
+	delete(bookshelvedBooks, StatusWishlisted) // Wishlisted books are not considered as bookshelved
 
-	return bookshelfedBooks
+	for _, books := range bookshelvedBooks {
+		sortBooksAlphabetically(books)
+	}
+
+	return bookshelvedBooks
 }
 
 func (b *Bookshelf) BookCollections() []ResolvedCollection {
-	bookByID := make(map[string]Book, len(b.Books))
-	for _, book := range b.Books {
-		bookByID[book.Id] = book
-	}
-
+	bookByID := b.bookById()
 	resolved := make([]ResolvedCollection, 0, len(b.Collections))
+
 	for _, c := range b.Collections {
 		var books []Book
 		for i, id := range c.Books {
@@ -119,7 +123,7 @@ func (b *Bookshelf) BookCollections() []ResolvedCollection {
 }
 
 func (b *Bookshelf) WishlistedBooks() []Book {
-	wishlistedBooks := b.BooksByStatus()[StatusWishlisted]
+	wishlistedBooks := b.booksByStatus()[StatusWishlisted]
 	sortBooksByRank(wishlistedBooks)
 
 	return wishlistedBooks
@@ -162,25 +166,29 @@ func (b *Bookshelf) Stats() Stats {
 			totalPages += book.Pages
 		}
 
+		// Total rating
 		if book.Rating > 0 {
 			totalRating += book.Rating
 			ratedBooks++
 		}
 
-		// Books by Genre
+		// Books by genre
 		if book.Genre != "" {
 			genreCount[book.Genre]++
 		}
 
-		// Books by Language
+		// Books by language
 		if book.Language != "" {
 			languageCount[book.Language]++
 		}
 	}
 
+	// Average pages
 	if stats.TotalBooks > 0 {
 		stats.AveragePages = float64(totalPages) / float64(stats.TotalBooks)
 	}
+
+	// Average rating
 	if ratedBooks > 0 {
 		stats.AverageRating = totalRating / float64(ratedBooks)
 	}
