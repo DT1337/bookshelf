@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"sort"
+	"time"
 )
 
 const (
@@ -142,6 +143,8 @@ func (b *Bookshelf) Stats() Stats {
 	languageCount := make(map[string]int)
 	statusCount := make(map[string]int)
 
+	currentYear := time.Now().Year()
+
 	for _, book := range b.Books {
 		statusCount[book.Status]++
 
@@ -156,10 +159,26 @@ func (b *Bookshelf) Stats() Stats {
 		// Total number of books finished
 		if book.Status == StatusFinished {
 			stats.BooksFinished++
+
+			// Check if the book was finished this year
+			if book.Progress.DateFinished != "" {
+				finishedYear, err := getYearFromDate(book.Progress.DateFinished)
+				if err == nil && finishedYear == currentYear {
+					stats.BooksFinishedThisYear++
+				}
+			}
 		}
 
 		// Total number of pages read
 		stats.PagesRead += book.Progress.PagesRead
+
+		// Calculate pages read this year
+		if book.Progress.DateStarted != "" && book.Progress.PagesRead > 0 {
+			startYear, err := getYearFromDate(book.Progress.DateStarted)
+			if err == nil && startYear == currentYear {
+				stats.PagesReadThisYear += book.Progress.PagesRead
+			}
+		}
 
 		// Total number of pages
 		if book.Pages > 0 {
@@ -240,4 +259,12 @@ func topN(s []StatCount, n int) []StatCount {
 		return s[:n]
 	}
 	return s
+}
+
+func getYearFromDate(date string) (int, error) {
+	parsedDate, err := time.Parse("2006-01-02", date)
+	if err != nil {
+		return 0, err
+	}
+	return parsedDate.Year(), nil
 }

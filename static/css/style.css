@@ -479,20 +479,30 @@ aside .meta-list {
   gap: .6rem;
 }
 
+.meta-item,
+.meta-item-list {
+  padding: .6rem;
+  background: var(--semi-transparent-1);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
 .meta-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: .6rem;
-  background: var(--semi-transparent-1);
-  border-radius: 10px;
+}
+
+.meta-item-list {
+  display: flex;
+  flex-direction: column;
 }
 
 .meta-item .key,
-.meta-item-list .entry .key {
+.meta-item-list .key {
   font-size: 1rem;
-  font-weight: 600;
-  color: var(--muted);
 }
 
 .meta-item .value,
@@ -500,14 +510,6 @@ aside .meta-list {
   font-size: .9rem;
   font-weight: 700;
   color: var(--accent-2);
-}
-
-.meta-item-list {
-  display: flex;
-  flex-direction: column;
-  padding: .6rem;
-  background: var(--semi-transparent-1);
-  border-radius: 10px;
 }
 
 .meta-item-list .category {
