@@ -290,13 +290,13 @@
       "cover": "",
       "link": "https://openlibrary.org/works/OL2163623W/Life_the_Universe_and_Everything?edition=key:/books/OL29474404M",
       "date_added": "2025-09-22",
-      "status": "reading",
+      "status": "finished",
       "progress": {
         "date_started": "2025-10-22",
-        "date_finished": "",
-        "pages_read": 158
+        "date_finished": "2025-11-02",
+        "pages_read": 199
       },
-      "rating": null,
+      "rating": 3.8,
       "collections": ["2025"]
     },
     {
@@ -313,14 +313,14 @@
       "cover": "https://covers.openlibrary.org/b/id/11189110-L.jpg",
       "link": "https://openlibrary.org/works/OL2163719W/So_long_and_thanks_for_all_the_fish?edition=key:/books/OL29474405M",
       "date_added": "2025-09-22",
-      "status": "to read",
+      "status": "reading",
       "progress": {
         "date_started": "",
         "date_finished": "",
         "pages_read": 0
       },
       "rating": null,
-      "collections": ["2025"]
+      "collections": null
     },
     {
       "id": "mostly-harmless",
@@ -343,7 +343,7 @@
         "pages_read": 0
       },
       "rating": null,
-      "collections": ["2025"]
+      "collections": null
     },
     {
       "id": "brave-new-world",
@@ -366,7 +366,8 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null
+      "rating": null,
+      "collections": null
     },
     {
       "id": "ready-player-one",
@@ -389,7 +390,8 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null
+      "rating": null,
+      "collections": null
     },
         {
       "id": "solaris",
@@ -412,7 +414,8 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null
+      "rating": null,
+      "collections": null
     },
     {
       "id": "contact",
@@ -435,7 +438,8 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null
+      "rating": null,
+      "collections": null
     },
     {
       "id": "the-outer-limits-of-reason",
@@ -458,7 +462,8 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null
+      "rating": null,
+      "collections": null
     }
   ],
   "collections": [
@@ -477,7 +482,8 @@
         "animal-farm",
         "algorithms-to-live-by",
         "the-hitchhikers-guide-to-the-galaxy",
-        "the-restaurant-at-the-end-of-the-universe"
+        "the-restaurant-at-the-end-of-the-universe",
+        "life-the-universe-and-everything"
       ]
     }
   ]
