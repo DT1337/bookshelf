@@ -313,14 +313,14 @@
       "cover": "https://covers.openlibrary.org/b/id/11189110-L.jpg",
       "link": "https://openlibrary.org/works/OL2163719W/So_long_and_thanks_for_all_the_fish?edition=key:/books/OL29474405M",
       "date_added": "2025-09-22",
-      "status": "reading",
+      "status": "finished",
       "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
+        "date_started": "2025-11-05",
+        "date_finished": "2025-11-11",
+        "pages_read": 167
       },
-      "rating": null,
-      "collections": null
+      "rating": 3.7,
+      "collections": ["2025"]
     },
     {
       "id": "mostly-harmless",
@@ -336,7 +336,7 @@
       "cover": "https://covers.openlibrary.org/b/id/12709843-L.jpg",
       "link": "https://openlibrary.org/books/OL28344154M/Mostly_Harmless",
       "date_added": "2025-09-22",
-      "status": "to read",
+      "status": "reading",
       "progress": {
         "date_started": "",
         "date_finished": "",
@@ -483,7 +483,8 @@
         "algorithms-to-live-by",
         "the-hitchhikers-guide-to-the-galaxy",
         "the-restaurant-at-the-end-of-the-universe",
-        "life-the-universe-and-everything"
+        "life-the-universe-and-everything",
+        "so-long-and-thanks-for-all-the-fish"
       ]
     }
   ]
