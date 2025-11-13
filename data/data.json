@@ -16,8 +16,8 @@
       "date_added": "2024-12-24",
       "status": "finished",
       "progress": {
-        "date_started": "",
-        "date_finished": "",
+        "date_started": "2025",
+        "date_finished": "2025",
         "pages_read": 297
       },
       "rating": 4.5,
@@ -39,8 +39,8 @@
       "date_added": "2024-12-24",
       "status": "finished",
       "progress": {
-        "date_started": "",
-        "date_finished": "",
+        "date_started": "2025",
+        "date_finished": "2025",
         "pages_read": 292
       },
       "rating": 3.8,
@@ -181,7 +181,7 @@
         "date_finished": "2025-09-02",
         "pages_read": 227
       },
-      "rating": null,
+      "rating": 3.9,
       "collections": ["2025"]
     },
     {
@@ -204,7 +204,7 @@
         "date_finished": "2025-09-06",
         "pages_read": 95
       },
-      "rating": null,
+      "rating": 4.3,
       "collections": ["2025"]
     },
     {
@@ -234,7 +234,7 @@
       "id": "the-hitchhikers-guide-to-the-galaxy",
       "isbn": "9781529034523",
       "title": "The Hitchhiker's Guide to the Galaxy",
-      "subtitle": "",
+      "subtitle": "The Hitchhiker’s Guide to the Galaxy #1",
       "authors": ["Douglas Adams"],
       "year": 1979,
       "language": "en",
@@ -257,7 +257,7 @@
       "id": "the-restaurant-at-the-end-of-the-universe",
       "isbn": "9781529034530",
       "title": "The Restaurant at the End of the Universe",
-      "subtitle": "",
+      "subtitle": "The Hitchhiker’s Guide to the Galaxy #2",
       "authors": ["Douglas Adams"],
       "year": 1980,
       "language": "en",
@@ -280,7 +280,7 @@
       "id": "life-the-universe-and-everything",
       "isbn": "9781529034547",
       "title": "Life, the Universe and Everything",
-      "subtitle": "",
+      "subtitle": "The Hitchhiker’s Guide to the Galaxy #3",
       "authors": ["Douglas Adams"],
       "year": 1982,
       "language": "en",
@@ -288,22 +288,22 @@
       "genre": "science fiction",
       "tags": ["comedy", "space", "humor"],
       "cover": "",
-      "link": "",
+      "link": "https://openlibrary.org/works/OL2163623W/Life_the_Universe_and_Everything?edition=key:/books/OL29474404M",
       "date_added": "2025-09-22",
-      "status": "reading",
+      "status": "finished",
       "progress": {
         "date_started": "2025-10-22",
-        "date_finished": "",
-        "pages_read": 98
+        "date_finished": "2025-11-02",
+        "pages_read": 199
       },
-      "rating": null,
+      "rating": 3.8,
       "collections": ["2025"]
     },
     {
       "id": "so-long-and-thanks-for-all-the-fish",
       "isbn": "9781529034554",
       "title": "So Long and Thanks for All the Fish",
-      "subtitle": "",
+      "subtitle": "The Hitchhiker’s Guide to the Galaxy #4",
       "authors": ["Douglas Adams"],
       "year": 1984,
       "language": "en",
@@ -313,20 +313,20 @@
       "cover": "https://covers.openlibrary.org/b/id/11189110-L.jpg",
       "link": "https://openlibrary.org/works/OL2163719W/So_long_and_thanks_for_all_the_fish?edition=key:/books/OL29474405M",
       "date_added": "2025-09-22",
-      "status": "to read",
+      "status": "finished",
       "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
+        "date_started": "2025-11-05",
+        "date_finished": "2025-11-11",
+        "pages_read": 167
       },
-      "rating": null,
+      "rating": 3.7,
       "collections": ["2025"]
     },
     {
       "id": "mostly-harmless",
       "isbn": "9781529034561",
       "title": "Mostly Harmless",
-      "subtitle": "",
+      "subtitle": "The Hitchhiker’s Guide to the Galaxy #5",
       "authors": ["Douglas Adams"],
       "year": 1992,
       "language": "en",
@@ -336,14 +336,14 @@
       "cover": "https://covers.openlibrary.org/b/id/12709843-L.jpg",
       "link": "https://openlibrary.org/books/OL28344154M/Mostly_Harmless",
       "date_added": "2025-09-22",
-      "status": "to read",
+      "status": "reading",
       "progress": {
         "date_started": "",
         "date_finished": "",
         "pages_read": 0
       },
       "rating": null,
-      "collections": ["2025"]
+      "collections": null
     },
     {
       "id": "brave-new-world",
@@ -358,7 +358,7 @@
       "tags": ["fiction", "social critism"],
       "cover": "https://covers.openlibrary.org/b/id/11270166-L.jpg",
       "link": "https://openlibrary.org/works/OL64365W/Brave_New_World?edition=key:/books/OL9273490M",
-      "date_added": "2025-10-29",
+      "date_added": "",
       "status": "wishlisted",
       "rank": 1,
       "progress": {
@@ -366,122 +366,8 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null
-    },
-    {
-      "id": "do-androids-dream-of-electric-sheep",
-      "isbn": "",
-      "title": "Do Androids Dream of Electric Sheep?",
-      "subtitle": "",
-      "authors": ["Philip K. Dick"],
-      "year": 1968,
-      "language": "en",
-      "pages": null,
-      "genre": "science fiction",
-      "tags": ["cyberpunk"],
-      "cover": "",
-      "link": "",
-      "date_added": "2025-10-29",
-      "status": "wishlisted",
-      "rank": 5,
-      "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
-      },
-      "rating": null
-    },
-    {
-      "id": "neuromancer",
-      "isbn": "9780441569595",
-      "title": "Neuromancer",
-      "subtitle": "",
-      "authors": ["William Gibson"],
-      "year": 1984,
-      "language": "en",
-      "pages": null,
-      "genre": "science fiction",
-      "tags": ["cyberpunk"],
-      "cover": "",
-      "link": "",
-      "date_added": "2025-10-29",
-      "status": "wishlisted",
-      "rank": 6,
-      "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
-      },
-      "rating": null
-    },
-    {
-      "id": "count-zero",
-      "isbn": "9780441013678",
-      "title": "Count Zero",
-      "subtitle": "",
-      "authors": ["William Gibson"],
-      "year": 1986,
-      "language": "en",
-      "pages": null,
-      "genre": "science fiction",
-      "tags": ["cyberpunk"],
-      "cover": "",
-      "link": "",
-      "date_added": "2025-10-29",
-      "status": "wishlisted",
-      "rank": 7,
-      "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
-      },
-      "rating": null
-    },
-    {
-      "id": "mona-lisa-overdrive",
-      "isbn": "9798217093960",
-      "title": "Mona Lisa Overdrive",
-      "subtitle": "",
-      "authors": ["William Gibson"],
-      "year": 1988,
-      "language": "en",
-      "pages": null,
-      "genre": "science fiction",
-      "tags": ["cyberpunk"],
-      "cover": "",
-      "link": "",
-      "date_added": "2025-10-29",
-      "status": "wishlisted",
-      "rank": 8,
-      "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
-      },
-      "rating": null
-    },
-    {
-      "id": "solaris",
-      "isbn": "9780571311576",
-      "title": "Solaris",
-      "subtitle": "",
-      "authors": ["Stanislaw Lem"],
-      "year": 1961,
-      "language": "en",
-      "pages": null,
-      "genre": "science fiction",
-      "tags": ["space", "philosophy"],
-      "cover": "https://covers.openlibrary.org/b/id/10116589-L.jpg",
-      "link": "https://openlibrary.org/works/OL109524W/Solaris?edition=key:/books/OL28179710M",
-      "date_added": "2025-10-29",
-      "status": "wishlisted",
-      "rank": 3,
-      "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
-      },
-      "rating": null
+      "rating": null,
+      "collections": null
     },
     {
       "id": "ready-player-one",
@@ -496,7 +382,7 @@
       "tags": ["dystopia", "pop culture fiction", "video games"],
       "cover": "https://covers.openlibrary.org/b/id/8270105-L.jpg",
       "link": "https://openlibrary.org/books/OL24842593M/Ready_Player_One",
-      "date_added": "2025-10-29",
+      "date_added": "",
       "status": "wishlisted",
       "rank": 2,
       "progress": {
@@ -504,7 +390,32 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null
+      "rating": null,
+      "collections": null
+    },
+        {
+      "id": "solaris",
+      "isbn": "9780571311576",
+      "title": "Solaris",
+      "subtitle": "",
+      "authors": ["Stanislaw Lem"],
+      "year": 1961,
+      "language": "en",
+      "pages": null,
+      "genre": "science fiction",
+      "tags": ["space", "philosophy"],
+      "cover": "https://covers.openlibrary.org/b/id/10116589-L.jpg",
+      "link": "https://openlibrary.org/works/OL109524W/Solaris?edition=key:/books/OL28179710M",
+      "date_added": "",
+      "status": "wishlisted",
+      "rank": 3,
+      "progress": {
+        "date_started": "",
+        "date_finished": "",
+        "pages_read": 0
+      },
+      "rating": null,
+      "collections": null
     },
     {
       "id": "contact",
@@ -519,7 +430,7 @@
       "tags": ["space", "astronomy", "alien"],
       "cover": "https://covers.openlibrary.org/b/id/8798315-L.jpg",
       "link": "https://openlibrary.org/works/OL2950903W/Contact?edition=key:/books/OL27333701M",
-      "date_added": "2025-10-30",
+      "date_added": "",
       "status": "wishlisted",
       "rank": 4,
       "progress": {
@@ -527,7 +438,32 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null
+      "rating": null,
+      "collections": null
+    },
+    {
+      "id": "the-outer-limits-of-reason",
+      "isbn": "9780262529846",
+      "title": "The Outer Limits of Reason",
+      "subtitle": "What Science, Mathematics, and Logic Cannot Tell Us",
+      "authors": ["Noson S. Yanofsky"],
+      "year": 2013,
+      "language": "en",
+      "pages": null,
+      "genre": "non-fiction",
+      "tags": ["science", "philosophy", "mathematics", "physics", "logic"],
+      "cover": "",
+      "link": "https://openlibrary.org/works/OL21593212W/Outer_Limits_of_Reason?edition=key:/books/OL29316428M",
+      "date_added": "",
+      "status": "wishlisted",
+      "rank": 5,
+      "progress": {
+        "date_started": "",
+        "date_finished": "",
+        "pages_read": 0
+      },
+      "rating": null,
+      "collections": null
     }
   ],
   "collections": [
@@ -546,7 +482,9 @@
         "animal-farm",
         "algorithms-to-live-by",
         "the-hitchhikers-guide-to-the-galaxy",
-        "the-restaurant-at-the-end-of-the-universe"
+        "the-restaurant-at-the-end-of-the-universe",
+        "life-the-universe-and-everything",
+        "so-long-and-thanks-for-all-the-fish"
       ]
     }
   ]

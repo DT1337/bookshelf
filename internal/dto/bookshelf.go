@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"os"
 	"sort"
+	"time"
 )
 
 const (
@@ -28,55 +29,81 @@ func LoadBookshelfFromFile(path string) (*Bookshelf, error) {
 	return &bookshelf, nil
 }
 
-func (b *Bookshelf) BooksByStatus() map[string][]Book {
-	booksByStatus := make(map[string][]Book)
-	books := append([]Book(nil), b.Books...) // clone to preserve original order
+func (b *Bookshelf) bookById() map[string]Book {
+	bookById := make(map[string]Book, len(b.Books))
+	for _, book := range b.Books {
+		bookById[book.Id] = book
+	}
 
-	sortBooksAlphabetically(books)
-	for _, book := range books {
+	return bookById
+}
+
+func (b *Bookshelf) booksByStatus() map[string][]Book {
+	booksByStatus := make(map[string][]Book)
+
+	for _, book := range b.Books {
 		booksByStatus[book.Status] = append(booksByStatus[book.Status], book)
 	}
 
 	return booksByStatus
 }
 
-func (b *Bookshelf) UpcomingBooks(limit int) map[string][]Book {
-	upcoming := map[string][]Book{
-		StatusReading: {},
-		StatusToRead:  {},
-	}
+func (b *Bookshelf) UpcomingBooks(limit int) (map[string][]Book, bool) {
+	hasUpcomingBooks := false
+	booksByStatus := b.booksByStatus()
+	delete(booksByStatus, StatusFinished) // Finished books are not part of the upcoming books
 
-	for _, book := range b.Books {
-		if book.Status == StatusReading || book.Status == StatusToRead {
-			upcoming[book.Status] = append(upcoming[book.Status], book)
+	for _, books := range booksByStatus {
+		if len(books) > 0 {
+			hasUpcomingBooks = true
+			break
 		}
 	}
 
-	if limit > 0 {
-		for key, books := range upcoming {
-			if len(books) > limit {
-				upcoming[key] = books[:limit]
-			}
+	sortBooksByRank(booksByStatus[StatusWishlisted])
+
+	if limit <= 0 {
+		return booksByStatus, hasUpcomingBooks
+	}
+
+	total := 0
+	upcomingBooks := make(map[string][]Book, len(booksByStatus))
+
+	// Fixed order to ensure deterministic limiting.
+	for _, status := range []string{StatusReading, StatusToRead, StatusWishlisted} {
+		books := booksByStatus[status]
+		if total >= limit {
+			break
+		}
+
+		remaining := limit - total
+		if len(books) > remaining {
+			upcomingBooks[status] = books[:remaining]
+			total += remaining
+		} else {
+			upcomingBooks[status] = books
+			total += len(books)
 		}
 	}
 
-	return upcoming
+	return upcomingBooks, hasUpcomingBooks
 }
 
-func (b *Bookshelf) BookshelfedBooks() map[string][]Book {
-	bookshelfedBooks := b.BooksByStatus()
-	delete(bookshelfedBooks, StatusWishlisted) // Wishlisted books are not part of the bookshelf
+func (b *Bookshelf) BookshelvedBooks() map[string][]Book {
+	bookshelvedBooks := b.booksByStatus()
+	delete(bookshelvedBooks, StatusWishlisted) // Wishlisted books are not considered as bookshelved
 
-	return bookshelfedBooks
+	for _, books := range bookshelvedBooks {
+		sortBooksAlphabetically(books)
+	}
+
+	return bookshelvedBooks
 }
 
 func (b *Bookshelf) BookCollections() []ResolvedCollection {
-	bookByID := make(map[string]Book, len(b.Books))
-	for _, book := range b.Books {
-		bookByID[book.Id] = book
-	}
-
+	bookByID := b.bookById()
 	resolved := make([]ResolvedCollection, 0, len(b.Collections))
+
 	for _, c := range b.Collections {
 		var books []Book
 		for i, id := range c.Books {
@@ -97,7 +124,7 @@ func (b *Bookshelf) BookCollections() []ResolvedCollection {
 }
 
 func (b *Bookshelf) WishlistedBooks() []Book {
-	wishlistedBooks := b.BooksByStatus()[StatusWishlisted]
+	wishlistedBooks := b.booksByStatus()[StatusWishlisted]
 	sortBooksByRank(wishlistedBooks)
 
 	return wishlistedBooks
@@ -112,44 +139,82 @@ func (b *Bookshelf) Stats() Stats {
 	var totalPages int
 	var totalRating float64
 	var ratedBooks int
-	statusCount := make(map[string]int)
-	languageCount := make(map[string]int)
 	genreCount := make(map[string]int)
+	languageCount := make(map[string]int)
+	statusCount := make(map[string]int)
+
+	currentYear := time.Now().Year()
 
 	for _, book := range b.Books {
+		statusCount[book.Status]++
+
+		// Wishlisted books are excluded
+		if book.Status == StatusWishlisted {
+			continue
+		}
+
+		// Total number of books in library
 		stats.TotalBooks++
 
+		// Total number of books finished
 		if book.Status == StatusFinished {
 			stats.BooksFinished++
+
+			// Check if the book was finished this year
+			if book.Progress.DateFinished != "" {
+				finishedYear, err := getYearFromDate(book.Progress.DateFinished)
+				if err == nil && finishedYear == currentYear {
+					stats.BooksFinishedThisYear++
+				}
+			}
 		}
+
+		// Total number of pages read
 		stats.PagesRead += book.Progress.PagesRead
-		if book.Rating > 0 {
-			totalRating += book.Rating
-			ratedBooks++
+
+		// Calculate pages read this year
+		if book.Progress.DateStarted != "" && book.Progress.PagesRead > 0 {
+			startYear, err := getYearFromDate(book.Progress.DateStarted)
+			if err == nil && startYear == currentYear {
+				stats.PagesReadThisYear += book.Progress.PagesRead
+			}
 		}
+
+		// Total number of pages
 		if book.Pages > 0 {
 			totalPages += book.Pages
 		}
 
-		statusCount[book.Status]++
-		if book.Language != "" {
-			languageCount[book.Language]++
+		// Total rating
+		if book.Rating > 0 {
+			totalRating += book.Rating
+			ratedBooks++
 		}
+
+		// Books by genre
 		if book.Genre != "" {
 			genreCount[book.Genre]++
 		}
+
+		// Books by language
+		if book.Language != "" {
+			languageCount[book.Language]++
+		}
 	}
 
+	// Average pages
 	if stats.TotalBooks > 0 {
 		stats.AveragePages = float64(totalPages) / float64(stats.TotalBooks)
 	}
+
+	// Average rating
 	if ratedBooks > 0 {
 		stats.AverageRating = totalRating / float64(ratedBooks)
 	}
 
 	stats.TopGenres = topN(mapToStatCountSlice(genreCount), 3)
-	stats.BooksByStatus = mapToStatCountSlice(statusCount)
 	stats.BooksByLanguage = mapToStatCountSlice(languageCount)
+	stats.BooksByStatus = mapToStatCountSlice(statusCount)
 
 	return stats
 }
@@ -162,7 +227,15 @@ func sortBooksAlphabetically(books []Book) {
 
 func sortBooksByRank(books []Book) {
 	sort.SliceStable(books, func(i, j int) bool {
-		return books[i].Rank < books[j].Rank
+		ri, rj := books[i].Rank, books[j].Rank
+
+		if ri == 0 && rj != 0 {
+			return false
+		}
+		if ri != 0 && rj == 0 {
+			return true
+		}
+		return ri < rj
 	})
 }
 
@@ -186,4 +259,20 @@ func topN(s []StatCount, n int) []StatCount {
 		return s[:n]
 	}
 	return s
+}
+
+func getYearFromDate(date string) (int, error) {
+	// Try to parse the date in "yyyy-mm-dd" format first
+	parsedDate, err := time.Parse("2006-01-02", date)
+	if err == nil {
+		return parsedDate.Year(), nil
+	}
+
+	// If the full year parse fails, try just the year "yyyy" format
+	parsedDate, err = time.Parse("2006", date)
+	if err != nil {
+		return 0, err
+	}
+
+	return parsedDate.Year(), nil
 }

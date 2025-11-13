@@ -35,35 +35,56 @@
         <p class="muted small">A snapshot of my bookshelf by the numbers.</p>
       </header>
       <div class="meta-list">
-        <div class="meta-item"><h3>Total books</h3><span class="small highlighted">{{ .Stats.TotalBooks }}</span></div>
-        <div class="meta-item"><h3>Books finished</h3><span class="small highlighted">{{ .Stats.BooksFinished }}</span></div>
-        <div class="meta-item"><h3>Pages read</h3><span class="small highlighted">{{ .Stats.PagesRead }}</span></div>
-        <div class="meta-item"><h3>Average pages per book</h3><span class="small highlighted">{{ printf "%.0f" .Stats.AveragePages }}</span></div>
-        <div class="meta-item"><h3>Average rating</h3><span class="small highlighted">{{printf "%.2f" .Stats.AverageRating}}</span></div>
+        <div class="meta-item">
+          <h3 class="key">Total books</h3>
+          <div><span class="value">{{ .Stats.TotalBooks }}</span></div>
+        </div>
+        <div class="meta-item">
+          <h3 class="key">Books finished</h3>
+          <div>
+            <span class="value">{{ .Stats.BooksFinished }}</span>
+            (<span class="value">{{ .Stats.BooksFinishedThisYear }}</span>)
+          </div>
+        </div>
+        <div class="meta-item">
+          <h3 class="key">Pages read</h3>
+          <div>
+            <span class="value">{{ .Stats.PagesRead }}</span>
+            (<span class="value">{{ .Stats.PagesReadThisYear }}</span>)
+          </div>
+        </div>
+        <div class="meta-item">
+          <h3 class="key">Average pages per book</h3>
+          <div><span class="value">{{ printf "%.0f" .Stats.AveragePages }}</span></div>
+        </div>
+        <div class="meta-item">
+          <h3 class="key">Average rating</h3>
+          <div><span class="value">{{printf "%.2f" .Stats.AverageRating}}</span></div>
+        </div>
         <div class="meta-item-list">
-          <h3>Top 3 Genres</h3>
+          <h3 class="category">Top 3 Genres</h3>
           {{range .Stats.TopGenres}}
             <div class="entry">
-              <span>{{ .Value }}</span>
-              <span class="small highlighted">{{ .Count }}</span>
+              <span class="key">{{ .Value }}</span>
+              <span class="value">{{ .Count }}</span>
             </div>
           {{ end }}
         </div>
         <div class="meta-item-list">
-          <h3>Books by Status</h3>
-          {{range .Stats.BooksByStatus }}
-            <div class="entry">
-              <span>{{ .Value }}</span>
-              <span class="small highlighted">{{ .Count }}</span>
-            </div>
-          {{ end }}
-        </div>
-        <div class="meta-item-list">
-          <h3>Books by Language</h3>
+          <h3 class="category">Books by Language</h3>
           {{range .Stats.BooksByLanguage }}
             <div class="entry">
-              <span>{{ .Value }}</span>
-              <span class="small highlighted">{{ .Count }}</span>
+              <span class="key">{{ .Value }}</span>
+              <span class="value">{{ .Count }}</span>
+            </div>
+          {{ end }}
+        </div>
+        <div class="meta-item-list">
+          <h3 class="category">Books by Status</h3>
+          {{range .Stats.BooksByStatus }}
+            <div class="entry">
+              <span class="key">{{ .Value }}</span>
+              <span class="value">{{ .Count }}</span>
             </div>
           {{ end }}
         </div>

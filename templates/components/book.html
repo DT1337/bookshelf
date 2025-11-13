@@ -3,44 +3,45 @@
     {{ if .Rank }}
       <span class="rank">{{ .Rank }}</span>
     {{ end }}
-    {{ $link := .Cover }}
-    {{ if not $link }}
-      {{ $link = printf "https://placehold.co/320x500/111111/9aa4b2?text=%s\\n%s" (urlquery .Title) (urlquery .Subtitle) }}
+    {{ if .Cover }}
+      <img src="{{ .Cover }}" alt="Cover of: {{ .Title }}">
+    {{ else }}
+      <div class="cover-placeholder">
+        {{ if .Title }}<span class="title">{{ .Title }}</span>{{ end }}
+        {{ if .Subtitle }}<span class="subtitle">{{ .Subtitle }}</span>{{ end }}
+      </div>
     {{ end}}
-    <img src="{{ $link }}" alt="Cover of: {{ .Title }}">
     <div class="book-details">
       <div class="book-info">
-        <div class="data">
-          <h3 class="title">{{ .Title }}</h3>
-          <p class="subtitle">{{ .Subtitle }}</p>
-          <p class="isbn">{{ .Isbn }}</p>
-          <div class="authors">
-            <ul>
-              {{ range .Authors }}
-                <li>{{ . }}</li>
-              {{ end }}
-            </ul>
-          </div>
-          <div class="meta">
-            <ul>
-              {{ if .Year }}<li>{{ .Year }}</li>{{ end }}
-              {{ if .Pages }}<li>{{ .Pages }} pages</li>{{ end }}
-              {{ if .Rating }}<li>★ {{printf "%.1f" .Rating }}</li>{{ end }}
-            </ul>
-          </div>
-        </div>
-        {{ if or .Progress.DateStarted .Progress.DateFinished }}
-          <div class="progress">
-            {{ if and .Progress.DateStarted .Progress.DateFinished }}
-              <span class="muted">Started:</span> {{ .Progress.DateStarted }}
-              <span class="muted">Finished:</span> {{ .Progress.DateFinished }}
-            {{ else if and .Progress.DateStarted (not .Progress.DateFinished) }}
-              <span class="muted">Started:</span> {{ .Progress.DateStarted }}
-              <span class="muted">Progress:</span> {{ .Progress.PagesRead }}/{{ .Pages }}
+        {{ if .Title }}<h3 class="title">{{ .Title }}</h3>{{ end }}
+        {{ if .Subtitle }}<p class="subtitle">{{ .Subtitle }}</p>{{ end }}
+        {{ if .Isbn }}<p class="isbn">ISBN: {{ .Isbn }}</p>{{ end }}
+        <div class="authors">
+          <ul>
+            {{ range .Authors }}
+              <li>{{ . }}</li>
             {{ end }}
-          </div>
-        {{ end }}
+          </ul>
+        </div>
+        <div class="meta">
+          <ul>
+            {{ if .Year }}<li>{{ .Year }}</li>{{ end }}
+            {{ if .Pages }}<li>{{ .Pages }} pages</li>{{ end }}
+            {{ if .Rating }}<li>★ {{printf "%.1f" .Rating }}</li>{{ end }}
+          </ul>
+        </div>
       </div>
+      {{ if or .Progress.DateStarted .Progress.DateFinished }}
+        <div class="book-progress">
+          {{ if and .Progress.DateStarted .Progress.DateFinished }}
+            <span class="muted">Started:</span> {{ .Progress.DateStarted }}
+            <span class="muted">Finished:</span> {{ .Progress.DateFinished }}
+          {{ else if and .Progress.DateStarted (not .Progress.DateFinished) }}
+            <span class="muted">Started:</span> {{ .Progress.DateStarted }}
+            <span class="muted">Progress:</span> {{ .Progress.PagesRead }}/{{ .Pages }}
+          {{ end }}
+        </div>
+      {{ end }}
       {{ if .Link }}
         <div class="book-actions">
           <a class="book-btn cta" href="{{ .Link }}" target="_blank">Link</a>

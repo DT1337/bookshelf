@@ -43,14 +43,16 @@ type Collection struct {
 // ----------------------------------------------
 
 type Stats struct {
-	TotalBooks      int
-	BooksFinished   int
-	PagesRead       int
-	AverageRating   float64
-	AveragePages    float64
-	TopGenres       []StatCount
-	BooksByStatus   []StatCount
-	BooksByLanguage []StatCount
+	TotalBooks            int
+	BooksFinished         int
+	BooksFinishedThisYear int
+	PagesRead             int
+	PagesReadThisYear     int
+	AverageRating         float64
+	AveragePages          float64
+	TopGenres             []StatCount
+	BooksByStatus         []StatCount
+	BooksByLanguage       []StatCount
 }
 
 type StatCount struct {

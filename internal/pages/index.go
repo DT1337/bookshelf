@@ -12,15 +12,7 @@ type indexPageData struct {
 }
 
 func RenderIndexPage(renderer *render.TemplateRenderer, bookshelf *dto.Bookshelf) error {
-	upcomingBooks := bookshelf.UpcomingBooks(3)
-
-	hasUpcomingBooks := false
-	for _, books := range upcomingBooks {
-		if len(books) > 0 {
-			hasUpcomingBooks = true
-			break
-		}
-	}
+	upcomingBooks, hasUpcomingBooks := bookshelf.UpcomingBooks(3)
 
 	data := indexPageData{
 		HasUpcomingBooks: hasUpcomingBooks,
