@@ -20,8 +20,7 @@
         "date_finished": "2025",
         "pages_read": 297
       },
-      "rating": 4.5,
-      "collections": ["2025"]
+      "rating": 4.5
     },
     {
       "id": "the-singularity-is-nearer",
@@ -43,8 +42,7 @@
         "date_finished": "2025",
         "pages_read": 292
       },
-      "rating": 3.8,
-      "collections": ["2025"]
+      "rating": 3.8
     },
     {
       "id": "1984",
@@ -66,8 +64,7 @@
         "date_finished": "2025-05-30",
         "pages_read": 336
       },
-      "rating": 4.6,
-      "collections": ["2025"]
+      "rating": 4.6
     },
     {
       "id": "project-hail-mary",
@@ -89,8 +86,7 @@
         "date_finished": "2025-06-07",
         "pages_read": 476
       },
-      "rating": 4.8,
-      "collections": ["2025"]
+      "rating": 4.8
     },
     {
       "id": "mickey7",
@@ -112,8 +108,7 @@
         "date_finished": "2025-06-30",
         "pages_read": 317
       },
-      "rating": 3.7,
-      "collections": ["2025"]
+      "rating": 3.7
     },
     {
       "id": "flatland",
@@ -135,8 +130,7 @@
         "date_finished": "2025-07-22",
         "pages_read": 100
       },
-      "rating": 4.0,
-      "collections": ["2025"]
+      "rating": 4.0
     },
     {
       "id": "the-pragmatic-programmer",
@@ -158,8 +152,7 @@
         "date_finished": "2025-08-25",
         "pages_read": 473
       },
-      "rating": 4.1,
-      "collections": ["2025"]
+      "rating": 4.1
     },
     {
       "id": "fahrenheit-451",
@@ -181,8 +174,7 @@
         "date_finished": "2025-09-02",
         "pages_read": 227
       },
-      "rating": 3.9,
-      "collections": ["2025"]
+      "rating": 3.9
     },
     {
       "id": "animal-farm",
@@ -204,8 +196,7 @@
         "date_finished": "2025-09-06",
         "pages_read": 95
       },
-      "rating": 4.3,
-      "collections": ["2025"]
+      "rating": 4.3
     },
     {
       "id": "algorithms-to-live-by",
@@ -227,8 +218,7 @@
         "date_finished": "2025-08-25",
         "pages_read": 398
       },
-      "rating": 3.8,
-      "collections": ["2025"]
+      "rating": 3.8
     },
     {
       "id": "the-hitchhikers-guide-to-the-galaxy",
@@ -250,8 +240,7 @@
         "date_finished": "2025-10-15",
         "pages_read": 180
       },
-      "rating": 4.2,
-      "collections": ["2025"]
+      "rating": 4.2
     },
     {
       "id": "the-restaurant-at-the-end-of-the-universe",
@@ -273,8 +262,7 @@
         "date_finished": "2025-10-21",
         "pages_read": 200
       },
-      "rating": 4.1,
-      "collections": ["2025"]
+      "rating": 4.1
     },
     {
       "id": "life-the-universe-and-everything",
@@ -296,8 +284,7 @@
         "date_finished": "2025-11-02",
         "pages_read": 199
       },
-      "rating": 3.8,
-      "collections": ["2025"]
+      "rating": 3.8
     },
     {
       "id": "so-long-and-thanks-for-all-the-fish",
@@ -319,8 +306,7 @@
         "date_finished": "2025-11-11",
         "pages_read": 167
       },
-      "rating": 3.7,
-      "collections": ["2025"]
+      "rating": 3.7
     },
     {
       "id": "mostly-harmless",
@@ -342,8 +328,7 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null,
-      "collections": null
+      "rating": null
     },
     {
       "id": "brave-new-world",
@@ -366,8 +351,7 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null,
-      "collections": null
+      "rating": null
     },
     {
       "id": "ready-player-one",
@@ -390,8 +374,7 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null,
-      "collections": null
+      "rating": null
     },
         {
       "id": "solaris",
@@ -414,8 +397,7 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null,
-      "collections": null
+      "rating": null
     },
     {
       "id": "contact",
@@ -438,8 +420,7 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null,
-      "collections": null
+      "rating": null
     },
     {
       "id": "the-outer-limits-of-reason",
@@ -462,8 +443,7 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null,
-      "collections": null
+      "rating": null
     }
   ],
   "collections": [
