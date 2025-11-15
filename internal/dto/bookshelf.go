@@ -6,6 +6,7 @@ import (
 	"os"
 	"sort"
 	"time"
+	"log"
 )
 
 const (
@@ -161,22 +162,22 @@ func (b *Bookshelf) Stats() Stats {
 			stats.BooksFinished++
 
 			// Check if the book was finished this year
-			if book.Progress.DateFinished != "" {
-				finishedYear, err := getYearFromDate(book.Progress.DateFinished)
-				if err == nil && finishedYear == currentYear {
+			if book.Status == StatusFinished {
+				finishedYear := getYearFromDate(book.Progress.DateFinished)
+				if finishedYear == currentYear {
 					stats.BooksFinishedThisYear++
 				}
 			}
 		}
 
 		// Total number of pages read
-		stats.PagesRead += book.Progress.PagesRead
+		stats.PagesRead += calculatePagesRead(book)
 
 		// Calculate pages read this year
-		if book.Progress.DateStarted != "" && book.Progress.PagesRead > 0 {
-			startYear, err := getYearFromDate(book.Progress.DateStarted)
-			if err == nil && startYear == currentYear {
-				stats.PagesReadThisYear += book.Progress.PagesRead
+		if book.Status != StatusToRead {
+			startYear := getYearFromDate(book.Progress.DateStarted)
+			if startYear == currentYear {
+				stats.PagesReadThisYear += calculatePagesRead(book)
 			}
 		}
 
@@ -261,18 +262,27 @@ func topN(s []StatCount, n int) []StatCount {
 	return s
 }
 
-func getYearFromDate(date string) (int, error) {
+func getYearFromDate(date string) int {
 	// Try to parse the date in "yyyy-mm-dd" format first
 	parsedDate, err := time.Parse("2006-01-02", date)
 	if err == nil {
-		return parsedDate.Year(), nil
+		return parsedDate.Year()
 	}
 
 	// If the full year parse fails, try just the year "yyyy" format
 	parsedDate, err = time.Parse("2006", date)
 	if err != nil {
-		return 0, err
+		log.Printf("Error getting year from date: %v", err)
+		return 0
 	}
 
-	return parsedDate.Year(), nil
+	return parsedDate.Year()
+}
+
+func calculatePagesRead(book Book) int {
+	if book.Status == StatusFinished {
+		return book.Pages
+	}
+
+	return book.Progress.PagesRead
 }
