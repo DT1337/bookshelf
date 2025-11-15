@@ -25,7 +25,6 @@ type Book struct {
 	Rank        int      `json:"rank"`
 	Progress    Progress `json:"progress"`
 	Rating      float64  `json:"rating"`
-	Collections []string `json:"collections"`
 }
 
 type Progress struct {
