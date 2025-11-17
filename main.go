@@ -28,7 +28,7 @@ func main() {
 		log.Fatalf("Failed to initialize template renderer: %v", err)
 	}
 
-	err = render.CopyStaticFiles("static", config.OutputPath)
+	err = renderer.CopyStaticFiles("static", config.OutputPath)
 	if err != nil {
 		log.Fatalf("Failed to copy static files: %v", err)
 	}

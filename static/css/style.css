@@ -637,6 +637,7 @@ footer.site-footer {
   }
 
   .books-grid {
+    gap: 4rem 0;
     grid-template-columns: 1fr;
   }
 
