@@ -10,6 +10,11 @@ import (
 	"unicode"
 )
 
+type TemplateRenderer struct {
+	config       TemplateRendererConfig
+	baseTemplate *template.Template
+}
+
 type TemplateRendererConfig struct {
 	TemplateType           string
 	TemplatesPath          string
@@ -17,11 +22,6 @@ type TemplateRendererConfig struct {
 	PageTemplatesPath      string
 	OutputPath             string
 	BaseTemplateName       string
-}
-
-type TemplateRenderer struct {
-	config       TemplateRendererConfig
-	baseTemplate *template.Template
 }
 
 type templateData struct {
@@ -55,16 +55,16 @@ func New(config TemplateRendererConfig) (*TemplateRenderer, error) {
 	return &TemplateRenderer{config: config, baseTemplate: baseTemplate}, nil
 }
 
-func (templateRenderer *TemplateRenderer) RenderToFile(templateName string, data any) error {
-	pageTemplate, err := templateRenderer.baseTemplate.Clone()
+func (r *TemplateRenderer) RenderToFile(templateName string, data any) error {
+	pageTemplate, err := r.baseTemplate.Clone()
 	if err != nil {
 		return err
 	}
 
 	templatePath := filepath.Join(
-		templateRenderer.config.TemplatesPath,
-		templateRenderer.config.PageTemplatesPath,
-		templateName+"."+templateRenderer.config.TemplateType,
+		r.config.TemplatesPath,
+		r.config.PageTemplatesPath,
+		templateName+"."+r.config.TemplateType,
 	)
 	_, err = pageTemplate.ParseFiles(templatePath)
 	if err != nil {
@@ -72,7 +72,7 @@ func (templateRenderer *TemplateRenderer) RenderToFile(templateName string, data
 	}
 
 	outputFileName := templateName + ".html"
-	outputPath := filepath.Join(templateRenderer.config.OutputPath, outputFileName)
+	outputPath := filepath.Join(r.config.OutputPath, outputFileName)
 
 	file, err := os.Create(outputPath)
 	if err != nil {
@@ -85,10 +85,10 @@ func (templateRenderer *TemplateRenderer) RenderToFile(templateName string, data
 		LastUpdated: time.Now().Format("2006-01-02"),
 	}
 
-	return pageTemplate.ExecuteTemplate(file, templateRenderer.config.BaseTemplateName, templateData)
+	return pageTemplate.ExecuteTemplate(file, r.config.BaseTemplateName, templateData)
 }
 
-func CopyStaticFiles(srcDir, dstDir string) error {
+func (r *TemplateRenderer) CopyStaticFiles(srcDir, dstDir string) error {
 	return filepath.Walk(srcDir, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
 			return err
