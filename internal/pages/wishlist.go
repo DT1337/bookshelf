@@ -14,5 +14,5 @@ func RenderWishlistPage(renderer *render.TemplateRenderer, bookshelf *dto.Booksh
 		Books: bookshelf.WishlistedBooks(),
 	}
 
-	return renderer.RenderToFile("wishlist", data)
+	return renderer.RenderToFile("wishlist", data, "wishlist")
 }

@@ -14,5 +14,5 @@ func RenderBookshelfPage(renderer *render.TemplateRenderer, bookshelf *dto.Books
 		Books: bookshelf.ShelvedBooks(),
 	}
 
-	return renderer.RenderToFile("bookshelf", data)
+	return renderer.RenderToFile("bookshelf", data, "bookshelf")
 }

@@ -14,5 +14,5 @@ func RenderCollectionsPage(renderer *render.TemplateRenderer, bookshelf *dto.Boo
 		Collections: bookshelf.BookCollections(),
 	}
 
-	return renderer.RenderToFile("collections", data)
+	return renderer.RenderToFile("collections", data, "collections")
 }
