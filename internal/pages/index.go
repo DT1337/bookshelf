@@ -20,5 +20,5 @@ func RenderIndexPage(renderer *render.TemplateRenderer, bookshelf *dto.Bookshelf
 		Stats:            bookshelf.Stats(),
 	}
 
-	return renderer.RenderToFile("index", data)
+	return renderer.RenderToFile("index", data, "index")
 }
