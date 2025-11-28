@@ -55,7 +55,7 @@ func New(config TemplateRendererConfig) (*TemplateRenderer, error) {
 	return &TemplateRenderer{config: config, baseTemplate: baseTemplate}, nil
 }
 
-func (r *TemplateRenderer) RenderToFile(templateName string, data any) error {
+func (r *TemplateRenderer) RenderToFile(templateName string, data any, outputName string) error {
 	pageTemplate, err := r.baseTemplate.Clone()
 	if err != nil {
 		return err
@@ -71,7 +71,7 @@ func (r *TemplateRenderer) RenderToFile(templateName string, data any) error {
 		return err
 	}
 
-	outputFileName := templateName + ".html"
+	outputFileName := outputName + ".html"
 	outputPath := filepath.Join(r.config.OutputPath, outputFileName)
 
 	file, err := os.Create(outputPath)

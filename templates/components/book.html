@@ -42,11 +42,9 @@
           {{ end }}
         </div>
       {{ end }}
-      {{ if .Link }}
-        <div class="book-actions">
-          <a class="book-btn cta" href="{{ .Link }}" target="_blank">Link</a>
-        </div>
-      {{ end }}
+      <div class="book-actions">
+        <a class="book-btn cta" href="{{ .Id }}.html">Link</a>
+      </div>
     </div>
   </article>
 {{ end }}

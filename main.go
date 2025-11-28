@@ -53,5 +53,10 @@ func main() {
 		log.Fatalf("Failed to render wishlist page: %v", err)
 	}
 
+	err = pages.RenderBookPages(renderer, bookshelf)
+	if err != nil {
+		log.Fatalf("Failed to render book pages: %v", err)
+	}
+
 	log.Println("Pages and static files rendered successfully!")
 }
