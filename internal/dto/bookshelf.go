@@ -1,6 +1,8 @@
 package dto
 
 import (
+	"crypto/md5"
+	"encoding/hex"
 	"encoding/json"
 	"fmt"
 	"math"
@@ -131,6 +133,30 @@ func (b *Bookshelf) BookCollections() []ResolvedCollection {
 	}
 
 	return resolved
+}
+
+func (b *Bookshelf) BookQuotes() []Quote {
+	var quotes []Quote
+
+	for _, book := range b.Books {
+		for _, quote := range book.Quotes {
+			quotes = append(quotes, Quote{
+				Quote:     quote,
+				Authors:   book.Authors,
+				BookTitle: book.Title,
+				Id:        book.Id,
+			})
+		}
+	}
+
+	// Sort quotes based on the hash of the quote text for a pseudo random (deterministic) order
+	sort.SliceStable(quotes, func(i, j int) bool {
+		hashI := md5.Sum([]byte(quotes[i].Quote))
+		hashJ := md5.Sum([]byte(quotes[j].Quote))
+		return hex.EncodeToString(hashI[:]) < hex.EncodeToString(hashJ[:])
+	})
+
+	return quotes
 }
 
 func (b *Bookshelf) WishlistedBooks() []Book {
