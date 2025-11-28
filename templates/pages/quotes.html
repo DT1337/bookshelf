@@ -1,0 +1,37 @@
+{{ define "content" }}
+  <section class="card" aria-labelledby="hero-heading">
+    <header>
+      <h2 id="hero-heading">Quotes</h2>
+      <p class="muted small">These are my favorite quotes from all the books I've read...</p>
+    </header>
+
+    {{ if .Quotes }}
+      <div class="book-quotes">
+        <ul class="quotes">
+          {{ range .Quotes }}
+            <li>
+              <blockquote class="book-quote">
+                {{ safeHTML .Quote }}
+                <div class="attribution">
+                  {{ if .Authors }}
+                    <ul class="authors">
+                      {{ range .Authors }}
+                        <li>{{ . }}</li>
+                      {{ end }}
+                    </ul>
+                  {{ end }}
+                  {{ if .BookTitle }}<a href="{{ .Id }}.html" class="title">{{ .BookTitle }}</a>{{ end }}
+                </div>
+              </blockquote>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    {{ else }}
+      <p class="empty-set">
+        Oh, quite empty here.<br>
+        Feel free to suggest me some good quotes from books I've read :)
+      </p>
+    {{ end }}
+  </section>
+{{ end }}

@@ -39,6 +39,9 @@ var funcMap = template.FuncMap{
 		r[0] = unicode.ToUpper(r[0])
 		return string(r)
 	},
+	"safeHTML": func(s string) template.HTML {
+		return template.HTML(strings.ReplaceAll(s, "\n", "<br>"))
+	},
 }
 
 func New(config TemplateRendererConfig) (*TemplateRenderer, error) {

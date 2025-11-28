@@ -556,14 +556,14 @@ main.site-main .layout-with-aside {
   line-height: 1.75;
 }
 
-.book-article .book-quotes ul {
+.book-quotes ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.book-article .book-quotes .book-quote {
+.book-quote {
   position: relative;
   padding: 1.2rem 20px 1.2rem 60px;
   background: var(--semi-transparent-2);
@@ -573,7 +573,7 @@ main.site-main .layout-with-aside {
   font-style: italic;
 }
 
-.book-article .book-quotes .book-quote::before {
+.book-quote::before {
   content: "\201C";
   position: absolute;
   left: 10px;
@@ -583,12 +583,47 @@ main.site-main .layout-with-aside {
   color: var(--accent-2);
 }
 
-.book-article .book-quotes .book-quote .author {
-  display: block;
-  margin-top: 1rem;
-  color: var(--accent-2);
+.book-quote .attribution {
+  display: flex;
+  flex-direction: row;
+  gap: 0 .5rem;
+  margin-top: .5rem;
+}
+
+.book-quote .authors {
+  position: relative;
+  margin-left: 1.5rem;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0 .5rem;
+  white-space: nowrap;
+}
+
+.book-quote .authors::before {
+  content: "—";
+  position: absolute;
+  top: 0;
+  left: -1.5rem;
+}
+
+.book-quote .authors li {
   font-style: normal;
   font-weight: bold;
+  color: var(--accent-2);
+}
+
+.book-quote .authors li:not(:last-child)::after {
+  content: "•";
+  margin-left: .5rem;
+  color: var(--muted);
+}
+
+.book-quote .title {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--muted);
 }
 
 .empty-set {
@@ -796,6 +831,14 @@ footer.site-footer {
   .book-article img,
   .book-article .cover-placeholder {
     margin: 0 auto;
+  }
+
+  .book-quote {
+    padding: 1.2rem 10px 1.2rem 40px;
+  }
+
+  .book-quote .attribution {
+    flex-direction: column;
   }
 
   footer.site-footer {
