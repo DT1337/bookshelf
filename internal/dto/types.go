@@ -26,18 +26,13 @@ type Book struct {
 	Progress  Progress `json:"progress"`
 	Rating    float64  `json:"rating"`
 	Review    []string `json:"review"`
-	Quotes    []Quote  `json:"quotes"`
+	Quotes    []string `json:"quotes"`
 }
 
 type Progress struct {
 	DateStarted  string `json:"date_started"`
 	DateFinished string `json:"date_finished"`
 	PagesRead    int    `json:"pages_read"`
-}
-
-type Quote struct {
-	Quote  []string `json:"quote"`
-	Author string   `json:"author"`
 }
 
 type Collection struct {
@@ -70,4 +65,11 @@ type ResolvedCollection struct {
 	Name        string
 	Description string
 	Books       []Book
+}
+
+type Quote struct {
+	Quote     string
+	Authors   []string
+	BookTitle string
+	Id        string
 }

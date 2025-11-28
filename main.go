@@ -48,6 +48,11 @@ func main() {
 		log.Fatalf("Failed to render collections page: %v", err)
 	}
 
+	err = pages.RenderQuotesPage(renderer, bookshelf)
+	if err != nil {
+		log.Fatalf("Failed to render quotes page: %v", err)
+	}
+
 	err = pages.RenderWishlistPage(renderer, bookshelf)
 	if err != nil {
 		log.Fatalf("Failed to render wishlist page: %v", err)
