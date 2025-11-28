@@ -70,7 +70,9 @@
               {{ range .Quotes }}
                 <li>
                   <blockquote class="book-quote">
-                    {{ .Quote }}
+                    {{ range .Quote }}
+                      <p>{{ . }}</p>
+                    {{ end }}
                     {{ if .Author }}<span class="author">{{ .Author }}</span>{{ end }}
                   </blockquote>
                 </li>
