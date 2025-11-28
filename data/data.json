@@ -19,7 +19,11 @@
         "date_started": "2025",
         "date_finished": "2025"
       },
-      "rating": 4.5
+      "rating": 4.5,
+      "quotes": [
+        "It was the mark of a barbarian to destroy something one could not understand.",
+        "Open the pod bay doors, Hal."
+      ]
     },
     {
       "id": "the-singularity-is-nearer",
@@ -37,10 +41,17 @@
       "date_added": "2024-12-24",
       "status": "finished",
       "progress": {
-        "date_started": "2025",
-        "date_finished": "2025"
+        "date_started": "2025-01-14",
+        "date_finished": "2025-03-02"
       },
-      "rating": 3.8
+      "rating": 3.8,
+      "quotes": [
+        "By starting with the most basic and fundamental axioms possible [...] a machine can [...] search through every possible way of combining the fundamental axioms in search of the truth.",
+        "Connectionist AI is prone to becoming a \"black box\" - capable of spitting out the correct answer, but unable to explain how it found it.",
+        "[The] concept of free will must somehow synthesize both deterministic and indeterministic philosophical ideas - avoiding rigid predictability without devolving into randomness.",
+        "\"Optimism is not an idle speculation on the future but rather a self-fulfilling prophecy.\" Belief that a better world is genuinely possible is a powerful motivator to work hard on creating it.",
+        "Once our civilization learns how to do something useful, we generally keep that knowledge and build on it."
+      ]
     },
     {
       "id": "1984",
@@ -61,7 +72,13 @@
         "date_started": "2025-05-24",
         "date_finished": "2025-05-30"
       },
-      "rating": 4.6
+      "rating": 4.6,
+      "quotes": [
+        "Who controls the past controls the future. Who controls the present controls the past.",
+        "Doublethink means the power of holding two contradictory beliefs in one's mind simultaneously, and accepting both of them.",
+        "Freedom is the freedom to say that two plus two make four. If that is granted, all else follows.",
+        "Big Brother is Watching You."
+      ]
     },
     {
       "id": "project-hail-mary",
@@ -124,7 +141,10 @@
         "date_started": "2025-07-03",
         "date_finished": "2025-07-22"
       },
-      "rating": 4.0
+      "rating": 4.0,
+      "quotes": [
+        "I call our world Flatland, not because we call it so, but to make its nature clearer to you, my happy readers, who are privileged to live in Space."
+      ]
     },
     {
       "id": "the-pragmatic-programmer",
@@ -166,7 +186,13 @@
         "date_started": "2025-08-30",
         "date_finished": "2025-09-02"
       },
-      "rating": 3.9
+      "rating": 3.9,
+      "quotes": [
+        "Fahrenheit 451:\nthe temperature at which book-paper catches fire and burns.",
+        "If you hide your ignorance, no one will hit you and you'll never learn.",
+        "A book is a loaded gun in the house next door...Who knows who might be the target of the well-read man?",
+        "Everyone must leave something behind when he dies, my grandfather said. A child or a book or a painting or a house or a wall built or a pair of shoes made. Or a garden planted. Something your hand touched some way so your soul has somewhere to go when you die, and when people look at that tree or that flower you planted, you're there.\n\nIt doesn't matter what you do, he said, so long as you change something from the way it was before you touched it into something that's like you after you take your hands away. The difference between the man who just cuts lawns and a real gardener is in the touching, he said. The lawn-cutter might just as well not have been there at all; the gardener will be there a lifetime."
+      ]
     },
     {
       "id": "animal-farm",
@@ -187,7 +213,10 @@
         "date_started": "2025-09-06",
         "date_finished": "2025-09-06"
       },
-      "rating": 4.3
+      "rating": 4.3,
+      "quotes": [
+        "All animals are equal.\nBut some animals are more equal than others."
+      ]
     },
     {
       "id": "algorithms-to-live-by",
@@ -208,7 +237,12 @@
         "date_started": "2025-07-30",
         "date_finished": "2025-08-25"
       },
-      "rating": 3.8
+      "rating": 3.8,
+      "quotes": [
+        "Computers multitask through a process called \"threading\", which you can think of as being like juggling a set of balls. Just as a juggler only hurls one ball at a time into the air but keeps three aloft, a CPU only works on one program at a time, but by swapping between them quickly enough [...] it appears to be [doing] all at once.",
+        "Seemingly innocuous language like 'Oh, I'm flexible' or 'What do you want to do tonight?' has a dark computational underbelly that should make you think twice. It has the veneer of kindness about it, but it does two deeply alarming things. First, it passes the cognitive buck: 'Here's a problem, you handle it.' Second, by not stating your preferences, it invites the others to simulate or imagine them. And as we have seen, the simulation of the minds of others is one of the biggest computational challenges a mind (or machine) can ever face.",
+        "Sorting something that you will never search is a complete waste; searching something you never sorted is merely inefficient."
+      ]
     },
     {
       "id": "the-hitchhikers-guide-to-the-galaxy",
@@ -229,7 +263,16 @@
         "date_started": "2025-10-11",
         "date_finished": "2025-10-15"
       },
-      "rating": 4.2
+      "rating": 4.2,
+      "quotes": [
+        "Don't Panic.",
+        "Time is an illusion. Lunchtime doubly so.",
+        "The ships hung in the sky in much the same way that bricks don't.",
+        "One of the things Ford Prefect had always found hardest to understand about humans was their habit of continually stating and repeating the very very obvious, as in \"It's a nice day\", or \"You're very tall\", or \"Oh dear you seem to have fallen down a thirty-foot well, are you alright?\" At first Ford had formed a theory to account for this strange behaviour. If human beings don't keep exercising their lips, he thought, their mouths probably seize up. After a few months' consideration and observation he abandoned this theory in favour of a new one. If they don't keep on exercising their lips, he thought, their brains start working.",
+        "Arthur Dent: \"[...] I really wish I'd listened to what my mother told me when I was young.\"\nFord Prefect: \"Why what did she tell you?\"\nArthur Dent: \"I don't know, I didn't listen.\"",
+        "He had found a Nutri-Matic machine which had provided him with a plastic cup filled with a liquid that was almost, but not quite, entirely unlike tea.",
+        "For a moment, nothing happened. Then, after a second or so, nothing continued to happen."
+      ]
     },
     {
       "id": "the-restaurant-at-the-end-of-the-universe",
@@ -250,7 +293,15 @@
         "date_started": "2025-10-16",
         "date_finished": "2025-10-21"
       },
-      "rating": 4.1
+      "rating": 4.1,
+      "quotes": [
+        "The story so far:\nIn the beginning the Universe was created.\nThis has made a lot of people very angry and been widely regarded as a bad move.",
+        "Reality is frequently inaccurate.",
+        "If I ever meet myself,' said Zaphod, 'I'll hit myself so hard I won't know what's hit me.",
+        "To summarize the summary of the summary: people are a problem.",
+        "Life is wasted on the living.",
+        "My universe is my eyes and my ears. Anything else is hearsay."
+      ]
     },
     {
       "id": "life-the-universe-and-everything",
@@ -271,7 +322,11 @@
         "date_started": "2025-10-22",
         "date_finished": "2025-11-02"
       },
-      "rating": 3.8
+      "rating": 3.8,
+      "quotes": [
+        "There is an art, it says, or rather, a knack to flying.\nThe knack lies in learning how to throw yourself at the ground and miss. ...\nClearly, it is the second part, the missing, which presents the difficulties.\n",
+        "Ford Prefect: \"Just believe everything I tell you, and it will all be very, very simple.\nArthur Dent: \"Ah, well, I'm not sure I believe that.\""
+      ]
     },
     {
       "id": "so-long-and-thanks-for-all-the-fish",
@@ -292,7 +347,10 @@
         "date_started": "2025-11-05",
         "date_finished": "2025-11-11"
       },
-      "rating": 3.7
+      "rating": 3.7,
+      "quotes": [
+        "See first, think later, then test. But always see first. Otherwise you will only see what you were expecting."
+      ]
     },
     {
       "id": "mostly-harmless",
@@ -314,7 +372,10 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null
+      "rating": null,
+      "quotes": [
+        "We all like to congregate... at boundary conditions. Where land meets water. Where earth meets air. Where body meets mind. Where time meets space. We like to be on one side, and look at the other."
+      ]
     },
     {
       "id": "brave-new-world",
