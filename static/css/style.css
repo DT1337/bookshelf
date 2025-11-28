@@ -482,6 +482,8 @@ main.site-main .layout-with-aside {
   border-radius: 16px;
   font-weight: bold;
   color: var(--text-inverted);
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .book-card .book-details .book-progress,
