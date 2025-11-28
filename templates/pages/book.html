@@ -36,9 +36,13 @@
             </ul>
           </div>
         </div>
-        <div class="book-status">
-          {{ title .Status }}
-        </div>
+          {{ $link := "bookshelf.html#{{ .Status }}" }}
+          {{ if eq .Status "wishlisted" }}
+            {{ $link = "wishlist.html" }}
+          {{ end }}
+          <a href="{{ $link }}" class="book-status">
+            {{ title .Status }}
+          </a>
         {{ if or .Progress.DateStarted .Progress.DateFinished }}
           <div class="book-progress">
             {{ if and .Progress.DateStarted .Progress.DateFinished }}
