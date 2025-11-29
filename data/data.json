@@ -366,15 +366,19 @@
       "cover": "https://covers.openlibrary.org/b/id/12709843-L.jpg",
       "link": "https://openlibrary.org/books/OL28344154M/Mostly_Harmless",
       "date_added": "2025-09-22",
-      "status": "reading",
+      "status": "finished",
       "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
+        "date_started": "2025-11-15",
+        "date_finished": "2025-11-29"
       },
-      "rating": null,
+      "rating": 3.9,
       "quotes": [
-        "We all like to congregate... at boundary conditions. Where land meets water. Where earth meets air. Where body meets mind. Where time meets space. We like to be on one side, and look at the other."
+        "We all like to congregate... at boundary conditions. Where land meets water. Where earth meets air. Where body meets mind. Where time meets space. We like to be on one side, and look at the other.",
+        "A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools.",
+        "It can be very dangerous to see things from somebody else's point of view without the proper training.",
+        "Let the past hold on to itself and let the present move forward into the future.",
+        "Sometimes if you received an answer, the question might be taken away.",
+        "Anything that happens, happens.\nAnything that, in happening, causes something else to happen, causes something else to happen.\nAnything that, in happening, causes itself to happen again, happens again.\nIt doesn’t necessarily do it in chronological order, though."
       ]
     },
     {
@@ -511,7 +515,8 @@
         "the-hitchhikers-guide-to-the-galaxy",
         "the-restaurant-at-the-end-of-the-universe",
         "life-the-universe-and-everything",
-        "so-long-and-thanks-for-all-the-fish"
+        "so-long-and-thanks-for-all-the-fish",
+        "mostly-harmless"
       ]
     }
   ]
