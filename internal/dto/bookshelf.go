@@ -344,3 +344,19 @@ func (b *Bookshelf) mapToStatCountSlice(m map[string]int) []StatCount {
 
 	return stats
 }
+
+func getYearFromDate(date string) (int, error) {
+	// Try to parse the date in "yyyy-mm-dd" format first
+	parsedDate, err := time.Parse("2006-01-02", date)
+	if err == nil {
+		return parsedDate.Year(), nil
+	}
+
+	// If the full year parse fails, try just the year "yyyy" format
+	parsedDate, err = time.Parse("2006", date)
+	if err != nil {
+		return 0, err
+	}
+
+	return parsedDate.Year(), nil
+}

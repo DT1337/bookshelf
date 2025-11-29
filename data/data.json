@@ -425,7 +425,8 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null
+      "rating": null,
+      "collections": null
     },
         {
       "id": "solaris",
@@ -448,7 +449,8 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null
+      "rating": null,
+      "collections": null
     },
     {
       "id": "contact",
@@ -471,7 +473,8 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null
+      "rating": null,
+      "collections": null
     },
     {
       "id": "the-outer-limits-of-reason",
@@ -494,7 +497,8 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null
+      "rating": null,
+      "collections": null
     }
   ],
   "collections": [
