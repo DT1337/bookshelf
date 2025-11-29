@@ -8,24 +8,25 @@ type Bookshelf struct {
 }
 
 type Book struct {
-	Id          string   `json:"id"`
-	Isbn        string   `json:"isbn"`
-	Title       string   `json:"title"`
-	Subtitle    string   `json:"subtitle"`
-	Authors     []string `json:"authors"`
-	Year        int      `json:"year"`
-	Language    string   `json:"language"`
-	Pages       int      `json:"pages"`
-	Genre       string   `json:"genre"`
-	Tags        []string `json:"tags"`
-	Cover       string   `json:"cover"`
-	Link        string   `json:"link"`
-	DateAdded   string   `json:"date_added"`
-	Status      string   `json:"status"`
-	Rank        int      `json:"rank"`
-	Progress    Progress `json:"progress"`
-	Rating      float64  `json:"rating"`
-	Collections []string `json:"collections"`
+	Id        string   `json:"id"`
+	Isbn      string   `json:"isbn"`
+	Title     string   `json:"title"`
+	Subtitle  string   `json:"subtitle"`
+	Authors   []string `json:"authors"`
+	Year      int      `json:"year"`
+	Language  string   `json:"language"`
+	Pages     int      `json:"pages"`
+	Genre     string   `json:"genre"`
+	Tags      []string `json:"tags"`
+	Cover     string   `json:"cover"`
+	Link      string   `json:"link"`
+	DateAdded string   `json:"date_added"`
+	Status    string   `json:"status"`
+	Rank      int      `json:"rank"`
+	Progress  Progress `json:"progress"`
+	Rating    float64  `json:"rating"`
+	Review    []string `json:"review"`
+	Quotes    []string `json:"quotes"`
 }
 
 type Progress struct {
@@ -64,4 +65,11 @@ type ResolvedCollection struct {
 	Name        string
 	Description string
 	Books       []Book
+}
+
+type Quote struct {
+	Quote     string
+	Authors   []string
+	BookTitle string
+	Id        string
 }

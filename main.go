@@ -28,7 +28,7 @@ func main() {
 		log.Fatalf("Failed to initialize template renderer: %v", err)
 	}
 
-	err = render.CopyStaticFiles("static", config.OutputPath)
+	err = renderer.CopyStaticFiles("static", config.OutputPath)
 	if err != nil {
 		log.Fatalf("Failed to copy static files: %v", err)
 	}
@@ -48,9 +48,19 @@ func main() {
 		log.Fatalf("Failed to render collections page: %v", err)
 	}
 
+	err = pages.RenderQuotesPage(renderer, bookshelf)
+	if err != nil {
+		log.Fatalf("Failed to render quotes page: %v", err)
+	}
+
 	err = pages.RenderWishlistPage(renderer, bookshelf)
 	if err != nil {
 		log.Fatalf("Failed to render wishlist page: %v", err)
+	}
+
+	err = pages.RenderBookPages(renderer, bookshelf)
+	if err != nil {
+		log.Fatalf("Failed to render book pages: %v", err)
 	}
 
 	log.Println("Pages and static files rendered successfully!")

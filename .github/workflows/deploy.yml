@@ -30,6 +30,10 @@ jobs:
               with:
                   go-version: "1.23"
 
+            # Run Go tests before building the site
+            - name: Run Go tests
+              run: go test ./...
+
             - name: Build site
               run: go run main.go
 

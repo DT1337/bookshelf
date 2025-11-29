@@ -62,7 +62,7 @@
           <div><span class="value">{{printf "%.2f" .Stats.AverageRating}}</span></div>
         </div>
         <div class="meta-item-list">
-          <h3 class="category">Top 3 Genres</h3>
+          <h3 class="category">Top 3 genres</h3>
           {{range .Stats.TopGenres}}
             <div class="entry">
               <span class="key">{{ .Value }}</span>
@@ -71,7 +71,7 @@
           {{ end }}
         </div>
         <div class="meta-item-list">
-          <h3 class="category">Books by Language</h3>
+          <h3 class="category">Books by language</h3>
           {{range .Stats.BooksByLanguage }}
             <div class="entry">
               <span class="key">{{ .Value }}</span>
@@ -80,7 +80,7 @@
           {{ end }}
         </div>
         <div class="meta-item-list">
-          <h3 class="category">Books by Status</h3>
+          <h3 class="category">Books by status</h3>
           {{range .Stats.BooksByStatus }}
             <div class="entry">
               <span class="key">{{ .Value }}</span>

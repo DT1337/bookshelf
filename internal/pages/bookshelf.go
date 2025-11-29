@@ -11,8 +11,8 @@ type bookshelfPageData struct {
 
 func RenderBookshelfPage(renderer *render.TemplateRenderer, bookshelf *dto.Bookshelf) error {
 	data := bookshelfPageData{
-		Books: bookshelf.BookshelvedBooks(),
+		Books: bookshelf.ShelvedBooks(),
 	}
 
-	return renderer.RenderToFile("bookshelf", data)
+	return renderer.RenderToFile("bookshelf", data, "bookshelf")
 }

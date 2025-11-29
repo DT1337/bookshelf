@@ -1,8 +1,11 @@
 package dto
 
 import (
+	"crypto/md5"
+	"encoding/hex"
 	"encoding/json"
 	"fmt"
+	"math"
 	"os"
 	"sort"
 	"time"
@@ -49,25 +52,34 @@ func (b *Bookshelf) booksByStatus() map[string][]Book {
 }
 
 func (b *Bookshelf) UpcomingBooks(limit int) (map[string][]Book, bool) {
-	hasUpcomingBooks := false
 	booksByStatus := b.booksByStatus()
 	delete(booksByStatus, StatusFinished) // Finished books are not part of the upcoming books
+	hasUpcomingBooks := b.hasUpcomingBooks(booksByStatus)
 
-	for _, books := range booksByStatus {
-		if len(books) > 0 {
-			hasUpcomingBooks = true
-			break
-		}
-	}
-
-	sortBooksByRank(booksByStatus[StatusWishlisted])
+	b.sortBooksByRank(booksByStatus[StatusWishlisted])
 
 	if limit <= 0 {
 		return booksByStatus, hasUpcomingBooks
 	}
 
-	total := 0
+	upcomingBooks := b.getUpcomingBooksWithLimit(booksByStatus, limit)
+
+	return upcomingBooks, hasUpcomingBooks
+}
+
+func (b *Bookshelf) hasUpcomingBooks(booksByStatus map[string][]Book) bool {
+	for _, books := range booksByStatus {
+		if len(books) > 0 {
+			return true
+		}
+	}
+
+	return false
+}
+
+func (b *Bookshelf) getUpcomingBooksWithLimit(booksByStatus map[string][]Book, limit int) map[string][]Book {
 	upcomingBooks := make(map[string][]Book, len(booksByStatus))
+	total := 0
 
 	// Fixed order to ensure deterministic limiting.
 	for _, status := range []string{StatusReading, StatusToRead, StatusWishlisted} {
@@ -86,18 +98,18 @@ func (b *Bookshelf) UpcomingBooks(limit int) (map[string][]Book, bool) {
 		}
 	}
 
-	return upcomingBooks, hasUpcomingBooks
+	return upcomingBooks
 }
 
-func (b *Bookshelf) BookshelvedBooks() map[string][]Book {
-	bookshelvedBooks := b.booksByStatus()
-	delete(bookshelvedBooks, StatusWishlisted) // Wishlisted books are not considered as bookshelved
+func (b *Bookshelf) ShelvedBooks() map[string][]Book {
+	shelvedBooks := b.booksByStatus()
+	delete(shelvedBooks, StatusWishlisted) // Wishlisted books are not considered as shelved books
 
-	for _, books := range bookshelvedBooks {
-		sortBooksAlphabetically(books)
+	for _, books := range shelvedBooks {
+		b.sortBooksAlphabetically(books)
 	}
 
-	return bookshelvedBooks
+	return shelvedBooks
 }
 
 func (b *Bookshelf) BookCollections() []ResolvedCollection {
@@ -123,9 +135,33 @@ func (b *Bookshelf) BookCollections() []ResolvedCollection {
 	return resolved
 }
 
+func (b *Bookshelf) BookQuotes() []Quote {
+	var quotes []Quote
+
+	for _, book := range b.Books {
+		for _, quote := range book.Quotes {
+			quotes = append(quotes, Quote{
+				Quote:     quote,
+				Authors:   book.Authors,
+				BookTitle: book.Title,
+				Id:        book.Id,
+			})
+		}
+	}
+
+	// Sort quotes based on the hash of the quote text for a pseudo random (deterministic) order
+	sort.SliceStable(quotes, func(i, j int) bool {
+		hashI := md5.Sum([]byte(quotes[i].Quote))
+		hashJ := md5.Sum([]byte(quotes[j].Quote))
+		return hex.EncodeToString(hashI[:]) < hex.EncodeToString(hashJ[:])
+	})
+
+	return quotes
+}
+
 func (b *Bookshelf) WishlistedBooks() []Book {
 	wishlistedBooks := b.booksByStatus()[StatusWishlisted]
-	sortBooksByRank(wishlistedBooks)
+	b.sortBooksByRank(wishlistedBooks)
 
 	return wishlistedBooks
 }
@@ -153,79 +189,35 @@ func (b *Bookshelf) Stats() Stats {
 			continue
 		}
 
-		// Total number of books in library
 		stats.TotalBooks++
 
-		// Total number of books finished
-		if book.Status == StatusFinished {
-			stats.BooksFinished++
+		b.updateStatsForFinishedBook(&stats, book, currentYear)
+		b.updateStatsForPages(&stats, book, currentYear)
 
-			// Check if the book was finished this year
-			if book.Progress.DateFinished != "" {
-				finishedYear, err := getYearFromDate(book.Progress.DateFinished)
-				if err == nil && finishedYear == currentYear {
-					stats.BooksFinishedThisYear++
-				}
-			}
-		}
+		totalPages = b.updateTotalPages(totalPages, book)
+		totalRating, ratedBooks = b.updateTotalRating(totalRating, ratedBooks, book)
 
-		// Total number of pages read
-		stats.PagesRead += book.Progress.PagesRead
-
-		// Calculate pages read this year
-		if book.Progress.DateStarted != "" && book.Progress.PagesRead > 0 {
-			startYear, err := getYearFromDate(book.Progress.DateStarted)
-			if err == nil && startYear == currentYear {
-				stats.PagesReadThisYear += book.Progress.PagesRead
-			}
-		}
-
-		// Total number of pages
-		if book.Pages > 0 {
-			totalPages += book.Pages
-		}
-
-		// Total rating
-		if book.Rating > 0 {
-			totalRating += book.Rating
-			ratedBooks++
-		}
-
-		// Books by genre
-		if book.Genre != "" {
-			genreCount[book.Genre]++
-		}
-
-		// Books by language
-		if book.Language != "" {
-			languageCount[book.Language]++
-		}
+		genreCount = b.updateGenreCount(genreCount, book)
+		languageCount = b.updateLanguageCount(languageCount, book)
 	}
 
-	// Average pages
-	if stats.TotalBooks > 0 {
-		stats.AveragePages = float64(totalPages) / float64(stats.TotalBooks)
-	}
+	stats.AveragePages = b.calculateAverage(float64(totalPages), stats.TotalBooks)
+	stats.AverageRating = b.calculateAverage(totalRating, ratedBooks)
 
-	// Average rating
-	if ratedBooks > 0 {
-		stats.AverageRating = totalRating / float64(ratedBooks)
-	}
-
-	stats.TopGenres = topN(mapToStatCountSlice(genreCount), 3)
-	stats.BooksByLanguage = mapToStatCountSlice(languageCount)
-	stats.BooksByStatus = mapToStatCountSlice(statusCount)
+	stats.TopGenres = b.topGenres(genreCount, 3)
+	stats.BooksByLanguage = b.mapToStatCountSlice(languageCount)
+	stats.BooksByStatus = b.mapToStatCountSlice(statusCount)
 
 	return stats
 }
 
-func sortBooksAlphabetically(books []Book) {
+func (b *Bookshelf) sortBooksAlphabetically(books []Book) {
 	sort.SliceStable(books, func(i, j int) bool {
 		return books[i].Title < books[j].Title
 	})
 }
 
-func sortBooksByRank(books []Book) {
+func (b *Bookshelf) sortBooksByRank(books []Book) {
 	sort.SliceStable(books, func(i, j int) bool {
 		ri, rj := books[i].Rank, books[j].Rank
 
@@ -235,44 +227,120 @@ func sortBooksByRank(books []Book) {
 		if ri != 0 && rj == 0 {
 			return true
 		}
+
 		return ri < rj
 	})
 }
 
-func mapToStatCountSlice(m map[string]int) []StatCount {
-	stats := make([]StatCount, 0, len(m))
-	for k, v := range m {
-		stats = append(stats, StatCount{Value: k, Count: v})
-	}
-	sortByCount(stats)
-	return stats
-}
-
-func sortByCount(s []StatCount) {
+func (b *Bookshelf) sortByCount(s []StatCount) {
 	sort.SliceStable(s, func(i, j int) bool {
 		return s[i].Count > s[j].Count
 	})
 }
 
-func topN(s []StatCount, n int) []StatCount {
-	if len(s) > n {
-		return s[:n]
-	}
-	return s
-}
-
-func getYearFromDate(date string) (int, error) {
+func (b *Bookshelf) getYearFromDate(date string) int {
 	// Try to parse the date in "yyyy-mm-dd" format first
 	parsedDate, err := time.Parse("2006-01-02", date)
 	if err == nil {
-		return parsedDate.Year(), nil
+		return parsedDate.Year()
 	}
 
 	// If the full year parse fails, try just the year "yyyy" format
 	parsedDate, err = time.Parse("2006", date)
 	if err != nil {
-		return 0, err
+		return 0
 	}
 
-	return parsedDate.Year(), nil
+	return parsedDate.Year()
+}
+
+func (b *Bookshelf) updateStatsForFinishedBook(stats *Stats, book Book, currentYear int) {
+	if book.Status == StatusFinished {
+		stats.BooksFinished++
+
+		finishedYear := b.getYearFromDate(book.Progress.DateFinished)
+		if finishedYear == currentYear {
+			stats.BooksFinishedThisYear++
+		}
+	}
+}
+
+func (b *Bookshelf) updateStatsForPages(stats *Stats, book Book, currentYear int) {
+	stats.PagesRead += b.calculatePagesRead(book)
+
+	if book.Status != StatusToRead {
+		startYear := b.getYearFromDate(book.Progress.DateStarted)
+		if startYear == currentYear {
+			stats.PagesReadThisYear += b.calculatePagesRead(book)
+		}
+	}
+}
+
+func (b *Bookshelf) calculatePagesRead(book Book) int {
+	if book.Status == StatusFinished {
+		return book.Pages
+	}
+
+	return book.Progress.PagesRead
+}
+
+func (b *Bookshelf) updateTotalPages(totalPages int, book Book) int {
+	if book.Pages > 0 {
+		return totalPages + book.Pages
+	}
+
+	return totalPages
+}
+
+func (b *Bookshelf) updateTotalRating(totalRating float64, ratedBooks int, book Book) (float64, int) {
+	if book.Rating > 0 {
+		totalRating += book.Rating
+		ratedBooks++
+	}
+
+	return totalRating, ratedBooks
+}
+
+func (b *Bookshelf) updateGenreCount(genreCount map[string]int, book Book) map[string]int {
+	if book.Genre != "" {
+		genreCount[book.Genre]++
+	}
+
+	return genreCount
+}
+
+func (b *Bookshelf) updateLanguageCount(languageCount map[string]int, book Book) map[string]int {
+	if book.Language != "" {
+		languageCount[book.Language]++
+	}
+
+	return languageCount
+}
+
+func (b *Bookshelf) calculateAverage(total float64, fraction int) float64 {
+	if fraction > 0 {
+		return math.Round(total/float64(fraction)*100) / 100
+	}
+
+	return 0
+}
+
+func (b *Bookshelf) topGenres(genreCount map[string]int, n int) []StatCount {
+	statCount := b.mapToStatCountSlice(genreCount)
+
+	if len(statCount) > n {
+		return statCount[:n]
+	}
+
+	return statCount
+}
+
+func (b *Bookshelf) mapToStatCountSlice(m map[string]int) []StatCount {
+	stats := make([]StatCount, 0, len(m))
+	for k, v := range m {
+		stats = append(stats, StatCount{Value: k, Count: v})
+	}
+	b.sortByCount(stats)
+
+	return stats
 }

@@ -9,7 +9,7 @@
       "year": 1968,
       "language": "en",
       "pages": 297,
-      "genre": "science fiction",
+      "genre": "science-fiction",
       "tags": ["space", "space travel", "mission"],
       "cover": "",
       "link": "",
@@ -17,11 +17,13 @@
       "status": "finished",
       "progress": {
         "date_started": "2025",
-        "date_finished": "2025",
-        "pages_read": 297
+        "date_finished": "2025"
       },
       "rating": 4.5,
-      "collections": ["2025"]
+      "quotes": [
+        "It was the mark of a barbarian to destroy something one could not understand.",
+        "Open the pod bay doors, Hal."
+      ]
     },
     {
       "id": "the-singularity-is-nearer",
@@ -39,12 +41,17 @@
       "date_added": "2024-12-24",
       "status": "finished",
       "progress": {
-        "date_started": "2025",
-        "date_finished": "2025",
-        "pages_read": 292
+        "date_started": "2025-01-14",
+        "date_finished": "2025-03-02"
       },
       "rating": 3.8,
-      "collections": ["2025"]
+      "quotes": [
+        "By starting with the most basic and fundamental axioms possible [...] a machine can [...] search through every possible way of combining the fundamental axioms in search of the truth.",
+        "Connectionist AI is prone to becoming a \"black box\" - capable of spitting out the correct answer, but unable to explain how it found it.",
+        "[The] concept of free will must somehow synthesize both deterministic and indeterministic philosophical ideas - avoiding rigid predictability without devolving into randomness.",
+        "\"Optimism is not an idle speculation on the future but rather a self-fulfilling prophecy.\" Belief that a better world is genuinely possible is a powerful motivator to work hard on creating it.",
+        "Once our civilization learns how to do something useful, we generally keep that knowledge and build on it."
+      ]
     },
     {
       "id": "1984",
@@ -56,18 +63,22 @@
       "language": "en",
       "pages": 336,
       "genre": "dystopia",
-      "tags": ["science fiction", "politics", "surveillance"],
+      "tags": ["science-fiction", "politics", "surveillance"],
       "cover": "https://covers.openlibrary.org/b/id/14370404-L.jpg",
       "link": "https://openlibrary.org/works/OL1168083W/Nineteen_Eighty-Four?edition=key:/books/OL24329982M",
       "date_added": "2025-05-17",
       "status": "finished",
       "progress": {
         "date_started": "2025-05-24",
-        "date_finished": "2025-05-30",
-        "pages_read": 336
+        "date_finished": "2025-05-30"
       },
       "rating": 4.6,
-      "collections": ["2025"]
+      "quotes": [
+        "Who controls the past controls the future. Who controls the present controls the past.",
+        "Doublethink means the power of holding two contradictory beliefs in one's mind simultaneously, and accepting both of them.",
+        "Freedom is the freedom to say that two plus two make four. If that is granted, all else follows.",
+        "Big Brother is Watching You."
+      ]
     },
     {
       "id": "project-hail-mary",
@@ -78,7 +89,7 @@
       "year": 2021,
       "language": "en",
       "pages": 476,
-      "genre": "science fiction",
+      "genre": "science-fiction",
       "tags": ["space", "space travel", "mission"],
       "cover": "https://covers.openlibrary.org/b/id/14433087-L.jpg",
       "link": "https://openlibrary.org/works/OL21745884W/Project_Hail_Mary?edition=key:/books/OL35577396M",
@@ -86,11 +97,9 @@
       "status": "finished",
       "progress": {
         "date_started": "2025-05-31",
-        "date_finished": "2025-06-07",
-        "pages_read": 476
+        "date_finished": "2025-06-07"
       },
-      "rating": 4.8,
-      "collections": ["2025"]
+      "rating": 4.8
     },
     {
       "id": "mickey7",
@@ -101,7 +110,7 @@
       "year": 2022,
       "language": "en",
       "pages": 317,
-      "genre": "science fiction",
+      "genre": "science-fiction",
       "tags": ["alien planet", "cloning"],
       "cover": "https://covers.openlibrary.org/b/id/15106084-L.jpg",
       "link": "https://openlibrary.org/books/OL39549624M/Mickey7",
@@ -109,11 +118,9 @@
       "status": "finished",
       "progress": {
         "date_started": "2025-06-15",
-        "date_finished": "2025-06-30",
-        "pages_read": 317
+        "date_finished": "2025-06-30"
       },
-      "rating": 3.7,
-      "collections": ["2025"]
+      "rating": 3.7
     },
     {
       "id": "flatland",
@@ -132,11 +139,12 @@
       "status": "finished",
       "progress": {
         "date_started": "2025-07-03",
-        "date_finished": "2025-07-22",
-        "pages_read": 100
+        "date_finished": "2025-07-22"
       },
       "rating": 4.0,
-      "collections": ["2025"]
+      "quotes": [
+        "I call our world Flatland, not because we call it so, but to make its nature clearer to you, my happy readers, who are privileged to live in Space."
+      ]
     },
     {
       "id": "the-pragmatic-programmer",
@@ -155,11 +163,9 @@
       "status": "finished",
       "progress": {
         "date_started": "2025-07-30",
-        "date_finished": "2025-08-25",
-        "pages_read": 473
+        "date_finished": "2025-08-25"
       },
-      "rating": 4.1,
-      "collections": ["2025"]
+      "rating": 4.1
     },
     {
       "id": "fahrenheit-451",
@@ -178,11 +184,15 @@
       "status": "finished",
       "progress": {
         "date_started": "2025-08-30",
-        "date_finished": "2025-09-02",
-        "pages_read": 227
+        "date_finished": "2025-09-02"
       },
       "rating": 3.9,
-      "collections": ["2025"]
+      "quotes": [
+        "Fahrenheit 451:\nthe temperature at which book-paper catches fire and burns.",
+        "If you hide your ignorance, no one will hit you and you'll never learn.",
+        "A book is a loaded gun in the house next door...Who knows who might be the target of the well-read man?",
+        "Everyone must leave something behind when he dies, my grandfather said. A child or a book or a painting or a house or a wall built or a pair of shoes made. Or a garden planted. Something your hand touched some way so your soul has somewhere to go when you die, and when people look at that tree or that flower you planted, you're there.\n\nIt doesn't matter what you do, he said, so long as you change something from the way it was before you touched it into something that's like you after you take your hands away. The difference between the man who just cuts lawns and a real gardener is in the touching, he said. The lawn-cutter might just as well not have been there at all; the gardener will be there a lifetime."
+      ]
     },
     {
       "id": "animal-farm",
@@ -201,11 +211,12 @@
       "status": "finished",
       "progress": {
         "date_started": "2025-09-06",
-        "date_finished": "2025-09-06",
-        "pages_read": 95
+        "date_finished": "2025-09-06"
       },
       "rating": 4.3,
-      "collections": ["2025"]
+      "quotes": [
+        "All animals are equal.\nBut some animals are more equal than others."
+      ]
     },
     {
       "id": "algorithms-to-live-by",
@@ -224,22 +235,25 @@
       "status": "finished",
       "progress": {
         "date_started": "2025-07-30",
-        "date_finished": "2025-08-25",
-        "pages_read": 398
+        "date_finished": "2025-08-25"
       },
       "rating": 3.8,
-      "collections": ["2025"]
+      "quotes": [
+        "Computers multitask through a process called \"threading\", which you can think of as being like juggling a set of balls. Just as a juggler only hurls one ball at a time into the air but keeps three aloft, a CPU only works on one program at a time, but by swapping between them quickly enough [...] it appears to be [doing] all at once.",
+        "Seemingly innocuous language like 'Oh, I'm flexible' or 'What do you want to do tonight?' has a dark computational underbelly that should make you think twice. It has the veneer of kindness about it, but it does two deeply alarming things. First, it passes the cognitive buck: 'Here's a problem, you handle it.' Second, by not stating your preferences, it invites the others to simulate or imagine them. And as we have seen, the simulation of the minds of others is one of the biggest computational challenges a mind (or machine) can ever face.",
+        "Sorting something that you will never search is a complete waste; searching something you never sorted is merely inefficient."
+      ]
     },
     {
       "id": "the-hitchhikers-guide-to-the-galaxy",
       "isbn": "9781529034523",
       "title": "The Hitchhiker's Guide to the Galaxy",
-      "subtitle": "The Hitchhiker’s Guide to the Galaxy #1",
+      "subtitle": "The Hitchhiker's Guide to the Galaxy #1",
       "authors": ["Douglas Adams"],
       "year": 1979,
       "language": "en",
       "pages": 180,
-      "genre": "science fiction",
+      "genre": "science-fiction",
       "tags": ["comedy", "space", "humor"],
       "cover": "https://covers.openlibrary.org/b/id/11045008-L.jpg",
       "link": "https://openlibrary.org/books/OL29474406M/Hitchhiker%27s_Guide_to_the_Galaxy_Hitchhiker%27s_Guide_to_the_Galaxy_Book_1",
@@ -247,22 +261,29 @@
       "status": "finished",
       "progress": {
         "date_started": "2025-10-11",
-        "date_finished": "2025-10-15",
-        "pages_read": 180
+        "date_finished": "2025-10-15"
       },
       "rating": 4.2,
-      "collections": ["2025"]
+      "quotes": [
+        "Don't Panic.",
+        "Time is an illusion. Lunchtime doubly so.",
+        "The ships hung in the sky in much the same way that bricks don't.",
+        "One of the things Ford Prefect had always found hardest to understand about humans was their habit of continually stating and repeating the very very obvious, as in \"It's a nice day\", or \"You're very tall\", or \"Oh dear you seem to have fallen down a thirty-foot well, are you alright?\" At first Ford had formed a theory to account for this strange behaviour. If human beings don't keep exercising their lips, he thought, their mouths probably seize up. After a few months' consideration and observation he abandoned this theory in favour of a new one. If they don't keep on exercising their lips, he thought, their brains start working.",
+        "Arthur Dent: \"[...] I really wish I'd listened to what my mother told me when I was young.\"\nFord Prefect: \"Why what did she tell you?\"\nArthur Dent: \"I don't know, I didn't listen.\"",
+        "He had found a Nutri-Matic machine which had provided him with a plastic cup filled with a liquid that was almost, but not quite, entirely unlike tea.",
+        "For a moment, nothing happened. Then, after a second or so, nothing continued to happen."
+      ]
     },
     {
       "id": "the-restaurant-at-the-end-of-the-universe",
       "isbn": "9781529034530",
       "title": "The Restaurant at the End of the Universe",
-      "subtitle": "The Hitchhiker’s Guide to the Galaxy #2",
+      "subtitle": "The Hitchhiker's Guide to the Galaxy #2",
       "authors": ["Douglas Adams"],
       "year": 1980,
       "language": "en",
       "pages": 200,
-      "genre": "science fiction",
+      "genre": "science-fiction",
       "tags": ["comedy", "space", "humor"],
       "cover": "https://covers.openlibrary.org/b/id/10162074-L.jpg",
       "link": "https://openlibrary.org/books/OL28229986M/Restaurant_at_the_End_of_the_Universe",
@@ -270,22 +291,28 @@
       "status": "finished",
       "progress": {
         "date_started": "2025-10-16",
-        "date_finished": "2025-10-21",
-        "pages_read": 200
+        "date_finished": "2025-10-21"
       },
       "rating": 4.1,
-      "collections": ["2025"]
+      "quotes": [
+        "The story so far:\nIn the beginning the Universe was created.\nThis has made a lot of people very angry and been widely regarded as a bad move.",
+        "Reality is frequently inaccurate.",
+        "If I ever meet myself,' said Zaphod, 'I'll hit myself so hard I won't know what's hit me.",
+        "To summarize the summary of the summary: people are a problem.",
+        "Life is wasted on the living.",
+        "My universe is my eyes and my ears. Anything else is hearsay."
+      ]
     },
     {
       "id": "life-the-universe-and-everything",
       "isbn": "9781529034547",
       "title": "Life, the Universe and Everything",
-      "subtitle": "The Hitchhiker’s Guide to the Galaxy #3",
+      "subtitle": "The Hitchhiker's Guide to the Galaxy #3",
       "authors": ["Douglas Adams"],
       "year": 1982,
       "language": "en",
       "pages": 199,
-      "genre": "science fiction",
+      "genre": "science-fiction",
       "tags": ["comedy", "space", "humor"],
       "cover": "",
       "link": "https://openlibrary.org/works/OL2163623W/Life_the_Universe_and_Everything?edition=key:/books/OL29474404M",
@@ -293,22 +320,24 @@
       "status": "finished",
       "progress": {
         "date_started": "2025-10-22",
-        "date_finished": "2025-11-02",
-        "pages_read": 199
+        "date_finished": "2025-11-02"
       },
       "rating": 3.8,
-      "collections": ["2025"]
+      "quotes": [
+        "There is an art, it says, or rather, a knack to flying.\nThe knack lies in learning how to throw yourself at the ground and miss. ...\nClearly, it is the second part, the missing, which presents the difficulties.\n",
+        "Ford Prefect: \"Just believe everything I tell you, and it will all be very, very simple.\nArthur Dent: \"Ah, well, I'm not sure I believe that.\""
+      ]
     },
     {
       "id": "so-long-and-thanks-for-all-the-fish",
       "isbn": "9781529034554",
       "title": "So Long and Thanks for All the Fish",
-      "subtitle": "The Hitchhiker’s Guide to the Galaxy #4",
+      "subtitle": "The Hitchhiker's Guide to the Galaxy #4",
       "authors": ["Douglas Adams"],
       "year": 1984,
       "language": "en",
       "pages": 167,
-      "genre": "science fiction",
+      "genre": "science-fiction",
       "tags": ["comedy", "space", "humor"],
       "cover": "https://covers.openlibrary.org/b/id/11189110-L.jpg",
       "link": "https://openlibrary.org/works/OL2163719W/So_long_and_thanks_for_all_the_fish?edition=key:/books/OL29474405M",
@@ -316,34 +345,41 @@
       "status": "finished",
       "progress": {
         "date_started": "2025-11-05",
-        "date_finished": "2025-11-11",
-        "pages_read": 167
+        "date_finished": "2025-11-11"
       },
       "rating": 3.7,
-      "collections": ["2025"]
+      "quotes": [
+        "See first, think later, then test. But always see first. Otherwise you will only see what you were expecting."
+      ]
     },
     {
       "id": "mostly-harmless",
       "isbn": "9781529034561",
       "title": "Mostly Harmless",
-      "subtitle": "The Hitchhiker’s Guide to the Galaxy #5",
+      "subtitle": "The Hitchhiker's Guide to the Galaxy #5",
       "authors": ["Douglas Adams"],
       "year": 1992,
       "language": "en",
       "pages": 230,
-      "genre": "science fiction",
+      "genre": "science-fiction",
       "tags": ["comedy", "space", "humor"],
       "cover": "https://covers.openlibrary.org/b/id/12709843-L.jpg",
       "link": "https://openlibrary.org/books/OL28344154M/Mostly_Harmless",
       "date_added": "2025-09-22",
-      "status": "reading",
+      "status": "finished",
       "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
+        "date_started": "2025-11-15",
+        "date_finished": "2025-11-29"
       },
-      "rating": null,
-      "collections": null
+      "rating": 3.9,
+      "quotes": [
+        "We all like to congregate... at boundary conditions. Where land meets water. Where earth meets air. Where body meets mind. Where time meets space. We like to be on one side, and look at the other.",
+        "A common mistake that people make when trying to design something completely foolproof is to underestimate the ingenuity of complete fools.",
+        "It can be very dangerous to see things from somebody else's point of view without the proper training.",
+        "Let the past hold on to itself and let the present move forward into the future.",
+        "Sometimes if you received an answer, the question might be taken away.",
+        "Anything that happens, happens.\nAnything that, in happening, causes something else to happen, causes something else to happen.\nAnything that, in happening, causes itself to happen again, happens again.\nIt doesn’t necessarily do it in chronological order, though."
+      ]
     },
     {
       "id": "brave-new-world",
@@ -366,8 +402,7 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null,
-      "collections": null
+      "rating": null
     },
     {
       "id": "ready-player-one",
@@ -378,7 +413,7 @@
       "year": 2011,
       "language": "en",
       "pages": null,
-      "genre": "science fiction",
+      "genre": "science-fiction",
       "tags": ["dystopia", "pop culture fiction", "video games"],
       "cover": "https://covers.openlibrary.org/b/id/8270105-L.jpg",
       "link": "https://openlibrary.org/books/OL24842593M/Ready_Player_One",
@@ -390,8 +425,7 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null,
-      "collections": null
+      "rating": null
     },
         {
       "id": "solaris",
@@ -402,7 +436,7 @@
       "year": 1961,
       "language": "en",
       "pages": null,
-      "genre": "science fiction",
+      "genre": "science-fiction",
       "tags": ["space", "philosophy"],
       "cover": "https://covers.openlibrary.org/b/id/10116589-L.jpg",
       "link": "https://openlibrary.org/works/OL109524W/Solaris?edition=key:/books/OL28179710M",
@@ -414,8 +448,7 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null,
-      "collections": null
+      "rating": null
     },
     {
       "id": "contact",
@@ -426,7 +459,7 @@
       "year": 1985,
       "language": "en",
       "pages": null,
-      "genre": "science fiction",
+      "genre": "science-fiction",
       "tags": ["space", "astronomy", "alien"],
       "cover": "https://covers.openlibrary.org/b/id/8798315-L.jpg",
       "link": "https://openlibrary.org/works/OL2950903W/Contact?edition=key:/books/OL27333701M",
@@ -438,8 +471,7 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null,
-      "collections": null
+      "rating": null
     },
     {
       "id": "the-outer-limits-of-reason",
@@ -462,8 +494,7 @@
         "date_finished": "",
         "pages_read": 0
       },
-      "rating": null,
-      "collections": null
+      "rating": null
     }
   ],
   "collections": [
@@ -484,7 +515,8 @@
         "the-hitchhikers-guide-to-the-galaxy",
         "the-restaurant-at-the-end-of-the-universe",
         "life-the-universe-and-everything",
-        "so-long-and-thanks-for-all-the-fish"
+        "so-long-and-thanks-for-all-the-fish",
+        "mostly-harmless"
       ]
     }
   ]

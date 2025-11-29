@@ -1,8 +1,8 @@
 {{ define "content" }}
   {{ range $status, $books := .Books }} 
-    <section class="card" aria-labelledby="hero-heading">
+    <section class="card" aria-labelledby="{{ $status }}">
       <header>
-        <h2 id="hero-heading">{{ title $status }}</h2>
+        <h2 id="{{ $status }}">{{ title $status }}</h2>
       </header>
 
       <div class="books-grid">
