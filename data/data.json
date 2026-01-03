@@ -516,6 +516,121 @@
         "pages_read": 0
       },
       "rating": null
+    },
+    {
+      "id": "we-are-legion",
+      "isbn": "9781668221570",
+      "title": "We Are Legion (We Are Bob)",
+      "subtitle": "Bobiverse #1",
+      "authors": ["Dennis E. Taylor"],
+      "year": 2016,
+      "language": "en",
+      "pages": null,
+      "genre": "science-fiction",
+      "tags": ["space", "humor"],
+      "cover": "https://covers.openlibrary.org/b/id/15150802-M.jpg",
+      "link": "https://openlibrary.org/books/OL60789259M/We_Are_Legion",
+      "date_added": "",
+      "status": "wishlisted",
+      "rank": 5,
+      "progress": {
+        "date_started": "",
+        "date_finished": "",
+        "pages_read": 0
+      },
+      "rating": null
+    },
+    {
+      "id": "for-we-are-many",
+      "isbn": "9781668221594",
+      "title": "For We Are Many",
+      "subtitle": "Bobiverse #2",
+      "authors": ["Dennis E. Taylor"],
+      "year": 2017,
+      "language": "en",
+      "pages": null,
+      "genre": "science-fiction",
+      "tags": ["space", "humor"],
+      "cover": "",
+      "link": "",
+      "date_added": "",
+      "status": "wishlisted",
+      "rank": 6,
+      "progress": {
+        "date_started": "",
+        "date_finished": "",
+        "pages_read": 0
+      },
+      "rating": null
+    },
+    {
+      "id": "all-these-worlds",
+      "isbn": "9781668221617",
+      "title": "All These Worlds",
+      "subtitle": "Bobiverse #3",
+      "authors": ["Dennis E. Taylor"],
+      "year": 2017,
+      "language": "en",
+      "pages": null,
+      "genre": "science-fiction",
+      "tags": ["space", "humor"],
+      "cover": "",
+      "link": "",
+      "date_added": "",
+      "status": "wishlisted",
+      "rank": 7,
+      "progress": {
+        "date_started": "",
+        "date_finished": "",
+        "pages_read": 0
+      },
+      "rating": null
+    },
+    {
+      "id": "heavens-river",
+      "isbn": "9781668221631",
+      "title": "Heaven's River",
+      "subtitle": "Bobiverse #4",
+      "authors": ["Dennis E. Taylor"],
+      "year": 2021,
+      "language": "en",
+      "pages": null,
+      "genre": "science-fiction",
+      "tags": ["space", "humor"],
+      "cover": "",
+      "link": "",
+      "date_added": "",
+      "status": "wishlisted",
+      "rank": 8,
+      "progress": {
+        "date_started": "",
+        "date_finished": "",
+        "pages_read": 0
+      },
+      "rating": null
+    },
+    {
+      "id": "not-till-we-are-lost",
+      "isbn": "9781668221655",
+      "title": "Not Till We Are Lost",
+      "subtitle": "Bobiverse #5",
+      "authors": ["Dennis E. Taylor"],
+      "year": 2024,
+      "language": "en",
+      "pages": null,
+      "genre": "science-fiction",
+      "tags": ["space", "humor"],
+      "cover": "",
+      "link": "",
+      "date_added": "",
+      "status": "wishlisted",
+      "rank": 9,
+      "progress": {
+        "date_started": "",
+        "date_finished": "",
+        "pages_read": 0
+      },
+      "rating": null
     }
   ],
   "collections": [
