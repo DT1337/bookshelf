@@ -404,6 +404,28 @@
       "rating": null
     },
     {
+      "id": "the-mythical-man-month",
+      "isbn": "0201006502",
+      "title": "The Mythical Man-Month",
+      "subtitle": "Essays on Software Engineering",
+      "authors": ["Frederick P. Brooks"],
+      "year": 1975,
+      "language": "en",
+      "pages": 177,
+      "genre": "non-fiction",
+      "tags": ["software engineering", "computer science"],
+      "cover": "https://covers.openlibrary.org/b/id/6915361-L.jpg",
+      "link": "https://openlibrary.org/works/OL3510570W/The_Mythical_Man-Month?edition=key:/books/OL5044740M",
+      "date_added": "2026-01-03",
+      "status": "to read",
+      "progress": {
+        "date_started": "",
+        "date_finished": "",
+        "pages_read": 0
+      },
+      "rating": null
+    },
+    {
       "id": "ready-player-one",
       "isbn": "9780307887436",
       "title": "Ready Player One",
