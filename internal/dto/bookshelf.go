@@ -1,11 +1,10 @@
 package dto
 
 import (
-	"crypto/md5"
-	"encoding/hex"
 	"encoding/json"
 	"fmt"
 	"math"
+	"math/rand"
 	"os"
 	"regexp"
 	"sort"
@@ -153,11 +152,9 @@ func (b *Bookshelf) BookQuotes() []Quote {
 		}
 	}
 
-	// Sort quotes based on the hash of the quote text for a pseudo random (deterministic) order
-	sort.SliceStable(quotes, func(i, j int) bool {
-		hashI := md5.Sum([]byte(quotes[i].Quote))
-		hashJ := md5.Sum([]byte(quotes[j].Quote))
-		return hex.EncodeToString(hashI[:]) < hex.EncodeToString(hashJ[:])
+	// Shuffle the quotes to prevent clusters of quotes per book
+	rand.Shuffle(len(quotes), func(i, j int) {
+		quotes[i], quotes[j] = quotes[j], quotes[i]
 	})
 
 	return quotes
