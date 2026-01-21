@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"math"
 	"os"
+	"regexp"
 	"sort"
 	"time"
 )
@@ -138,10 +139,13 @@ func (b *Bookshelf) BookCollections() []ResolvedCollection {
 func (b *Bookshelf) BookQuotes() []Quote {
 	var quotes []Quote
 
+	// regex for removing the line indicator at the end of the quote if present
+	lineIndicatorRegex := regexp.MustCompile(`\s*\[\d+(?:-\d+)?\]$`)
+
 	for _, book := range b.Books {
 		for _, quote := range book.Quotes {
 			quotes = append(quotes, Quote{
-				Quote:     quote,
+				Quote:     lineIndicatorRegex.ReplaceAllString(quote, ""),
 				Authors:   book.Authors,
 				BookTitle: book.Title,
 				Id:        book.Id,
