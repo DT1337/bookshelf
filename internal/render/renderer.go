@@ -50,7 +50,23 @@ func New(config TemplateRendererConfig) (*TemplateRenderer, error) {
 		return nil, err
 	}
 
-	_, err = baseTemplate.ParseGlob(filepath.Join(config.TemplatesPath, config.ComponentTemplatesPath, "*."+config.TemplateType))
+	var templateFiles []string
+	err = filepath.Walk(filepath.Join(config.TemplatesPath, config.ComponentTemplatesPath), func(path string, info os.FileInfo, err error) error {
+		if err != nil {
+			return err
+		}
+
+		if !info.IsDir() && strings.HasSuffix(info.Name(), "."+config.TemplateType) {
+			templateFiles = append(templateFiles, path)
+		}
+
+		return nil
+	})
+	if err != nil {
+		return nil, err
+	}
+
+	_, err = baseTemplate.ParseFiles(templateFiles...)
 	if err != nil {
 		return nil, err
 	}
