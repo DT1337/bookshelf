@@ -36,21 +36,21 @@
             </ul>
           </div>
         </div>
-          {{ $link := .Status | printf "bookshelf.html#%s" }}
-          {{ if eq .Status "wishlisted" }}
-            {{ $link = "wishlist.html" }}
-          {{ end }}
-          <a href="{{ $link }}" class="book-status">
-            {{ title .Status }}
-          </a>
+        {{ $link := .Status | printf "bookshelf.html#%s" }}
+        {{ if eq .Status "wishlisted" }}
+          {{ $link = "wishlist.html" }}
+        {{ end }}
+        <a href="{{ $link }}" class="book-status">
+          {{ title .Status }}
+        </a>
         {{ if or .Progress.DateStarted .Progress.DateFinished }}
           <div class="book-progress">
             {{ if and .Progress.DateStarted .Progress.DateFinished }}
-            <span class="muted">Started:</span> {{ .Progress.DateStarted }}
-            <span class="muted">Finished:</span> {{ .Progress.DateFinished }}
+              <span class="muted">Started:</span> {{ .Progress.DateStarted }}
+              <span class="muted">Finished:</span> {{ .Progress.DateFinished }}
             {{ else if and .Progress.DateStarted (not .Progress.DateFinished) }}
-            <span class="muted">Started:</span> {{ .Progress.DateStarted }}
-            <span class="muted">Progress:</span> {{ .Progress.PagesRead }}/{{ .Pages }}
+              <span class="muted">Started:</span> {{ .Progress.DateStarted }}
+              <span class="muted">Progress:</span> {{ .Progress.PagesRead }}/{{ .Pages }}
             {{ end }}
           </div>
         {{ end }}
@@ -59,7 +59,7 @@
             <h2>Review</h2>
             {{ if .Rating }}<span class="rating">★ {{printf "%.1f" .Rating }}</span>{{ end }}
             {{ range .Review }}
-              <p>{{ . }}</p>
+              <p class="review">{{ . }}</p>
             {{ end }}
           </div>
         {{ end }}

@@ -101,6 +101,34 @@ func (b *Bookshelf) getUpcomingBooksWithLimit(booksByStatus map[string][]Book, l
 	return upcomingBooks
 }
 
+func (b *Bookshelf) LatestReviewedBook() (Book, bool) {
+	// Filter out books that have no reviews
+	var booksWithReviews []Book
+	for _, book := range b.Books {
+		if len(book.Review) > 0 && book.Progress.DateFinished != "" {
+			booksWithReviews = append(booksWithReviews, book)
+		}
+	}
+
+	if len(booksWithReviews) == 0 {
+		return Book{}, false
+	}
+
+	// Sort books by Progress.DateFinished in descending order (latest finished first)
+	sort.SliceStable(booksWithReviews, func(i, j int) bool {
+		dateI, errI := time.Parse("2006-01-02", booksWithReviews[i].Progress.DateFinished)
+		dateJ, errJ := time.Parse("2006-01-02", booksWithReviews[j].Progress.DateFinished)
+
+		// Handle parsing errors by treating it as a fallback (older books will go last)
+		if errI != nil || errJ != nil {
+			return booksWithReviews[i].Progress.DateFinished > booksWithReviews[j].Progress.DateFinished
+		}
+		return dateI.After(dateJ)
+	})
+
+	return booksWithReviews[0], true
+}
+
 func (b *Bookshelf) ShelvedBooks() map[string][]Book {
 	shelvedBooks := b.booksByStatus()
 	delete(shelvedBooks, StatusWishlisted) // Wishlisted books are not considered as shelved books

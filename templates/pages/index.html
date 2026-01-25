@@ -1,38 +1,65 @@
 {{ define "content" }}
   <div class="layout-with-aside">
-    <section class="card" aria-labelledby="hero-heading">
-      <header>
-        <h2 id="hero-heading">Welcome to My Digital Book Library</h2>
-        <p class="muted small">Here you can find a collection of books I'm reading now — and those I can't wait to start.</p>
-      </header>
+    <div>
+      <section class="card" aria-labelledby="welcome-heading">
+        <header>
+          <h2 id="welcome-heading">Welcome to My Digital Book Library</h2>
+          <p class="muted">Here you can find a collection of books I'm reading now — and those I can't wait to start.</p>
+        </header>
 
-      {{ if .HasUpcomingBooks}}
-        <div class="books-grid">
-          {{ range $status, $books := .UpcomingBooks }}
-            {{ $statusDisplayed := false }}
-            {{ range $books }}
-              <div class="book-group">
-                {{ if not $statusDisplayed }}
-                  <div class="status-label">{{ title $status }}</div>
-                  {{ $statusDisplayed = true }}
-                {{ end }}
-                {{ template "book" . }}
-              </div>
+        {{ if .HasUpcomingBooks}}
+          <div class="books-grid">
+            {{ range $status, $books := .UpcomingBooks }}
+              {{ $statusDisplayed := false }}
+              {{ range $books }}
+                <div class="book-group">
+                  {{ if not $statusDisplayed }}
+                    <div class="status-label">{{ title $status }}</div>
+                    {{ $statusDisplayed = true }}
+                  {{ end }}
+                  {{ template "book" . }}
+                </div>
+              {{ end }}
             {{ end }}
-          {{ end }}
-        </div>
-      {{ else }}
-        <p class="empty-set">
-          Oh, quite empty here.<br>
-          Feel free to suggest me some good books :)
-        </p>
+          </div>
+        {{ else }}
+          <p class="empty-set">
+            Oh, quite empty here.<br>
+            Feel free to suggest me some good books :)
+          </p>
+        {{ end }}
+      </section>
+
+      {{ if .HasLatestReviewedBook }}
+        {{ with .LatestReviewedBook }}
+          <section class="card" aria-labelledby="latest-reviews-heading">
+            <header>
+              <h2 id="latest-reviews-heading">Latest Review</h2>
+              <p class="muted">
+                I just turned the last page of 
+                {{ $link := .Id | printf "%s.html" }}
+                <a href="{{ $link }}" class="book-highlight">
+                  {{ .Title }}
+                </a>
+                 — Here's my take on it.
+              </p>
+            </header>
+
+            <div class="book-review">
+              {{ if .Rating }}<span class="rating">★ {{printf "%.1f" .Rating }}</span>{{ end }}
+              {{ range .Review }}
+                <p class="review">{{ . }}</p>
+              {{ end }}
+            </div>
+          </section>
+        {{ end }}
       {{ end }}
-    </section>
+    </div>
 
     <aside class="card" aria-labelledby="sidebar-heading">
       <header>
         <h2 id="sidebar-heading">Stats</h2>
-        <p class="muted small">A snapshot of my bookshelf by the numbers.</p>
+        <p class="muted">A snapshot of my bookshelf by the numbers.</p>
       </header>
       <div class="meta-list">
         <div class="meta-item">
