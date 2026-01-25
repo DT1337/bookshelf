@@ -46,7 +46,7 @@
             </header>
 
             <div class="book-review">
-              {{ if .Rating }}<span class="rating">★ {{printf "%.1f" .Rating }}</span>{{ end }}
+              {{ if .Rating }}<span class="rating">{{ template "rating" }} {{printf "%.1f" .Rating }}</span>{{ end }}
               {{ range .Review }}
                 <p class="review">{{ . }}</p>
               {{ end }}
