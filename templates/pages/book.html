@@ -36,7 +36,7 @@
             </ul>
           </div>
         </div>
-          {{ $link := "bookshelf.html#{{ .Status }}" }}
+          {{ $link := .Status | printf "bookshelf.html#%s" }}
           {{ if eq .Status "wishlisted" }}
             {{ $link = "wishlist.html" }}
           {{ end }}
