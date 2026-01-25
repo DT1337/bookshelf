@@ -32,6 +32,7 @@ type Book struct {
 type Progress struct {
 	DateStarted  string `json:"date_started"`
 	DateFinished string `json:"date_finished"`
+	ReadingTime  string `json:"reading_time"`
 	PagesRead    int    `json:"pages_read"`
 }
 
