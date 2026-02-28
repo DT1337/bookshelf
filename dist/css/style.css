@@ -247,6 +247,10 @@ main.site-main .layout-with-aside {
   align-items: start;
 }
 
+.layout-with-aside > * {
+  height: 100%;
+}
+
 .card {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0.01));
   border-radius: 16px;
@@ -256,7 +260,7 @@ main.site-main .layout-with-aside {
 }
 
 .card:not(:last-child) {
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .card header {
@@ -466,6 +470,19 @@ main.site-main .layout-with-aside {
   gap: .5rem;
 }
 
+.book-card .book-info .meta ul li,
+.book-article .book-info .meta ul li {
+  display: flex;
+  align-items: center;
+  gap: .25rem;
+}
+
+.book-card .book-info .meta ul li svg,
+.book-article .book-info .meta ul li svg {
+  width: 16px;
+  height: 16px;
+}
+
 .book-card .book-info .authors ul li:not(:last-child)::after,
 .book-card .book-info .meta ul li:not(:last-child)::after,
 .book-article .book-info .authors ul li:not(:last-child)::after,
@@ -546,13 +563,26 @@ main.site-main .layout-with-aside {
   margin-bottom: .25rem;
 }
 
-.book-article .book-review .rating {
-  display: block;
+.book-review .rating {
+  display: flex;
+  align-items: center;
+  gap: .25rem;
   margin-bottom: .25rem;
 }
 
-.book-article .book-review,
-.book-article .book-quotes {
+.book-review .rating svg {
+  width: 16px;
+  height: 16px;
+}
+
+.book-review .review {
+  margin-bottom: .5rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.book-review,
+.book-quotes {
   line-height: 1.75;
 }
 
@@ -634,6 +664,17 @@ main.site-main .layout-with-aside {
   text-align: center;
   color: var(--muted);
   font-size: 1.25rem;
+}
+
+.book-highlight {
+  background: var(--cta);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 aside .meta-list {
