@@ -4,15 +4,12 @@
       "id": "2001-a-space-odyssey",
       "isbn": "9780451457998",
       "title": "2001: A Space Odyssey",
-      "subtitle": "",
       "authors": ["Arthur C. Clarke"],
       "year": 1968,
       "language": "en",
       "pages": 297,
       "genre": "science-fiction",
       "tags": ["space", "space travel", "mission"],
-      "cover": "",
-      "link": "",
       "date_added": "2024-12-24",
       "status": "finished",
       "progress": {
@@ -57,7 +54,6 @@
       "id": "1984",
       "isbn": "9780141036144",
       "title": "1984",
-      "subtitle": "",
       "authors": ["George Orwell"],
       "year": 1949,
       "language": "en",
@@ -84,7 +80,6 @@
       "id": "project-hail-mary",
       "isbn": "9781529157468",
       "title": "Project Hail Mary",
-      "subtitle": "",
       "authors": ["Andy Weir"],
       "year": 2021,
       "language": "en",
@@ -105,7 +100,6 @@
       "id": "mickey7",
       "isbn": "9781786185464",
       "title": "Mickey7",
-      "subtitle": "",
       "authors": ["Edward Ashton"],
       "year": 2022,
       "language": "en",
@@ -124,7 +118,6 @@
     },
     {
       "id": "flatland",
-      "isbn": "",
       "title": "Flatland",
       "subtitle": "A Romance of Many Dimensions",
       "authors": ["Edwin A. Abbott"],
@@ -133,8 +126,6 @@
       "pages": 100,
       "genre": "fiction",
       "tags": ["mathematics", "dimension", "abstract"],
-      "cover": "",
-      "link": "",
       "date_added": "2025-07-01",
       "status": "finished",
       "progress": {
@@ -171,7 +162,6 @@
       "id": "fahrenheit-451",
       "isbn": "9781451673319",
       "title": "Fahrenheit 451",
-      "subtitle": "",
       "authors": ["Ray Bradburry"],
       "year": 1953,
       "language": "en",
@@ -314,7 +304,6 @@
       "pages": 199,
       "genre": "science-fiction",
       "tags": ["comedy", "space", "humor"],
-      "cover": "",
       "link": "https://openlibrary.org/works/OL2163623W/Life_the_Universe_and_Everything?edition=key:/books/OL29474404M",
       "date_added": "2025-09-22",
       "status": "finished",
@@ -378,14 +367,13 @@
         "It can be very dangerous to see things from somebody else's point of view without the proper training.",
         "Let the past hold on to itself and let the present move forward into the future.",
         "Sometimes if you received an answer, the question might be taken away.",
-        "Anything that happens, happens.\nAnything that, in happening, causes something else to happen, causes something else to happen.\nAnything that, in happening, causes itself to happen again, happens again.\nIt doesn’t necessarily do it in chronological order, though."
+        "Anything that happens, happens.\nAnything that, in happening, causes something else to happen, causes something else to happen.\nAnything that, in happening, causes itself to happen again, happens again.\nIt doesn't necessarily do it in chronological order, though."
       ]
     },
     {
       "id": "brave-new-world",
       "isbn": "9780099477464",
       "title": "Brave New World",
-      "subtitle": "",
       "authors": ["Aldous Huxley"],
       "year": 1932,
       "language": "en",
@@ -456,70 +444,43 @@
       "id": "ready-player-one",
       "isbn": "9780307887436",
       "title": "Ready Player One",
-      "subtitle": "",
       "authors": ["Ernest Cline"],
       "year": 2011,
       "language": "en",
-      "pages": null,
       "genre": "science-fiction",
       "tags": ["dystopia", "pop culture fiction", "video games"],
       "cover": "https://covers.openlibrary.org/b/id/8270105-L.jpg",
       "link": "https://openlibrary.org/books/OL24842593M/Ready_Player_One",
-      "date_added": "",
       "status": "wishlisted",
-      "rank": 1,
-      "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
-      },
-      "rating": null
+      "rank": 1
     },
         {
       "id": "solaris",
       "isbn": "9780571311576",
       "title": "Solaris",
-      "subtitle": "",
       "authors": ["Stanislaw Lem"],
       "year": 1961,
       "language": "en",
-      "pages": null,
       "genre": "science-fiction",
       "tags": ["space", "philosophy"],
       "cover": "https://covers.openlibrary.org/b/id/10116589-L.jpg",
       "link": "https://openlibrary.org/works/OL109524W/Solaris?edition=key:/books/OL28179710M",
-      "date_added": "",
       "status": "wishlisted",
-      "rank": 2,
-      "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
-      },
-      "rating": null
+      "rank": 2
     },
     {
       "id": "contact",
       "isbn": "9781501197987",
       "title": "Contact",
-      "subtitle": "",
       "authors": ["Carl Sagan"],
       "year": 1985,
       "language": "en",
-      "pages": null,
       "genre": "science-fiction",
       "tags": ["space", "astronomy", "alien"],
       "cover": "https://covers.openlibrary.org/b/id/8798315-L.jpg",
       "link": "https://openlibrary.org/works/OL2950903W/Contact?edition=key:/books/OL27333701M",
-      "date_added": "",
       "status": "wishlisted",
-      "rank": 3,
-      "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
-      },
-      "rating": null
+      "rank": 3
     },
     {
       "id": "the-outer-limits-of-reason",
@@ -529,20 +490,11 @@
       "authors": ["Noson S. Yanofsky"],
       "year": 2013,
       "language": "en",
-      "pages": null,
       "genre": "non-fiction",
       "tags": ["science", "philosophy", "mathematics", "physics", "logic"],
-      "cover": "",
       "link": "https://openlibrary.org/works/OL21593212W/Outer_Limits_of_Reason?edition=key:/books/OL29316428M",
-      "date_added": "",
       "status": "wishlisted",
-      "rank": 4,
-      "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
-      },
-      "rating": null
+      "rank": 4
     },
     {
       "id": "we-are-legion",
@@ -552,20 +504,12 @@
       "authors": ["Dennis E. Taylor"],
       "year": 2016,
       "language": "en",
-      "pages": null,
       "genre": "science-fiction",
       "tags": ["space", "humor"],
       "cover": "https://covers.openlibrary.org/b/id/15150802-M.jpg",
       "link": "https://openlibrary.org/books/OL60789259M/We_Are_Legion",
-      "date_added": "",
       "status": "wishlisted",
-      "rank": 5,
-      "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
-      },
-      "rating": null
+      "rank": 5
     },
     {
       "id": "for-we-are-many",
@@ -575,20 +519,10 @@
       "authors": ["Dennis E. Taylor"],
       "year": 2017,
       "language": "en",
-      "pages": null,
       "genre": "science-fiction",
       "tags": ["space", "humor"],
-      "cover": "",
-      "link": "",
-      "date_added": "",
       "status": "wishlisted",
-      "rank": 6,
-      "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
-      },
-      "rating": null
+      "rank": 6
     },
     {
       "id": "all-these-worlds",
@@ -598,20 +532,10 @@
       "authors": ["Dennis E. Taylor"],
       "year": 2017,
       "language": "en",
-      "pages": null,
       "genre": "science-fiction",
       "tags": ["space", "humor"],
-      "cover": "",
-      "link": "",
-      "date_added": "",
       "status": "wishlisted",
-      "rank": 7,
-      "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
-      },
-      "rating": null
+      "rank": 7
     },
     {
       "id": "heavens-river",
@@ -621,20 +545,10 @@
       "authors": ["Dennis E. Taylor"],
       "year": 2021,
       "language": "en",
-      "pages": null,
       "genre": "science-fiction",
       "tags": ["space", "humor"],
-      "cover": "",
-      "link": "",
-      "date_added": "",
       "status": "wishlisted",
-      "rank": 8,
-      "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
-      },
-      "rating": null
+      "rank": 8
     },
     {
       "id": "not-till-we-are-lost",
@@ -644,20 +558,10 @@
       "authors": ["Dennis E. Taylor"],
       "year": 2024,
       "language": "en",
-      "pages": null,
       "genre": "science-fiction",
       "tags": ["space", "humor"],
-      "cover": "",
-      "link": "",
-      "date_added": "",
       "status": "wishlisted",
-      "rank": 9,
-      "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
-      },
-      "rating": null
+      "rank": 9
     }
   ],
   "collections": [
