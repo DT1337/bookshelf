@@ -441,6 +441,27 @@
       ]
     },
     {
+      "id": "designing-data-intensive-applications",
+      "isbn": "9781449373320",
+      "title": "Designing Data-Intensive Applications",
+      "subtitle": "The Big Ideas Behind Reliable, Scalable, and Maintainable Systems",
+      "authors": ["Martin Kleppmann"],
+      "year": 2017,
+      "language": "en",
+      "pages": 544,
+      "genre": "non-fiction",
+      "tags": ["software engineering", "computer science"],
+      "cover": "https://covers.openlibrary.org/b/id/8434671-L.jpg",
+      "link": "https://openlibrary.org/works/OL19293745W/Designing_Data-Intensive_Applications?edition=key:/books/OL26780701M",
+      "date_added": "2026-01-31",
+      "status": "reading",
+      "progress": {
+        "date_started": "2026-02-23",
+        "date_finished": "",
+        "pages_read": 38
+      }
+    },
+    {
       "id": "ready-player-one",
       "isbn": "9780307887436",
       "title": "Ready Player One",
