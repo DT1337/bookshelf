@@ -59,7 +59,7 @@
             <h2>Review</h2>
             {{ if .Rating }}<span class="rating">{{ template "rating" }} {{printf "%.1f" .Rating }}</span>{{ end }}
             {{ range .Review }}
-              <p class="review">{{ . }}</p>
+              <p class="review">{{ safeHTML . }}</p>
             {{ end }}
           </div>
         {{ end }}
