@@ -395,13 +395,24 @@
       "cover": "https://covers.openlibrary.org/b/id/11270166-L.jpg",
       "link": "https://openlibrary.org/works/OL64365W/Brave_New_World?edition=key:/books/OL9273490M",
       "date_added": "2025-12-24",
-      "status": "to read",
+      "status": "finished",
       "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
+        "date_started": "2026-01-10",
+        "date_finished": "2026-01-20",
+        "reading_time": "8:40:35.92"
       },
-      "rating": null
+      "rating": 4.0,
+      "quotes": [
+        "A love of nature keeps no factories busy. [18]",
+        "I am I, and I wish I weren't. [55]",
+        "Never put off till tomorrow the fun you can have today. [81]",
+        "He was a philosopher, if you know what that was. \"A man who dreams of fewer things than there are in heaven and earth.\" [204]",
+        "You can't play Electro-magnetic Golf according to the rules of Centrifugal Bumble-puppy. [208]",
+        "\"Did you eat something that did't agree with you?\" asked Bernard. The Savage nodded. \"I ate civilization.\" [213]"
+      ],
+      "review": [
+        "Brave New World paints a haunting vision of a future where pleasure and control are manipulated to create a perfectly stable society - yet, at the expense of humanity's soul.\nWow did Huxley predicted todays social media industry with this one?\nHuxley's exploration of consumerism and loss of individuality still feels incredibly relevant today."
+      ]
     },
     {
       "id": "the-mythical-man-month",
@@ -634,6 +645,13 @@
     }
   ],
   "collections": [
+    {
+      "name": "2026",
+      "description": "Books I read in the year 2026",
+      "books": [
+        "brave-new-world"
+      ]
+    },
     {
       "name": "2025",
       "description": "Books I read in the year 2025",
