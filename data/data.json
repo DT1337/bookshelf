@@ -428,13 +428,29 @@
       "cover": "https://covers.openlibrary.org/b/id/6915361-L.jpg",
       "link": "https://openlibrary.org/works/OL3510570W/The_Mythical_Man-Month?edition=key:/books/OL5044740M",
       "date_added": "2026-01-03",
-      "status": "to read",
+      "status": "finished",
       "progress": {
-        "date_started": "",
-        "date_finished": "",
-        "pages_read": 0
+        "date_started": "2026-02-10",
+        "date_finished": "2026-02-19"
       },
-      "rating": null
+      "rating": 3.9,
+      "quotes": [
+        "The programmer, like the poet, works only slightly removed from pure thought-stuff. He builds his castle in the air, from air, creating by exertion of the imagination. [7]",
+        "All programmers are optimists. Perhaps this modern sorcery especially attracts those who believe in happy endings and fairy godmothers. [14]",
+        "The Mind of the Maker, devides creative activity into three stages: the idea, the implementation, and the interaction. [15]",
+        "For the human makers of things, the incompleteness and inconsistencies of our ideas become clear only during implementation. [15]",
+        "[...] conceptual integrity is the most important consideration in system design. [42]",
+        "Because ease of use is the purpose, this ratio of function to conceptual complexity is the ultimate test of system design. [43]",
+        "An ancient adage warns \"Never go to sea with two chronometers; take one or three.\" [64]",
+        "Thinkers are rare; doers are rarer; and thinker-doers are rarest. [80]",
+        "Long before any code exists, the specification must be handed to an outside testing group to be scrutinized for completeness and clarity. As Vyssotsky says, the developers themselves cannot do this: \"They won't tell you they don't understand it; they will happily invent their way through the gaps and obscurities.\" [142]",
+        "How does a project get to be a year late? ... One day at a time. [153]",
+        "But the day-by-day slippage is harder to recognize, harder to prevent, harder to make up. Yesterday a key man was sick, and a meeting couldn't be held. Today the machines are all down, because lightning struck the building's power transformer. Tomorrow the disk routines won't start testing, because the first disk is a week late from the factory. Snow, jury duty, family problems, emergency meetings with customers, executive audits - the list goes on and on. Each one only postpones some activity by a half-day or a day. And the schedule slips, one day at a time. [154]",
+        "But every boss needs two kinds of information, exceptions to plan that require action and a status picture for education. [157]"
+      ],
+      "review": [
+        "The Mythical Man-Month kicks off with the simple truth: \"Adding manpower to a late software project makes it later.\" now known as Brooks' Law. The author uses real examples from the '60s to show how this played out in operating system development. Even though tech has changed a lot since then, the book's lessons still feel incredibly relevant - especially for today's web development world. It's eye-opening how much still applies to managing projects and teams."
+      ]
     },
     {
       "id": "ready-player-one",
@@ -649,7 +665,8 @@
       "name": "2026",
       "description": "Books I read in the year 2026",
       "books": [
-        "brave-new-world"
+        "brave-new-world",
+        "the-mythical-man-month"
       ]
     },
     {
