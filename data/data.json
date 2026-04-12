@@ -477,6 +477,21 @@
       "status": "to read"
     },
     {
+      "id": "contact",
+      "isbn": "9781501197987",
+      "title": "Contact",
+      "authors": ["Carl Sagan"],
+      "year": 1985,
+      "language": "en",
+      "pages": 374,
+      "genre": "science-fiction",
+      "tags": ["space", "astronomy", "alien"],
+      "cover": "https://covers.openlibrary.org/b/id/8798315-L.jpg",
+      "link": "https://openlibrary.org/works/OL2950903W/Contact?edition=key:/books/OL27333701M",
+      "date_added": "2026-04-08",
+      "status": "to read"
+    },
+    {
       "id": "ready-player-one",
       "isbn": "9780307887436",
       "title": "Ready Player One",
@@ -489,20 +504,6 @@
       "link": "https://openlibrary.org/books/OL24842593M/Ready_Player_One",
       "status": "wishlisted",
       "rank": 1
-    },
-    {
-      "id": "contact",
-      "isbn": "9781501197987",
-      "title": "Contact",
-      "authors": ["Carl Sagan"],
-      "year": 1985,
-      "language": "en",
-      "genre": "science-fiction",
-      "tags": ["space", "astronomy", "alien"],
-      "cover": "https://covers.openlibrary.org/b/id/8798315-L.jpg",
-      "link": "https://openlibrary.org/works/OL2950903W/Contact?edition=key:/books/OL27333701M",
-      "status": "wishlisted",
-      "rank": 3
     },
     {
       "id": "the-outer-limits-of-reason",
