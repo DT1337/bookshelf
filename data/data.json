@@ -462,6 +462,21 @@
       }
     },
     {
+      "id": "solaris",
+      "isbn": "9780571311576",
+      "title": "Solaris",
+      "authors": ["Stanislaw Lem"],
+      "year": 1961,
+      "language": "en",
+      "pages": 214,
+      "genre": "science-fiction",
+      "tags": ["space", "philosophy"],
+      "cover": "https://covers.openlibrary.org/b/id/10116589-L.jpg",
+      "link": "https://openlibrary.org/works/OL109524W/Solaris?edition=key:/books/OL28179710M",
+      "date_added": "2026-03-30",
+      "status": "to read"
+    },
+    {
       "id": "ready-player-one",
       "isbn": "9780307887436",
       "title": "Ready Player One",
@@ -474,20 +489,6 @@
       "link": "https://openlibrary.org/books/OL24842593M/Ready_Player_One",
       "status": "wishlisted",
       "rank": 1
-    },
-        {
-      "id": "solaris",
-      "isbn": "9780571311576",
-      "title": "Solaris",
-      "authors": ["Stanislaw Lem"],
-      "year": 1961,
-      "language": "en",
-      "genre": "science-fiction",
-      "tags": ["space", "philosophy"],
-      "cover": "https://covers.openlibrary.org/b/id/10116589-L.jpg",
-      "link": "https://openlibrary.org/works/OL109524W/Solaris?edition=key:/books/OL28179710M",
-      "status": "wishlisted",
-      "rank": 2
     },
     {
       "id": "contact",
