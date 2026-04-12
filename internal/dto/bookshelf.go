@@ -246,7 +246,15 @@ func (b *Bookshelf) sortBooksAlphabetically(books []Book) {
 	})
 }
 
+func (b *Bookshelf) normalizeRanks(books []Book) {
+	// Reset ranks so that they are continuous, starting from 1
+	for i, _ := range books {
+		books[i].Rank = i + 1 // Set rank as index + 1
+	}
+}
+
 func (b *Bookshelf) sortBooksByRank(books []Book) {
+	// First sort the books by rank (with 0 being treated as the lowest possible rank)
 	sort.SliceStable(books, func(i, j int) bool {
 		ri, rj := books[i].Rank, books[j].Rank
 
@@ -259,6 +267,9 @@ func (b *Bookshelf) sortBooksByRank(books []Book) {
 
 		return ri < rj
 	})
+
+	// Now normalize ranks to ensure they are continuous
+	b.normalizeRanks(books)
 }
 
 func (b *Bookshelf) sortByCount(s []StatCount) {
