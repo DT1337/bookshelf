@@ -492,6 +492,20 @@
       "status": "to read"
     },
     {
+      "id": "neuromancer",
+      "isbn": "9780441569595",
+      "title": "Neuromancer",
+      "subtitle": "Sprawl #1",
+      "authors": ["William Gibson"],
+      "year": 1984,
+      "language": "en",
+      "pages": 287,
+      "genre": "science-fiction",
+      "tags": ["cyberpunk"],
+      "date_added": "2026-04-28",
+      "status": "to read"
+    },
+    {
       "id": "ready-player-one",
       "isbn": "9780307887436",
       "title": "Ready Player One",
