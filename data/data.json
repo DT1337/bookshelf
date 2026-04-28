@@ -520,6 +520,32 @@
       "rank": 1
     },
     {
+      "id": "count-zero",
+      "isbn": "9780441013678",
+      "title": "Count Zero",
+      "subtitle": "Sprawl #2",
+      "authors": ["William Gibson"],
+      "year": 1986,
+      "language": "en",
+      "genre": "science-fiction",
+      "tags": ["cyberpunk"],
+      "status": "wishlisted",
+      "rank": 2
+    },
+    {
+      "id": "mona-lisa-overdrive",
+      "isbn": "9798217093960",
+      "title": "Mona Lisa Overdrive",
+      "subtitle": "Sprawl #3",
+      "authors": ["William Gibson"],
+      "year": 1988,
+      "language": "en",
+      "genre": "science-fiction",
+      "tags": ["cyberpunk"],
+      "status": "wishlisted",
+      "rank": 3
+    },
+    {
       "id": "the-outer-limits-of-reason",
       "isbn": "9780262529846",
       "title": "The Outer Limits of Reason",
