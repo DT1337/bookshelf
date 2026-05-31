@@ -454,12 +454,25 @@
       "cover": "https://covers.openlibrary.org/b/id/8434671-L.jpg",
       "link": "https://openlibrary.org/works/OL19293745W/Designing_Data-Intensive_Applications?edition=key:/books/OL26780701M",
       "date_added": "2026-01-31",
-      "status": "reading",
+      "status": "finished",
       "progress": {
         "date_started": "2026-02-23",
-        "date_finished": "",
-        "pages_read": 38
-      }
+        "date_finished": "2026-05-27"
+      },
+      "rating": 4.3,
+      "quotes": [
+        "One of the best tools we have for removing accidental complexity is abstraction. [21]",
+        "data outlives code. [130]",
+        "May your application's evolution be rapid and your deployments be frequent. [140]",
+        "In distributed systems, suspicion, pessimism, and paranoia pay off. [277]",
+        "The fastest and most reliable network request is no request at all! [509]",
+        "\"machine learning is like money laundering for bias\" [534]",
+        "As a thought experiment, try replacing the word <strong>data</strong> with <strong>surveillance</strong>, and observe if common phrases still sound so good. How about this: \"In our surveillance-driven organization we collect real-time surveillance streams and store them in our surveillance warehouse. Our surveillance scientists use advanced analytics and surveillance processing in order to derive new insights.\"\n\nThis thought experiment is unusually polemic for this book, <strong>Designing Surveillance-Intensive Applications</strong>, but I think that strong words are needed to emphasize this point. [537]",
+        "The right to privacy is a decision right; it enables each person to decide where they want to be on the spectrum between secrecy and transparency in each situation. [539]"
+      ],
+      "review": [
+        "Essential reading for every developer. This book offers the clearest, most comprehensive overview of data storage and distributed systems—two fundamental pillars of modern software development—that I've encountered. Martin Kleppmann masterfully distills a vast amount of research, breaking down complex concepts and challenging trade-offs into explanations that are both accessible and insightful."
+      ]
     },
     {
       "id": "solaris",
@@ -706,7 +719,8 @@
         "brave-new-world",
         "the-mythical-man-month",
         "neuromancer",
-        "the-subtle-art-of-not-giving-a-fck"
+        "the-subtle-art-of-not-giving-a-fck",
+        "designing-data-intensive-applications"
       ]
     },
     {
