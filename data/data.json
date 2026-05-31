@@ -536,7 +536,45 @@
       "cover": "https://covers.openlibrary.org/b/id/14832101-L.jpg",
       "link": "https://openlibrary.org/works/OL17590212W/The_Subtle_Art_of_Not_Giving_a_F*ck?edition=key:/books/OL39199973M",
       "date_added": "2026-05-10",
-      "status": "to read"
+      "progress": {
+        "date_started": "2026-05-10",
+        "date_finished": "2026-05-25"
+      },
+      "status": "finished",
+      "rating": 3.8,
+      "quotes": [
+        "giving too many fucks is bad for your mental health.",
+        "The desire for more positive experience is itself a negative experience. And, paradoxically, the acceptance of one's negative experience is itself a positive experience.",
+        "\"You will never be happy if you continue to search for what happiness consists of. You will never live if you are looking for the meaning of life.\" Or put more simply: Don't try.",
+        "Everything worthwhile in life is won through surmounting the associated negative experience.",
+        "There's a name for a person who finds no emotion or meaning in anything: a psychopath.",
+        "Not giving a fuck does not mean being indifferent; it means being comfortable with being different.",
+        "To not give a fuck about adversity, you must first give a fuck about something more important than adversity.",
+        "Whether you realize it or not, you are always choosing what to give a fuck about.",
+        "Pain and loss are inevitable and we should let go of trying to resist them.",
+        "We are wired to become dissatisfied with whatever we have and satisfied by only what we do not have. This constant dissatisfaction has kept our species fighting and striving, building and conquering. So no - our own pain and misery aren't a bug of human evolution; they're a feature.",
+        "[Emotions are] feedback mechanisms telling us that something is either likely right or likely wrong for us - nothing more, nothing less.",
+        "Much as the pain of touching a hot stove teaches you not to touch it again, the sadness of being alone teaches you not do the things that made you feel so alone again. Emotions are simply biological signals designed to nudge you in the direction of beneficial change.",
+        "We're all, for the most part, pretty average people.",
+        "The internet has not just open-sources information; it has also open-sourced insecurity, self-doubt, and shame.",
+        "Often the only difference between a problem being painful or being powerful is a sense that we chose it, and that we are responsible for it.",
+        "Fault is past tense. Responsibility is present tense. Fault results from choices that have already been made. Responsibility results from the choices you're currently making, every second of every day.",
+        "But part of living in a democracy and a free society is that we all have to deal with views and people we don't necessarily like. That's simply the price we pay - you could even say it's the whole point of the system. And it seems more and more people are forgetting that.",
+        "The more you embrace being uncertain and not knowing, the more comfortable you will feel in knowing what you don't know.",
+        "We cannot learn anything without first not knowing something. The more we admit we do not know, the more opportunities we gain to learn.",
+        "Parkinson's law: \"Work expands so as to fill up the time available for its completion.\"",
+        "The more something threatens your identity, the more you will avoid it.",
+        "Aristotle wrote, \"It is the mark of an educated mind to be able to entertain a thought without accepting it.\"",
+        "Travel is a fantastic self-development tool, because it extricates you from the values of your culture and shows you that another society can live with entirely different values and still function and not hate themselves. This exposure to different cultural values and metrics then forces you to reexamine what seems obvious in your own life and to consider that perhaps it's not necessarily the best way to live.",
+        "It's not about giving a fuck about everything your partner gives a fuck about; it's about giving a fuck about your partner regardless of the fucks he or she gives. That's unconditional love, baby.",
+        "Death is the light by which the shadow of all of life's meaning is measured.",
+        "We are all aware on some level that our physical self will eventually die, that this death is inevitable, and that its inevitability - on some unconscious level - scares the shit out of us. Therefore, in order to compensate for our fear of the inevitable loss of our physical self, we try to construct a conceptual self that will live forever."
+      ],
+      "review": [
+        "Mark Manson, in his book The Subtle Art of Not Giving a F*ck, offers an honest perspective on life and emphasizes that \"giving too many fucks is bad for your mental health.\"",
+        "As with any self-help book, I take its advice with a grain of salt, but this is not the typical \"be positive and love yourself\" kind of rambling.",
+        "Although I think some of the examples provided by the author do not always make his points entirely clear, the book does challenge conventional perspectives and offers an interesting view on life, society, and everything around us."
+      ]
     },
     {
       "id": "ready-player-one",
@@ -667,7 +705,8 @@
       "books": [
         "brave-new-world",
         "the-mythical-man-month",
-        "neuromancer"
+        "neuromancer",
+        "the-subtle-art-of-not-giving-a-fck"
       ]
     },
     {
