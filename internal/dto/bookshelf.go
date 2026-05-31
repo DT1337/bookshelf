@@ -188,6 +188,14 @@ func (b *Bookshelf) BookQuotes() []Quote {
 	return quotes
 }
 
+func (b *Bookshelf) FavoriteQuote() (Quote, bool) {
+	if b.Insights.FavoriteQuote.Quote == "" {
+		return Quote{}, false
+	}
+
+	return b.Insights.FavoriteQuote, true
+}
+
 func (b *Bookshelf) WishlistedBooks() []Book {
 	wishlistedBooks := b.booksByStatus()[StatusWishlisted]
 	b.sortBooksByRank(wishlistedBooks)
@@ -248,7 +256,7 @@ func (b *Bookshelf) sortBooksAlphabetically(books []Book) {
 
 func (b *Bookshelf) normalizeRanks(books []Book) {
 	// Reset ranks so that they are continuous, starting from 1
-	for i, _ := range books {
+	for i := range books {
 		books[i].Rank = i + 1 // Set rank as index + 1
 	}
 }

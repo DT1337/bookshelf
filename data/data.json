@@ -756,5 +756,13 @@
         "mostly-harmless"
       ]
     }
-  ]
+  ],
+  "insights": {
+    "favoriteQuote": {
+        "quote": "Death is the light by which the shadow of all of life's meaning is measured.",
+        "authors": ["Mark Manson"],
+        "title": "The Subtle Art of Not Giving a F*ck",
+        "id": "the-subtle-art-of-not-giving-a-fck"
+    }
+  }
 }

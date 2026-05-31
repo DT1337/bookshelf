@@ -5,6 +5,7 @@ package dto
 type Bookshelf struct {
 	Books       []Book       `json:"books"`
 	Collections []Collection `json:"collections"`
+	Insights    Insights     `json:"insights"`
 }
 
 type Book struct {
@@ -42,6 +43,17 @@ type Collection struct {
 	Books       []string `json:"books"`
 }
 
+type Insights struct {
+	FavoriteQuote Quote `json:"favoriteQuote"`
+}
+
+type Quote struct {
+	Quote     string   `json:"quote"`
+	Authors   []string `json:"authors"`
+	BookTitle string   `json:"title"`
+	Id        string   `json:"id"`
+}
+
 // ----------------------------------------------
 
 type Stats struct {
@@ -66,11 +78,4 @@ type ResolvedCollection struct {
 	Name        string
 	Description string
 	Books       []Book
-}
-
-type Quote struct {
-	Quote     string
-	Authors   []string
-	BookTitle string
-	Id        string
 }

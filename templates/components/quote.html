@@ -1,0 +1,15 @@
+{{ define "quote" }}
+  <blockquote class="book-quote">
+    {{ safeHTML .Quote }}
+    <div class="attribution">
+      {{ if .Authors }}
+        <ul class="authors">
+          {{ range .Authors }}
+            <li>{{ . }}</li>
+          {{ end }}
+        </ul>
+      {{ end }}
+      {{ if and .BookTitle .Id }}<a href="{{ .Id }}.html" class="title">{{ .BookTitle }}</a>{{ end }}
+    </div>
+  </blockquote>
+{{ end }}

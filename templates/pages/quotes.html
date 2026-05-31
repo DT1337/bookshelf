@@ -10,19 +10,7 @@
         <ul class="quotes">
           {{ range .Quotes }}
             <li>
-              <blockquote class="book-quote">
-                {{ safeHTML .Quote }}
-                <div class="attribution">
-                  {{ if .Authors }}
-                    <ul class="authors">
-                      {{ range .Authors }}
-                        <li>{{ . }}</li>
-                      {{ end }}
-                    </ul>
-                  {{ end }}
-                  {{ if .BookTitle }}<a href="{{ .Id }}.html" class="title">{{ .BookTitle }}</a>{{ end }}
-                </div>
-              </blockquote>
+              {{ template "quote" . }}
             </li>
           {{ end }}
         </ul>

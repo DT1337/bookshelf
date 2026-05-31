@@ -54,6 +54,31 @@
           </section>
         {{ end }}
       {{ end }}
+
+      {{ if .HasFavoriteQuote }}
+        {{ with .FavoriteQuote }}
+          <section class="card" aria-labelledby="favorite-quote-heading">
+            <header>
+              <h2 id="favorite-quote-heading">Favorite Quote</h2>
+              <p class="muted">
+                One line that's been on my mind lately from the book
+                {{ $link := .Id | printf "%s.html" }}
+                <a href="{{ $link }}" class="book-highlight">
+                  {{ .BookTitle }}
+                </a>
+              </p>
+            </header>
+          
+            <div class="favorite-quote">
+              {{ template "quote" . }}
+            </div>
+
+            <footer>
+              <a href="quotes.html" class="muted">More quotes</a>
+            </footer>
+          </section>
+        {{ end }}
+      {{ end }}
     </div>
 
     <aside class="card" aria-labelledby="sidebar-heading">
