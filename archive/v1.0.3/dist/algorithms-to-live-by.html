@@ -1,0 +1,171 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <title>DT - My Digital Bookshelf</title>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
+      <meta name="description" content="DT - My Digital Bookshelf" />
+      <link rel="icon" href="icons/favicon.ico" type="image/x-icon">
+      <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+      <link rel="manifest" href="site.webmanifest">
+      <link rel="stylesheet" href="css/style.css">
+      <script src="js/theme-toggle.js"></script>
+    </head>
+    <body>
+      <div class="site" role="document">
+        <header class="site-header" role="banner">
+          <a href="index.html" class="brand" aria-label="Homepage">
+            <span class="logo" aria-hidden="true">DT</span>
+            <span class="site-title">
+              <h1 class="title">My Digital Bookshelf</h1>
+              <p class="subtitle">Books I've read, am currently reading or want to read in the future</p>
+            </span>
+          </a>
+
+          <nav class="primary-nav" role="navigation" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="bookshelf.html">Bookshelf</a>
+            <a href="collections.html">Collections</a>
+            <a href="quotes.html">Quotes</a>
+            <a href="wishlist.html" class="cta">Wishlist</a>
+          </nav>
+
+          <div class="toggle-group">
+            <div class="theme-toggle">
+              <input id="theme-toggle" type="checkbox" aria-hidden="true" />
+              <label class="theme-toggle-label" for="theme-toggle" aria-hidden="true" title="Toggle theme">
+                
+  <svg class="light" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="5"></circle>
+    <line x1="12" y1="1" x2="12" y2="3"></line>
+    <line x1="12" y1="21" x2="12" y2="23"></line>
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+    <line x1="1" y1="12" x2="3" y2="12"></line>
+    <line x1="21" y1="12" x2="23" y2="12"></line>
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+  </svg>
+
+                
+  <svg class="dark" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+
+              </label>
+            </div>
+            
+            <div class="nav-toggle">
+              <input id="nav-toggle" type="checkbox" aria-hidden="true" />
+              <label class="nav-toggle-label" for="nav-toggle" aria-hidden="true" title="Toggle navigation">
+                <span class="hamburger" aria-hidden="true"></span>
+              </label>
+            </div>
+          </div>
+        </header>
+
+        <main class="site-main" role="main">
+          
+  <article class="book-article">
+    <div class="card layout">
+      <div class="book-cover">
+        
+          <img src="https://covers.openlibrary.org/b/id/10402105-L.jpg" alt="Cover of: Algorithms to Live By">
+        
+        
+          <div class="book-actions">
+            <a class="book-btn cta" href="https://openlibrary.org/books/OL29603701M/Algorithms_to_Live_By" target="_blank">Link</a>
+          </div>
+        
+      </div>
+      <div class="book-details">
+        <div class="book-info">
+          <h3 class="title">Algorithms to Live By</h3>
+          <p class="subtitle">The Computer Science of Human Decisions</p>
+          <p class="isbn">ISBN: 9780008166090</p>
+          <div class="authors">
+            <ul>
+              
+                <li>Brian Christian</li>
+              
+                <li>Tom Griffiths</li>
+              
+            </ul>
+          </div>
+          <div class="meta">
+            <ul>
+              <li>2016</li>
+              <li>398 pages</li>
+              <li>
+  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+    </polygon>
+  </svg>
+ 3.8</li>
+            </ul>
+          </div>
+        </div>
+        
+        
+        <a href="bookshelf.html#finished" class="book-status">
+          Finished
+        </a>
+        
+          <div class="book-progress">
+            
+              <span class="muted">Started:</span> 2025-07-30
+              <span class="muted">Finished:</span> 2025-08-25
+            
+          </div>
+        
+        
+        
+          <div class="book-quotes">
+            <h2>Quotes</h2>
+            <ul>
+              
+                <li>
+                  <blockquote class="book-quote">
+                    Computers multitask through a process called "threading", which you can think of as being like juggling a set of balls. Just as a juggler only hurls one ball at a time into the air but keeps three aloft, a CPU only works on one program at a time, but by swapping between them quickly enough [...] it appears to be [doing] all at once.
+                  </blockquote>
+                </li>
+              
+                <li>
+                  <blockquote class="book-quote">
+                    Seemingly innocuous language like 'Oh, I'm flexible' or 'What do you want to do tonight?' has a dark computational underbelly that should make you think twice. It has the veneer of kindness about it, but it does two deeply alarming things. First, it passes the cognitive buck: 'Here's a problem, you handle it.' Second, by not stating your preferences, it invites the others to simulate or imagine them. And as we have seen, the simulation of the minds of others is one of the biggest computational challenges a mind (or machine) can ever face.
+                  </blockquote>
+                </li>
+              
+                <li>
+                  <blockquote class="book-quote">
+                    Sorting something that you will never search is a complete waste; searching something you never sorted is merely inefficient.
+                  </blockquote>
+                </li>
+              
+            </ul>
+          </div>
+        
+      </div>
+  </article>
+
+        </main>
+
+        <footer class="site-footer" role="contentinfo">
+          <p class="legal">
+            All book cover images are the property of their respective publishers and are used here for informational and non-commercial purposes only.<br>
+            The cover images are provided through the <a href="https://openlibrary.org" target="_blank">Open Library Iniative</a>.<br>
+            All rights to the images, titles, and content are owned by the authors, publishers, or other copyright holders.<br>
+            If you are the copyright holder of any image used here and believe it is being used improperly, please <a href="mailto:dt1337.github@gmail.com">contact me</a>, and I will gladly remove or replace it.<br>
+            No copyright infringement is intended.
+          </p>
+          <p class="timestamp">Last updated: <time datetime="2026-04-12">2026-04-12</time></p>
+        </footer>
+      </div>
+    </body>
+  </html>
