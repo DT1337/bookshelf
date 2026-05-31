@@ -523,6 +523,22 @@
       ]
     },
     {
+      "id": "the-subtle-art-of-not-giving-a-fck",
+      "isbn": "9780062457714",
+      "title": "The Subtle Art of Not Giving a F*ck",
+      "subtitle": "A Counterintuitive Approach to Living a Good Life",
+      "authors": ["Mark Manson"],
+      "year": 2016,
+      "language": "en",
+      "pages": 140,
+      "genre": "non-fiction",
+      "tags": ["self-help", "psychology", "philosophy"],
+      "cover": "https://covers.openlibrary.org/b/id/14832101-L.jpg",
+      "link": "https://openlibrary.org/works/OL17590212W/The_Subtle_Art_of_Not_Giving_a_F*ck?edition=key:/books/OL39199973M",
+      "date_added": "2026-05-10",
+      "status": "to read"
+    },
+    {
       "id": "ready-player-one",
       "isbn": "9780307887436",
       "title": "Ready Player One",
