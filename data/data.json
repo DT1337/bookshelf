@@ -501,9 +501,26 @@
       "language": "en",
       "pages": 287,
       "genre": "science-fiction",
-      "tags": ["cyberpunk"],
+      "tags": ["cyberpunk", "artifical intelligence", "dystopia"],
       "date_added": "2026-04-28",
-      "status": "to read"
+      "status": "finished",
+      "progress": {
+        "date_started": "2026-04-29",
+        "date_finished": "2026-05-07"
+      },
+      "rating": 4.0,
+      "quotes": [
+        "The sky above the port was the color of television, tuned to a dead channel.",
+        "When the past is always with you, it may as well be present; and if it is present, it will be future as well.",
+        "Night City was like a deranged experiment in social Darwinism, designed by a bored researcher who kept one thumb permanently on the fast-forward button."
+      ],
+      "review": [
+        "With Neuromancer, William Gibson created an entirely new subgenre of science fiction: Cyberpunk.",
+        "While reading the book which is packed with cyberpunky terms and pop-culture-familiar concepts like cyberspace and the matrix, I felt right at home, yet wondering who had actually invented all these ideas.",
+        "I had the original source right in front of me. William Gibson is indeed the originator of many of these concepts, and for that reason alone, this book is a must-read for any cyberpunk or science-fiction enthusiast.",
+        "But be aware, the sheer density of terminoligy, which mostly got introduced in Gibson's earlier short stories and is not fully explained in this novel, can be difficult to follow at times.",
+        "A groundbreaking work for the cyberpunkian genre. Definitely recommended."
+      ]
     },
     {
       "id": "ready-player-one",
@@ -633,7 +650,8 @@
       "description": "Books I read in the year 2026",
       "books": [
         "brave-new-world",
-        "the-mythical-man-month"
+        "the-mythical-man-month",
+        "neuromancer"
       ]
     },
     {
