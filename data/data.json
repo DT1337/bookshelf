@@ -590,6 +590,18 @@
       ]
     },
     {
+      "id": "the-invisible-man",
+      "title": "The Invisible Man",
+      "authors": ["H. G. Wells"],
+      "year": 1897,
+      "language": "en",
+      "pages": 135,
+      "genre": "science-fiction",
+      "tags": ["classic", "mysterious", "science"],
+      "date_added": "2026-05-28",
+      "status": "to read"
+    },
+    {
       "id": "ready-player-one",
       "isbn": "9780307887436",
       "title": "Ready Player One",
