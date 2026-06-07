@@ -608,12 +608,13 @@
       "authors": ["Ernest Cline"],
       "year": 2011,
       "language": "en",
+      "pages": 374,
       "genre": "science-fiction",
       "tags": ["dystopia", "pop culture fiction", "video games"],
       "cover": "https://covers.openlibrary.org/b/id/8270105-L.jpg",
       "link": "https://openlibrary.org/books/OL24842593M/Ready_Player_One",
-      "status": "wishlisted",
-      "rank": 1
+      "date_added": "2026-06-05",
+      "status": "to read"
     },
     {
       "id": "count-zero",
