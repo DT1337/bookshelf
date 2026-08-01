@@ -478,7 +478,7 @@
       "id": "solaris",
       "isbn": "9780571311576",
       "title": "Solaris",
-      "authors": ["Stanislaw Lem"],
+      "authors": ["Stanisław Lem"],
       "year": 1961,
       "language": "en",
       "pages": 214,
@@ -487,7 +487,20 @@
       "cover": "https://covers.openlibrary.org/b/id/10116589-L.jpg",
       "link": "https://openlibrary.org/works/OL109524W/Solaris?edition=key:/books/OL28179710M",
       "date_added": "2026-03-30",
-      "status": "to read"
+      "status": "finished",
+      "progress": {
+        "date_started": "2026-06-13",
+        "date_finished": "2026-06-15"
+      },
+      "rating": 4.2,
+      "quotes": [
+        "We don't want to conquer the cosmos, we simply want to extend the boundaries of Earth to the frontiers of the cosmos. [75]",
+        "Man has gone out to explore other worlds and other civilizations without having explored his own labyrinth of dark passages and secret chambers, and without finding what lies behind doorways that he himself has sealed. [164]",
+        "I sat by the panoramic window, looking at the ocean. There was nothing to do now that the report, which had taken five days to compile, was only a pattern of waves in space. It would be month before a similar pattern would leave Earth to create its own line of disturbance in the gravitational field of the galaxy towards the twin suns of Solaris. [204]"
+      ],
+      "review": [
+        "When I first picked up Solaris by Stanisław Lem, I expected a story about exploring an alien planet, perhaps in the vein of classic science fiction. What I found was so much more.\nSolaris is a brilliant reimagining of the sci-fi genre, blending elements of science fiction and psychological horror with profound philosophical questions. The result is a refreshing, thought-provoking story that I found impossible to put down. Though not a fast-paced action novel, the intellectual depth and eerie atmosphere kept me hooked from start to finish. It's a deeply captivating read, and I highly recommend it."
+      ]
     },
     {
       "id": "contact",
@@ -762,7 +775,8 @@
         "neuromancer",
         "the-subtle-art-of-not-giving-a-fck",
         "designing-data-intensive-applications",
-        "the-invisible-man"
+        "the-invisible-man",
+        "solaris"
       ]
     },
     {
@@ -789,10 +803,10 @@
   ],
   "insights": {
     "favoriteQuote": {
-        "quote": "Death is the light by which the shadow of all of life's meaning is measured.",
-        "authors": ["Mark Manson"],
-        "title": "The Subtle Art of Not Giving a F*ck",
-        "id": "the-subtle-art-of-not-giving-a-fck"
+        "quote": "I sat by the panoramic window, looking at the ocean. There was nothing to do now that the report, which had taken five days to compile, was only a pattern of waves in space. It would be month before a similar pattern would leave Earth to create its own line of disturbance in the gravitational field of the galaxy towards the twin suns of Solaris.",
+        "authors": ["Stanisław Lem"],
+        "title": "Solaris",
+        "id": "solaris"
     }
   }
 }
