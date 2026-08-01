@@ -630,6 +630,21 @@
       "status": "to read"
     },
     {
+      "id": "i-robot",
+      "isbn": "9780007532278",
+      "title": "I, Robot",
+      "authors": ["Isaac Asimov"],
+      "year": 1950,
+      "language": "en",
+      "pages": 245,
+      "genre": "science-fiction",
+      "tags": ["robotics", "artifical intelligence", "short stories"],
+      "cover": "https://covers.openlibrary.org/b/id/12707977-L.jpg",
+      "link": "https://openlibrary.org/books/OL28509974M/I_Robot",
+      "date_added": "2026-06-14",
+      "status": "to read"
+    },
+    {
       "id": "count-zero",
       "isbn": "9780441013678",
       "title": "Count Zero",
