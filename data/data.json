@@ -655,7 +655,18 @@
       "cover": "https://covers.openlibrary.org/b/id/12707977-L.jpg",
       "link": "https://openlibrary.org/books/OL28509974M/I_Robot",
       "date_added": "2026-06-14",
-      "status": "to read"
+      "status": "finished",
+      "progress": {
+        "date_started": "2026-06-24",
+        "date_finished": "2026-06-27"
+      },
+      "rating": 4.1,
+      "quotes": [
+        "The Three Laws of Robotics:\n1: A robot may not injure a human being or, through inaction, allow a human being to come to harm;\n2: A robot must obey the orders given it by human beings except where such orders would conflict with the First Law;\n3: A robot must protect its own existence as long as such protection does not conflict with the First or Second Law;\nThe Zeroth Law: A robot may not harm humanity, or, by inaction, allow humanity to come to harm."
+      ],
+      "review": [
+        "I, Robot is an excellent collection of short stories by Isaac Asimov, all centered around his famous \"Three Laws of Robotics\". Each story explores the idea that robots cannot violate these laws. Despite this seemingly simple premise, Asimov creates fascinating dilemmas, with every story presenting a unique challenge and an ingenious solution."
+      ]
     },
     {
       "id": "count-zero",
@@ -776,7 +787,8 @@
         "the-subtle-art-of-not-giving-a-fck",
         "designing-data-intensive-applications",
         "the-invisible-man",
-        "solaris"
+        "solaris",
+        "i-robot"
       ]
     },
     {
