@@ -599,7 +599,20 @@
       "genre": "science-fiction",
       "tags": ["classic", "mysterious", "science"],
       "date_added": "2026-05-28",
-      "status": "to read"
+      "progress": {
+        "date_started": "2026-05-28",
+        "date_finished": "2026-06-07"
+      },
+      "status": "finished",
+      "rating": 3.7,
+      "quotes": [
+        "An invisible man is a man of power.",
+        "But consider, visibility depends on the action of the visible bodies on light. Either a body absorbs light, or it reflects or refracts it, or does all these things. If it neither reflects nor refracts nor absorbs light, it cannot of itself be visible.",
+        "I was invisible, and I was only just beginning to realise the extraordinary advantage my invisibility gave me."
+      ],
+      "review": [
+        "The Invisible Man by H.G. Wells was a fascinating read because it combines science fiction with a deep look at how power and isolation can change a person. I enjoyed the suspense and the thought-provoking themes, even though the main character became increasingly unsettling."
+      ]
     },
     {
       "id": "ready-player-one",
@@ -733,7 +746,8 @@
         "the-mythical-man-month",
         "neuromancer",
         "the-subtle-art-of-not-giving-a-fck",
-        "designing-data-intensive-applications"
+        "designing-data-intensive-applications",
+        "the-invisible-man"
       ]
     },
     {
