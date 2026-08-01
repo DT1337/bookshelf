@@ -267,6 +267,10 @@ main.site-main .layout-with-aside {
   margin: 0 0 1.5rem 0;
 }
 
+.card footer {
+  margin: 1.5rem 0 0 0;
+}
+
 .status-label {
   margin-bottom: .5rem;
   font-weight: 600;
