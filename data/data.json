@@ -669,6 +669,19 @@
       ]
     },
     {
+      "id": "rendezvous-with-rama",
+      "isbn": "9781399617178",
+      "title": "Rendezvous With Rama",
+      "authors": ["Arthur C. Clarke"],
+      "year": 1973,
+      "language": "en",
+      "pages": 246,
+      "genre": "science-fiction",
+      "tags": ["space", "exploration", "alien"],
+      "date_added": "2026-07-24",
+      "status": "to read"
+    },
+    {
       "id": "count-zero",
       "isbn": "9780441013678",
       "title": "Count Zero",
