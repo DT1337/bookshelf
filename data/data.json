@@ -701,6 +701,22 @@
       "status": "to read"
     },
     {
+      "id": "automate-this",
+      "isbn": "9781591844921",
+      "title": "Automate This",
+      "subtitle": "How algorithms came to rule our world",
+      "authors": ["Christopher Steiner"],
+      "year": 2012,
+      "language": "en",
+      "pages": 184,
+      "genre": "non-fiction",
+      "tags": ["algorithms", "computer science"],
+      "cover": "https://covers.openlibrary.org/b/id/7359493-L.jpg",
+      "link": "https://openlibrary.org/books/OL25316935M/Automate_this",
+      "date_added": "2026-09-15",
+      "status": "to read"
+    },
+    {
       "id": "count-zero",
       "isbn": "9780441013678",
       "title": "Count Zero",
