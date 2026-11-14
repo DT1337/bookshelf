@@ -741,7 +741,16 @@
       "cover": "https://covers.openlibrary.org/b/id/13151259-L.jpg",
       "link": "https://openlibrary.org/books/OL41520142M/The_Stranger",
       "date_added": "2026-10-18",
-      "status": "to read"
+      "status": "finished",
+      "progress": {
+        "date_started": "2026-10-18",
+        "date_finished": "2026-10-25"
+      },
+      "rating": 3.6,
+      "quotes": [
+        "One always has exaggerated ideas about what one doesn't know. [82]",
+        "it was better to burn than to disappear. [88]"
+      ]
     },
     {
       "id": "count-zero",
@@ -857,7 +866,8 @@
         "solaris",
         "i-robot",
         "ready-player-one",
-        "rendezvous-with-rama" 
+        "rendezvous-with-rama",
+        "the-stranger"
       ]
     },
     {
