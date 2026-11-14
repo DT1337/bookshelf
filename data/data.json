@@ -665,6 +665,7 @@
       "id": "i-robot",
       "isbn": "9780007532278",
       "title": "I, Robot",
+      "subtitle": "The Robot Series #1",
       "authors": ["Isaac Asimov"],
       "year": 1950,
       "language": "en",
@@ -858,6 +859,42 @@
       "genre": "science-fiction",
       "tags": ["space", "humor"],
       "status": "wishlisted"
+    },
+    {
+      "id": "the-caves-of-steel",
+      "isbn": "9798217093458",
+      "title": "The Caves of Steel",
+      "subtitle": "The Robot Series #2",
+      "authors": ["Isaac Asimov"],
+      "genre": "science-fiction",
+      "tags": ["robotics", "artifical intelligence"],
+      "link": "https://openlibrary.org/books/OL60900702M/Caves_of_Steel",
+      "status": "wishlisted",
+      "rank": 1
+    },
+    {
+      "id": "the-naked-sun",
+      "isbn": "9798217093465",
+      "title": "The Naked Sun",
+      "subtitle": "The Robot Series #3",
+      "authors": ["Isaac Asimov"],
+      "genre": "science-fiction",
+      "tags": ["robotics", "artifical intelligence"],
+      "link": "https://openlibrary.org/books/OL60887850M/Naked_Sun",
+      "status": "wishlisted",
+      "rank": 2
+    },
+    {
+      "id": "the-robots-of-dawn",
+      "isbn": "9798217093472",
+      "title": "The Robots of Dawn",
+      "subtitle": "The Robot Series #4",
+      "authors": ["Isaac Asimov"],
+      "genre": "science-fiction",
+      "tags": ["robotics", "artifical intelligence"],
+      "link": "https://openlibrary.org/books/OL60892905M/Robots_of_Dawn",
+      "status": "wishlisted",
+      "rank": 3
     }
   ],
   "collections": [
