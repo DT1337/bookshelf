@@ -698,7 +698,19 @@
       "genre": "science-fiction",
       "tags": ["space", "exploration", "alien"],
       "date_added": "2026-07-24",
-      "status": "to read"
+      "status": "finished",
+      "progress": {
+        "date_started": "2026-09-16",
+        "date_finished": "2026-10-10"
+      },
+      "rating": 4.0,
+      "quotes": [
+        "When in doubt, say nothing and move on.",
+        "He had a suspicion of plausible answers; they were so often wrong."
+      ],
+      "review": [
+        "Rendezvous with Rama was a fascinating read that really captured my imagination. Arthur C. Clarke does a great job of creating a believable scientific world and an atmosphere that made me want to explore the unknown alongside the characters. I found myself constantly wondering about the mysteries surrounding Rama and its purpose. While the characters weren't particularly deep, I didn't mind, as the real attraction for me was the exploration itself."
+      ]
     },
     {
       "id": "automate-this",
@@ -829,7 +841,8 @@
         "the-invisible-man",
         "solaris",
         "i-robot",
-        "ready-player-one"
+        "ready-player-one",
+        "rendezvous-with-rama" 
       ]
     },
     {
