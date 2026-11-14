@@ -126,7 +126,13 @@ func (b *Bookshelf) LatestReviewedBook() (Book, bool) {
 		return dateI.After(dateJ)
 	})
 
-	return booksWithReviews[0], true
+	// Check if latest review is within the last month
+	latestReviewedBookDate, err := time.Parse("2006-01-02", booksWithReviews[0].Progress.DateFinished)
+	if err == nil && latestReviewedBookDate.After(time.Now().AddDate(0, -1, 0)) {
+		return booksWithReviews[0], true
+	} 
+
+	return Book{}, false
 }
 
 func (b *Bookshelf) ShelvedBooks() map[string][]Book {
