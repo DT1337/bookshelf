@@ -726,7 +726,15 @@
       "cover": "https://covers.openlibrary.org/b/id/7359493-L.jpg",
       "link": "https://openlibrary.org/books/OL25316935M/Automate_this",
       "date_added": "2026-09-15",
-      "status": "to read"
+      "status": "finished",
+      "progress": {
+        "date_started": "2026-09-15",
+        "date_finished": "2026-10-28" 
+      },
+      "rating": 3.6,
+      "quotes": [
+        "Leibniz's development of the symbols and theory behind calculus, which allows for the precise study and modeling of change, gave mathematicians a weapon with which to create algorithms powerful enough to build semiconductors, connect us through radio, and launch satellites into orbit with a laser's precision. Calculus and algorithms have intertwined histories, meanings, and power. [53]"
+      ]
     },
     {
       "id": "the-stranger",
@@ -867,7 +875,8 @@
         "i-robot",
         "ready-player-one",
         "rendezvous-with-rama",
-        "the-stranger"
+        "the-stranger",
+        "automate-this"
       ]
     },
     {
