@@ -729,6 +729,21 @@
       "status": "to read"
     },
     {
+      "id": "the-stranger",
+      "isbn": "9780679720201",
+      "title": "The Stranger",
+      "authors": ["Albert Camus"],
+      "year": 1942,
+      "language": "en",
+      "pages": 85,
+      "genre": "fiction",
+      "tags": ["", ""],
+      "cover": "https://covers.openlibrary.org/b/id/13151259-L.jpg",
+      "link": "https://openlibrary.org/books/OL41520142M/The_Stranger",
+      "date_added": "2026-10-18",
+      "status": "to read"
+    },
+    {
       "id": "count-zero",
       "isbn": "9780441013678",
       "title": "Count Zero",
