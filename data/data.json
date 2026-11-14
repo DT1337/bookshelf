@@ -691,8 +691,7 @@
       "language": "en",
       "genre": "science-fiction",
       "tags": ["cyberpunk"],
-      "status": "wishlisted",
-      "rank": 2
+      "status": "wishlisted"
     },
     {
       "id": "mona-lisa-overdrive",
@@ -704,8 +703,7 @@
       "language": "en",
       "genre": "science-fiction",
       "tags": ["cyberpunk"],
-      "status": "wishlisted",
-      "rank": 3
+      "status": "wishlisted"
     },
     {
       "id": "the-outer-limits-of-reason",
@@ -718,8 +716,7 @@
       "genre": "non-fiction",
       "tags": ["science", "philosophy", "mathematics", "physics", "logic"],
       "link": "https://openlibrary.org/works/OL21593212W/Outer_Limits_of_Reason?edition=key:/books/OL29316428M",
-      "status": "wishlisted",
-      "rank": 4
+      "status": "wishlisted"
     },
     {
       "id": "we-are-legion",
@@ -733,8 +730,7 @@
       "tags": ["space", "humor"],
       "cover": "https://covers.openlibrary.org/b/id/15150802-M.jpg",
       "link": "https://openlibrary.org/books/OL60789259M/We_Are_Legion",
-      "status": "wishlisted",
-      "rank": 5
+      "status": "wishlisted"
     },
     {
       "id": "for-we-are-many",
@@ -746,8 +742,7 @@
       "language": "en",
       "genre": "science-fiction",
       "tags": ["space", "humor"],
-      "status": "wishlisted",
-      "rank": 6
+      "status": "wishlisted"
     },
     {
       "id": "all-these-worlds",
@@ -759,8 +754,7 @@
       "language": "en",
       "genre": "science-fiction",
       "tags": ["space", "humor"],
-      "status": "wishlisted",
-      "rank": 7
+      "status": "wishlisted"
     },
     {
       "id": "heavens-river",
@@ -772,8 +766,7 @@
       "language": "en",
       "genre": "science-fiction",
       "tags": ["space", "humor"],
-      "status": "wishlisted",
-      "rank": 8
+      "status": "wishlisted"
     },
     {
       "id": "not-till-we-are-lost",
@@ -785,8 +778,7 @@
       "language": "en",
       "genre": "science-fiction",
       "tags": ["space", "humor"],
-      "status": "wishlisted",
-      "rank": 9
+      "status": "wishlisted"
     }
   ],
   "collections": [

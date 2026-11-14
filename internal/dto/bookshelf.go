@@ -8,6 +8,7 @@ import (
 	"os"
 	"regexp"
 	"sort"
+	"strings"
 	"time"
 )
 
@@ -263,23 +264,32 @@ func (b *Bookshelf) sortBooksAlphabetically(books []Book) {
 func (b *Bookshelf) normalizeRanks(books []Book) {
 	// Reset ranks so that they are continuous, starting from 1
 	for i := range books {
-		books[i].Rank = i + 1 // Set rank as index + 1
+		if books[i].Rank != 0 { // ignore books without rank
+			books[i].Rank = i + 1 // Set rank as index + 1
+		}
 	}
 }
 
 func (b *Bookshelf) sortBooksByRank(books []Book) {
-	// First sort the books by rank (with 0 being treated as the lowest possible rank)
+	// First sort the books by rank (if rank not set sort alphabetically)
 	sort.SliceStable(books, func(i, j int) bool {
-		ri, rj := books[i].Rank, books[j].Rank
+		bi, bj := books[i], books[j]
 
-		if ri == 0 && rj != 0 {
-			return false
+		// Both books have no rank: sort alphabetically by title
+		if bi.Rank == 0 && bj.Rank == 0 {
+			return strings.ToLower(bi.Title) < strings.ToLower(bj.Title)
 		}
-		if ri != 0 && rj == 0 {
+
+		// Books without a rank go last
+		if bi.Rank == 0 {
+			return false 
+		}
+		if bj.Rank == 0 {
 			return true
 		}
 
-		return ri < rj
+		// Both have a rank: sort by rank
+		return bi.Rank < bj.Rank
 	})
 
 	// Now normalize ranks to ensure they are continuous
