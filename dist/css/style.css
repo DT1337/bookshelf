@@ -327,11 +327,11 @@ main.site-main .layout-with-aside {
   align-items: center;
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--text-inverted);
+  color: var(--cover);
   background: var(--accent-2);
   border-radius: 16px 0 16px 0;
-  border-right: 3px solid black;
-  border-bottom: 3px solid black;
+  border-right: 3px solid;
+  border-bottom: 3px solid;
 }
 
 .book-card img,
